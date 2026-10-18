@@ -5,7 +5,7 @@
   1. Place the partner's horizontal logo inside the SAFE AREA (400 × 120), centred on both guides.
   2. Wordmarks: fit the width (up to 400 px). Emblems / square marks: fit the height (up to 120 px).
      Balance by eye so every logo feels the same visual size.
-  3. Recolour the whole logo to one colour: #0C0C0B. No background, box, tagline or shadow.
+  3. Keep the logo in its ORIGINAL colours, unaltered. Remove only the background.
   4. Hide or delete the "guides" layer, then export as SVG (preferred) or PNG at 960 × 360 (2×), transparent.
   5. Name the file with the slug from the list, e.g. google.svg, and send it to Dina's site folder assets/img/logos/.
 -->
@@ -16,7 +16,7 @@
     <line x1="240" y1="0" x2="240" y2="180" stroke="#9C8462" stroke-width="0.75" stroke-dasharray="3 3"/>
     <line x1="0" y1="90" x2="480" y2="90" stroke="#9C8462" stroke-width="0.75" stroke-dasharray="3 3"/>
     <text x="44" y="46" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" fill="#C0392B">SAFE AREA 400 × 120 — logo stays inside</text>
-    <text x="8" y="172" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" fill="#7A6242">Artboard 480 × 180 · one colour #0C0C0B · transparent · hide this layer before export</text>
+    <text x="8" y="172" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" fill="#7A6242">Artboard 480 × 180 · original colours · transparent · hide this layer before export</text>
   </g>
   <g id="logo">
     <!-- Place the logo here -->
