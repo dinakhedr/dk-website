@@ -142,7 +142,7 @@ Case study template: Header (title, partners, year, tags, image) → At a glance
   - `/blog/5-must-have-marketing-videos-for-your-business-in-2025` → `/insights/5-must-have-marketing-videos-for-your-business/`
   - `/blog/positioning-vs.-promotion-why-most-startups-get-it-wrong` → `/insights/positioning-vs-promotion/`
 - Booking link (every "Book a consultation" button): `https://calendar.app.google/dwxgqnSqhQKSAXD16` (open in new tab).
-- Contact: `dina.khedr@gmail.com` · LinkedIn `https://www.linkedin.com/in/dinakhedr`.
+- Contact email (site-wide, Dina's choice 19 Oct 2026): `info@dinakhedr.com` · LinkedIn `https://www.linkedin.com/in/dinakhedr`. (Her CV PDF still shows her Gmail — that is fine.)
 - Analytics: GA4 + Google Search Console at launch.
 
 ## 7. Assets
