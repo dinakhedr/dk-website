@@ -32,7 +32,7 @@ The personal consulting website of **Dina Khedr**, an independent business & str
 | 8 service pages | `/services/<slug>/index.html` | **Done** |
 | How I Work | `/how-i-work/index.html` | **Done** |
 | Work (case study library) | `/work/index.html` | **Done** (filter chips: Growth & Brand · Programs & Accelerators · Partnerships & Talent · Summits & Campaigns · Proposals & Funding) |
-| Case studies | `/work/<slug>/index.html` | **6 done** (the homepage six); 7 to build: CU2050, CU AI Nexus, Belda, ECOSYS+, STREAM, NP Explore, Google & Udacity |
+| Case studies | `/work/<slug>/index.html` | **Done** (all 13) |
 | About | `/about/index.html` | To build |
 | Insights (blog) | `/insights/index.html` + article template | To build |
 | Contact / Start a Project | `/contact/index.html` + `/contact/thank-you/index.html` | To build |
@@ -165,9 +165,6 @@ Case study template: Header (title, partners, year, tags, image) → At a glance
 
 1. ~~Services overview + 8 service pages~~ (done — Dina to confirm FAQ assumptions: on-site/remote mix, Arabic proposals, typical durations).
 2. ~~How I Work~~ (done — Dina to confirm: fee formats per model, proposal within 5 business days, weekly check-ins + monthly report, NDA before discovery call, specialist network, regional work, 2–3 week start).
-3. Work listing + case studies — listing and the 6 homepage stories **done**; next batch: CU2050, CU AI Nexus, Belda, ECOSYS+, STREAM, NP Explore, Google & Udacity (copy the structure of `work/brainsmingle/index.html`; "Next case study" links follow the listing order). Dina to confirm: Gemini role/title, years for NP Explore and Google & Udacity, CUES 2026 sponsors/partners.
-4. About.
-5. Insights listing + article template (migrate old posts when available).
-6. Contact (Netlify form) + thank-you page + 404.
+3. Work listing + case studies — listing and the 6 homepage stories **done**; next batch: CU2050, C3. ~~Work listing + case studies~~ (done — all 13; copy `work/brainsmingle/index.html` for new ones; "Next case study" links follow the listing order). Dina to confirm: Gemini role/title; CUES 2026 sponsors; CU2050 role and pillar themes; CU AI Nexus and ECOSYS+ outcome figures; STREAM institution/role (drafted as Nile University); NP Explore year, role and discipline names; Google & Udacity year, co-managing organization and "1,000+ jobs facilitated" wording (vs 750+ candidates).etlify form) + thank-you page + 404.
 7. `netlify.toml` (redirects, headers), `robots.txt`, `sitemap.xml`, OG image (`assets/img/og-image.jpg`, 1200×630).
 8. Full check (desktop + mobile, all links, `file://` preview), then connect Netlify and switch GoDaddy DNS.
