@@ -37,7 +37,7 @@ The personal consulting website of **Dina Khedr**, an independent business & str
 | Insights (blog) — "Strategy to Street" | `/insights/index.html` + 8 articles `/insights/<slug>/index.html` | **Done** |
 | Contact / Start a Project | `/contact/index.html` + `/contact/thank-you/index.html` | **Done** |
 | 404 | `/404.html` | **Done** (uses root-absolute paths `/assets/...` because Netlify serves it at any URL — the only page not previewable from disk) |
-| Config | `netlify.toml`, `robots.txt`, `sitemap.xml` | To build |
+| Config | `netlify.toml`, `robots.txt`, `sitemap.xml`, `assets/img/og-image.jpg` | **Done** |
 
 Global elements on every page: header (logo, nav: Services · How I Work · Work · About · Insights, button **Book a consultation**), footer (logo, email, LinkedIn, **Capability statement (PDF)**, © year), closing CTA band.
 
@@ -172,5 +172,5 @@ Case study template: Header (title, partners, year, tags, image) → At a glance
 4. ~~About~~ (done — timeline from Dina's resume, Oct 2026; CU2050 deliberately left out of About).
 5. ~~Insights~~ (done — listing with category filter, article template with key takeaways, author box, related service and share; homepage "Perspectives" features Positioning vs. Promotion, Pricing Model and Silent Killer).
 6. ~~Contact (Netlify form) + thank-you page + 404~~ (done — form submits only once deployed on Netlify).
-7. `netlify.toml` (redirects, headers), `robots.txt`, `sitemap.xml`, OG image (`assets/img/og-image.jpg`, 1200×630).
+7. ~~`netlify.toml`, `robots.txt`, `sitemap.xml`, OG image~~ (done — `netlify.toml` blocks public access to `/CLAUDE.md`, `/netlify.toml` and `/.claude/*` because the publish directory is the repo root; when adding or renaming a page, add it to `sitemap.xml`). Still missing before launch: **capability statement PDF** (linked in every footer).
 8. Full check (desktop + mobile, all links, `file://` preview), then connect Netlify and switch GoDaddy DNS.

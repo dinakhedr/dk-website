@@ -1,0 +1,129 @@
+# dinakhedr.com — Netlify configuration
+# Static site: no build command, publish the repository root.
+
+[build]
+  publish = "."
+
+# ---------------------------------------------------------------
+# Private project files — never serve them publicly
+# ---------------------------------------------------------------
+[[redirects]]
+  from = "/CLAUDE.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/netlify.toml"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/.claude/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+# ---------------------------------------------------------------
+# Old site (HubSpot) → new site
+# Specific rules first; Netlify uses the first match.
+# ---------------------------------------------------------------
+
+# Portfolio and programs pages are now the Work library
+[[redirects]]
+  from = "/portfolio"
+  to = "/work/"
+  status = 301
+
+[[redirects]]
+  from = "/portfolio/*"
+  to = "/work/"
+  status = 301
+
+[[redirects]]
+  from = "/programs"
+  to = "/work/"
+  status = 301
+
+[[redirects]]
+  from = "/programs/*"
+  to = "/work/"
+  status = 301
+
+# Blog articles whose address changed
+[[redirects]]
+  from = "/blog/why-your-startup-meetings-suck-and-how-to-fix-them"
+  to = "/insights/why-startup-meetings-fail-and-how-to-fix-them/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/5-must-have-marketing-videos-for-your-business-in-2025"
+  to = "/insights/5-must-have-marketing-videos-for-your-business/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/positioning-vs.-promotion-why-most-startups-get-it-wrong"
+  to = "/insights/positioning-vs-promotion/"
+  status = 301
+
+# Blog index, tag, author and paging pages
+[[redirects]]
+  from = "/blog"
+  to = "/insights/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/tag/*"
+  to = "/insights/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/author/*"
+  to = "/insights/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/page/*"
+  to = "/insights/"
+  status = 301
+
+# All other blog articles kept their slug
+[[redirects]]
+  from = "/blog/*"
+  to = "/insights/:splat/"
+  status = 301
+
+# ---------------------------------------------------------------
+# Headers
+# ---------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+# Images, icons and fonts change rarely: cache for 30 days.
+# CSS and JS keep Netlify's default (always revalidate) because their file names do not change.
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/assets/docs/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/contact/thank-you/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
+[[headers]]
+  for = "/404.html"
+  [headers.values]
+    X-Robots-Tag = "noindex"
