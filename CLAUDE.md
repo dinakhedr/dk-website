@@ -34,7 +34,7 @@ The personal consulting website of **Dina Khedr**, an independent business & str
 | Work (case study library) | `/work/index.html` | **Done** (filter chips: Growth & Brand · Programs & Accelerators · Partnerships & Talent · Summits & Campaigns · Proposals & Funding) |
 | Case studies | `/work/<slug>/index.html` | **Done** (all 13) |
 | About | `/about/index.html` | **Done** |
-| Insights (blog) | `/insights/index.html` + article template | To build |
+| Insights (blog) — "Strategy to Street" | `/insights/index.html` + 8 articles `/insights/<slug>/index.html` | **Done** |
 | Contact / Start a Project | `/contact/index.html` + `/contact/thank-you/index.html` | To build |
 | 404 | `/404.html` | To build |
 | Config | `netlify.toml`, `robots.txt`, `sitemap.xml` | To build |
@@ -137,7 +137,10 @@ Case study template: Header (title, partners, year, tags, image) → At a glance
 - **Hosting: Netlify (free plan)**, connected to this GitHub repo; publish directory = repo root, no build command. Free plan is 300 credits/month (15 per production deploy, 20 per GB bandwidth) — keep images compressed and batch publishes.
 - **Contact form:** Netlify Forms (`<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact/thank-you/">` + hidden `form-name`). Fields: name, email, organization, role, "I am a" (Startup / SME / University / Government / Donor or development org / Corporate), services (the 8 + Other), timeline (ASAP / 1–3 months / 3+ months), budget range (optional), message. Response promise: "I reply within 2 business days" (to confirm with Dina).
 - **Domain:** registered at **GoDaddy**; keep DNS there (email unaffected). At launch: `A @ → 75.2.60.5` and `CNAME www → <site>.netlify.app`; primary domain **www.dinakhedr.com**.
-- **Redirects** (`netlify.toml`) from the old site: `/portfolio` and `/programs` → `/work/`, `/blog/*` → `/insights/:splat` (confirm old post slugs once Dina shares the old platform).
+- **Redirects** (`netlify.toml`) from the old site (HubSpot): `/portfolio` and `/programs` → `/work/`, `/services` → `/services/`, `/about` → `/about/`, `/contact` → `/contact/`, `/blog` and `/blog/tag/*` → `/insights/`, and `/blog/*` → `/insights/:splat/` — **except** these three renamed slugs, which need explicit rules listed first:
+  - `/blog/why-your-startup-meetings-suck-and-how-to-fix-them` → `/insights/why-startup-meetings-fail-and-how-to-fix-them/`
+  - `/blog/5-must-have-marketing-videos-for-your-business-in-2025` → `/insights/5-must-have-marketing-videos-for-your-business/`
+  - `/blog/positioning-vs.-promotion-why-most-startups-get-it-wrong` → `/insights/positioning-vs-promotion/`
 - Booking link (every "Book a consultation" button): `https://calendar.app.google/dwxgqnSqhQKSAXD16` (open in new tab).
 - Contact: `dina.khedr@gmail.com` · LinkedIn `https://www.linkedin.com/in/dinakhedr`.
 - Analytics: GA4 + Google Search Console at launch.
@@ -157,8 +160,8 @@ Case study template: Header (title, partners, year, tags, image) → At a glance
 - Partner logos (optional, only with permission).
 - ~~CV PDF~~ → `assets/docs/dina-khedr-cv.pdf` (done: web version of Dina's resume `Resume 2026/DinaKhedr_Resume.docx` with the **phone number and the 130M EGP figure removed**. Any future CV update must repeat both removals before publishing.)
 - Capability statement PDF → `assets/docs/dina-khedr-capability-statement.pdf` (Claude can draft it).
-- Old blog: which platform the current dinakhedr.com runs on, or the articles themselves; latest 3 article titles for the homepage "Perspectives" section.
-- Free guide (lead magnet) title.
+- ~~Old blog~~ (done: 8 posts migrated from HubSpot; old in-article CTAs removed; leftover drafting text and a stray sentence fixed; empty CRM table dropped). "6 Egyptian Women" founder images are placeholders until Dina confirms reuse.
+- Free guide (lead magnet) title and PDF — the homepage guide block is commented out until then.
 - Testimonials (3–5 quotes) — section stays hidden until then.
 
 ## 9. Next steps (in order)
@@ -167,7 +170,7 @@ Case study template: Header (title, partners, year, tags, image) → At a glance
 2. ~~How I Work~~ (done — Dina to confirm: fee formats per model, proposal within 5 business days, weekly check-ins + monthly report, NDA before discovery call, specialist network, regional work, 2–3 week start).
 3. ~~Work listing + case studies~~ (done — all 13; copy `work/brainsmingle/index.html` for new ones; "Next case study" links follow the listing order; roles and years corrected from Dina's resume). Dina to confirm: CUES 2026 sponsors; CU2050 pillar themes; CU AI Nexus and ECOSYS+ outcome figures; NP Explore discipline names.
 4. ~~About~~ (done — timeline from Dina's resume, Oct 2026; CU2050 deliberately left out of About).
-5. Insights listing + article template (migrate old posts when available).
+5. ~~Insights~~ (done — listing with category filter, article template with key takeaways, author box, related service and share; homepage "Perspectives" features Positioning vs. Promotion, Pricing Model and Silent Killer).
 6. Contact (Netlify form) + thank-you page + 404.
 7. `netlify.toml` (redirects, headers), `robots.txt`, `sitemap.xml`, OG image (`assets/img/og-image.jpg`, 1200×630).
 8. Full check (desktop + mobile, all links, `file://` preview), then connect Netlify and switch GoDaddy DNS.

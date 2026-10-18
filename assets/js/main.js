@@ -2,7 +2,8 @@
    - Mobile navigation toggle
    - Scroll reveal for elements with .reveal
    - Count-up numbers for elements with [data-count]
-   - Work page filter
+   - Category filter (Work, Insights)
+   - Copy link button (articles)
    - Footer year
 */
 (function () {
@@ -79,11 +80,11 @@
     counters.forEach(function (el) { countObserver.observe(el); });
   }
 
-  /* ---------- Work filter ---------- */
-  var filter = document.querySelector('.work-filter');
+  /* ---------- Category filter (Work, Insights) ---------- */
+  var filter = document.querySelector('.filter-chips');
   if (filter) {
-    var workCards = document.querySelectorAll('.work-card');
-    var empty = document.querySelector('.work-empty');
+    var workCards = document.querySelectorAll('.filter-item');
+    var empty = document.querySelector('.filter-empty');
     filter.hidden = false;
     filter.addEventListener('click', function (e) {
       var btn = e.target.closest('[data-filter]');
@@ -103,6 +104,14 @@
       if (empty) empty.hidden = shown > 0;
     });
   }
+
+  /* ---------- Copy link (articles) ---------- */
+  document.querySelectorAll('[data-copy-link]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var done = function () { btn.textContent = 'Link copied'; setTimeout(function () { btn.textContent = 'Copy link'; }, 2000); };
+      if (navigator.clipboard) { navigator.clipboard.writeText(window.location.href).then(done, function () {}); }
+    });
+  });
 
   /* ---------- Footer year ---------- */
   var year = document.querySelector('[data-year]');
