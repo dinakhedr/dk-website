@@ -609,3 +609,8 @@ ol.deliverables { margin: 0; padding: 0; }
 .status-hero .btn-row { margin-top: 36px; }
 .status-links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line); }
 .status-links__label { font-size: 14px; color: var(--muted); }
+
+/* ---------- Impact: four numbers (homepage) ---------- */
+.stats--four { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px 32px; }
+.stats--four .stat__value { font-size: clamp(44px, min(11vw, 5.4vw + 18px), 84px); }
+@media (max-width: 760px) { .stats--four { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 20px; } }
