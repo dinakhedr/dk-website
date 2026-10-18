@@ -53,16 +53,16 @@
        ========================================================= -->
   <header class="site-header fade-up">
     <div class="container site-header__inner">
-      <a href="./" class="site-header__logo" aria-label="Dina Khedr, home">
+      <a href="./index.html" class="site-header__logo" aria-label="Dina Khedr, home">
         <img src="assets/img/logo-dina-khedr.png" alt="Dina Khedr — Business Consultant" width="699" height="192">
       </a>
       <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
       <nav class="nav" id="site-nav" aria-label="Main">
-        <a href="services/" class="lnk">Services</a>
-        <a href="how-i-work/" class="lnk">How I Work</a>
-        <a href="work/" class="lnk">Work</a>
-        <a href="about/" class="lnk">About</a>
-        <a href="insights/" class="lnk">Insights</a>
+        <a href="services/index.html" class="lnk">Services</a>
+        <a href="how-i-work/index.html" class="lnk">How I Work</a>
+        <a href="work/index.html" class="lnk">Work</a>
+        <a href="about/index.html" class="lnk">About</a>
+        <a href="insights/index.html" class="lnk">Insights</a>
         <a href="https://calendar.app.google/dwxgqnSqhQKSAXD16" class="btn btn--dark btn--sm" target="_blank" rel="noopener">Book a consultation</a>
       </nav>
     </div>
@@ -118,11 +118,13 @@
           <span class="hl">growth and national programs — turning complex</span>
           <span class="hl">mandates into clear direction and measurable outcomes.</span>
         </p>
-        <div class="stats">
+        <div class="stats stats--six">
           <div class="stat reveal"><span class="stat__value" data-count="18" data-suffix="+">18+</span><span class="stat__label">years of strategic leadership</span></div>
-          <div class="stat reveal" style="--d:.1s"><span class="stat__value" data-count="25" data-suffix="K+">25K+</span><span class="stat__label">companies enabled on WUZZUF</span></div>
-          <div class="stat reveal" style="--d:.2s"><span class="stat__value" data-count="30" data-suffix="K+">30K+</span><span class="stat__label">sign-ups in one national AI activation</span></div>
-          <div class="stat reveal" style="--d:.3s"><span class="stat__value" data-count="20" data-suffix="K">20K</span><span class="stat__label">summit registrations in 30 days</span></div>
+          <div class="stat reveal" style="--d:.08s"><span class="stat__value" data-count="40000" data-commas data-suffix="+">40,000+</span><span class="stat__label">students &amp; graduates reached</span></div>
+          <div class="stat reveal" style="--d:.16s"><span class="stat__value" data-count="20" data-suffix="+">20+</span><span class="stat__label">government, international &amp; industry partners</span></div>
+          <div class="stat reveal"><span class="stat__value" data-count="7.8" data-decimals="1" data-suffix="×">7.8×</span><span class="stat__label">platform user growth in six months</span></div>
+          <div class="stat reveal" style="--d:.08s"><span class="stat__value" data-count="13">13</span><span class="stat__label">flagship programs &amp; campaigns</span></div>
+          <div class="stat reveal" style="--d:.16s"><span class="stat__value" data-count="10">10</span><span class="stat__label">sectors served</span></div>
         </div>
       </div>
     </section>
@@ -130,23 +132,89 @@
     <!-- =========================================================
          3. TRUSTED BY
          ========================================================= -->
-    <section class="section" aria-labelledby="partners-title" style="padding-block: 96px">
+    <section class="section logos" aria-labelledby="partners-title">
       <div class="container">
-        <h2 class="eyebrow reveal" id="partners-title">Trusted by</h2>
-        <div class="partners">
-          <div class="partner-group reveal">
-            <h3 class="partner-group__title">Government &amp; Institutions</h3>
-            <p class="partner-group__list">Ministry of Higher Education · Central Bank of Egypt · ASRT · TIEC (ITIDA) · Cairo University</p>
-          </div>
-          <div class="partner-group reveal" style="--d:.1s">
-            <h3 class="partner-group__title">International &amp; Corporate Partners</h3>
-            <p class="partner-group__list">Google · HSBC · European Union · GIZ · ILO · Erasmus+ · Udacity · Sawiris Foundation · HTW Dresden</p>
-          </div>
-          <div class="partner-group reveal" style="--d:.2s">
-            <h3 class="partner-group__title">Academic &amp; Industry Partners</h3>
-            <p class="partner-group__list">Nile University · WUZZUF · Forasna · BrainsMingle · Daftra · almentor · Chefaa · Belda</p>
-          </div>
+        <div class="section__head reveal" style="margin-bottom: 40px">
+          <h2 class="eyebrow" id="partners-title">Trusted by</h2>
+          <p class="logos__legend">Government &amp; Institutions · International &amp; Corporate · Academic &amp; Industry</p>
         </div>
+      </div>
+      <!-- Logos: replace each <span>Name</span> with <img src="assets/img/logos/name.svg" alt="Name"> when files arrive -->
+      <div class="logo-rows reveal">
+          <div class="logo-row" aria-label="Government and institutions">
+            <ul class="logo-track logo-track--left" role="list">
+              <li class="logo-pill"><span>Ministry of Higher Education</span></li>
+              <li class="logo-pill"><span>Central Bank of Egypt</span></li>
+              <li class="logo-pill"><span>ASRT</span></li>
+              <li class="logo-pill"><span>TIEC (ITIDA)</span></li>
+              <li class="logo-pill"><span>Cairo University</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>Ministry of Higher Education</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>Central Bank of Egypt</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>ASRT</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>TIEC (ITIDA)</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>Cairo University</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>Ministry of Higher Education</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>Central Bank of Egypt</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>ASRT</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>TIEC (ITIDA)</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>Cairo University</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>Ministry of Higher Education</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>Central Bank of Egypt</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>ASRT</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>TIEC (ITIDA)</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>Cairo University</span></li>
+            </ul>
+          </div>
+          <div class="logo-row" aria-label="International and corporate partners">
+            <ul class="logo-track logo-track--right" role="list">
+              <li class="logo-pill"><span>Google</span></li>
+              <li class="logo-pill"><span>HSBC</span></li>
+              <li class="logo-pill"><span>European Union</span></li>
+              <li class="logo-pill"><span>GIZ</span></li>
+              <li class="logo-pill"><span>ILO</span></li>
+              <li class="logo-pill"><span>Erasmus+</span></li>
+              <li class="logo-pill"><span>Udacity</span></li>
+              <li class="logo-pill"><span>Sawiris Foundation</span></li>
+              <li class="logo-pill"><span>HTW Dresden</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>Google</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>HSBC</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>European Union</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>GIZ</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>ILO</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>Erasmus+</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>Udacity</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>Sawiris Foundation</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>HTW Dresden</span></li>
+            </ul>
+          </div>
+          <div class="logo-row" aria-label="Academic and industry partners">
+            <ul class="logo-track logo-track--left logo-track--slow" role="list">
+              <li class="logo-pill"><span>Nile University</span></li>
+              <li class="logo-pill"><span>WUZZUF</span></li>
+              <li class="logo-pill"><span>Forasna</span></li>
+              <li class="logo-pill"><span>BrainsMingle</span></li>
+              <li class="logo-pill"><span>Daftra</span></li>
+              <li class="logo-pill"><span>almentor</span></li>
+              <li class="logo-pill"><span>Chefaa</span></li>
+              <li class="logo-pill"><span>Belda</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>Nile University</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>WUZZUF</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>Forasna</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>BrainsMingle</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>Daftra</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>almentor</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>Chefaa</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>Belda</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>Nile University</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>WUZZUF</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>Forasna</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>BrainsMingle</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>Daftra</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>almentor</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>Chefaa</span></li>
+              <li class="logo-pill" aria-hidden="true"><span>Belda</span></li>
+            </ul>
+          </div>
       </div>
     </section>
 
@@ -161,24 +229,24 @@
             <div class="audience__head"><span class="audience__key">A</span><h3 class="audience__title">Founders &amp; Growth Companies</h3></div>
             <p class="audience__intro">For founders and leadership teams ready to sharpen their position, enter new markets and build growth engines that outlast the launch.</p>
             <nav class="svc-list" aria-label="Services for founders and growth companies">
-              <a href="services/growth-go-to-market-strategy/">Growth &amp; Go-to-Market Strategy</a>
-              <a href="services/brand-positioning-architecture/">Brand Positioning &amp; Architecture</a>
-              <a href="services/fractional-growth-leadership/">Fractional Growth Leadership</a>
-              <a href="services/strategic-partnerships-business-development/">Strategic Partnerships &amp; Business Development</a>
+              <a href="services/growth-go-to-market-strategy/index.html">Growth &amp; Go-to-Market Strategy</a>
+              <a href="services/brand-positioning-architecture/index.html">Brand Positioning &amp; Architecture</a>
+              <a href="services/fractional-growth-leadership/index.html">Fractional Growth Leadership</a>
+              <a href="services/strategic-partnerships-business-development/index.html">Strategic Partnerships &amp; Business Development</a>
             </nav>
           </div>
           <div class="audience reveal" style="--d:.1s">
             <div class="audience__head"><span class="audience__key">B</span><h3 class="audience__title">Institutions &amp; Development Partners</h3></div>
             <p class="audience__intro">For universities, government bodies, donors and corporates that need programs rigorously designed, credibly funded and delivered to measurable impact.</p>
             <nav class="svc-list" aria-label="Services for institutions and development partners">
-              <a href="services/program-architecture-delivery/">Program Architecture &amp; Delivery</a>
-              <a href="services/ecosystem-university-industry-partnerships/">Ecosystem &amp; University–Industry Partnerships</a>
-              <a href="services/flagship-summits-national-activations/">Flagship Summits &amp; National Activations</a>
-              <a href="services/proposal-funding-strategy/">Proposal &amp; Funding Strategy</a>
+              <a href="services/program-architecture-delivery/index.html">Program Architecture &amp; Delivery</a>
+              <a href="services/ecosystem-university-industry-partnerships/index.html">Ecosystem &amp; University–Industry Partnerships</a>
+              <a href="services/flagship-summits-national-activations/index.html">Flagship Summits &amp; National Activations</a>
+              <a href="services/proposal-funding-strategy/index.html">Proposal &amp; Funding Strategy</a>
             </nav>
           </div>
         </div>
-        <p style="margin-top: 48px"><a href="services/" class="lnk lnk--strong">Explore advisory services →</a></p>
+        <p style="margin-top: 48px"><a href="services/index.html" class="lnk lnk--strong">Explore advisory services →</a></p>
       </div>
     </section>
 
@@ -189,7 +257,7 @@
       <div class="container">
         <div class="section__head reveal">
           <h2 class="h-display" id="work-title">Selected work</h2>
-          <a href="work/" class="lnk lnk--strong">All case studies →</a>
+          <a href="work/index.html" class="lnk lnk--strong">All case studies →</a>
         </div>
 
         <div class="stack">
@@ -298,7 +366,7 @@
           <span class="chip">Project Engagement</span>
           <span class="chip">Fractional Leadership</span>
           <span class="chip">Advisory &amp; Workshops</span>
-          <a href="how-i-work/" class="lnk lnk--strong">How I work →</a>
+          <a href="how-i-work/index.html" class="lnk lnk--strong">How I work →</a>
         </div>
       </div>
     </section>
@@ -314,16 +382,16 @@
       <div class="container">
         <div class="section__head reveal">
           <h2 class="h-display" id="insights-title">Perspectives</h2>
-          <a href="insights/" class="lnk lnk--strong">All articles →</a>
+          <a href="insights/index.html" class="lnk lnk--strong">All articles →</a>
         </div>
         <div class="posts">
-          <a href="insights/" class="post reveal"><div class="post__media"><div class="ph">[ Article image ]</div></div><span class="post__meta">[Category] · [Read time]</span><span class="post__title">[Latest article title]</span></a>
-          <a href="insights/" class="post reveal" style="--d:.1s"><div class="post__media"><div class="ph">[ Article image ]</div></div><span class="post__meta">[Category] · [Read time]</span><span class="post__title">[Second article title]</span></a>
-          <a href="insights/" class="post reveal" style="--d:.2s"><div class="post__media"><div class="ph">[ Article image ]</div></div><span class="post__meta">[Category] · [Read time]</span><span class="post__title">[Third article title]</span></a>
+          <a href="insights/index.html" class="post reveal"><div class="post__media"><div class="ph">[ Article image ]</div></div><span class="post__meta">[Category] · [Read time]</span><span class="post__title">[Latest article title]</span></a>
+          <a href="insights/index.html" class="post reveal" style="--d:.1s"><div class="post__media"><div class="ph">[ Article image ]</div></div><span class="post__meta">[Category] · [Read time]</span><span class="post__title">[Second article title]</span></a>
+          <a href="insights/index.html" class="post reveal" style="--d:.2s"><div class="post__media"><div class="ph">[ Article image ]</div></div><span class="post__meta">[Category] · [Read time]</span><span class="post__title">[Third article title]</span></a>
         </div>
         <div class="guide reveal">
           <div><p class="eyebrow">Free guide</p><p class="guide__title">[Guide title to confirm]</p></div>
-          <a href="insights/" class="btn btn--dark">Download the guide</a>
+          <a href="insights/index.html" class="btn btn--dark">Download the guide</a>
         </div>
       </div>
     </section>
@@ -337,7 +405,7 @@
         <p class="cta__text">Begin with a 30-minute discovery conversation, or share the brief for your next initiative.</p>
         <div class="btn-row">
           <a href="https://calendar.app.google/dwxgqnSqhQKSAXD16" class="btn btn--dark" target="_blank" rel="noopener">Book a consultation</a>
-          <a href="contact/" class="btn btn--white">Share a brief</a>
+          <a href="contact/index.html" class="btn btn--white">Share a brief</a>
         </div>
       </div>
     </section>

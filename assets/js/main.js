@@ -35,6 +35,7 @@
     var prefix = el.getAttribute('data-prefix') || '';
     var suffix = el.getAttribute('data-suffix') || '';
     var commas = el.hasAttribute('data-commas');
+    var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
     var duration = 1800;
     var start = null;
 
@@ -42,7 +43,8 @@
       if (start === null) start = now;
       var p = Math.min(1, (now - start) / duration);
       var eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = prefix + formatNumber(Math.round(target * eased), commas) + suffix;
+      var value = decimals ? (target * eased).toFixed(decimals) : formatNumber(Math.round(target * eased), commas);
+      el.textContent = prefix + value + suffix;
       if (p < 1) requestAnimationFrame(frame);
     }
     requestAnimationFrame(frame);

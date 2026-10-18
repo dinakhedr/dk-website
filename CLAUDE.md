@@ -9,8 +9,9 @@ The personal consulting website of **Dina Khedr**, an independent business & str
 - Address her as **Dina**, in a **formal, business-professional tone**. Use feminine forms where applicable.
 - Do not offer unsolicited personal opinions; give recommendations when asked, with reasons.
 - She reviews visually: after each meaningful change, describe what changed in one or two sentences.
-- She previews by pulling this repo with **GitHub Desktop** into `Desktop/Website/dk-website` and opening `index.html` directly in Chrome (`file://`). **All internal paths must be relative** (see §6) or the styles will not load.
-- Commit and push to `main` after each completed page or fix so she can pull it.
+- **Working setup (from 19 Oct 2026):** Dina works with **Claude Code on her Mac**, directly in her local clone at `~/Documents/GitHub/dk-website`. Edit files in place; she previews by opening `index.html` in Chrome (`file://`). **All internal paths must be relative** (see §6) or the styles will not load.
+- **Do not push to GitHub until the full site is complete** (Dina's instruction). Commit locally after each completed page or fix; push only when she approves the finished site.
+- Header, footer and closing CTA are repeated in every page (no build step). When changing them, update **every** HTML file consistently. Copy the structure of an existing page (e.g. `services/index.html` for a top-level page, `services/<slug>/index.html` for a second-level page) when creating new pages.
 
 ## 2. Goal and positioning
 
@@ -27,9 +28,9 @@ The personal consulting website of **Dina Khedr**, an independent business & str
 | Page | Path | Status |
 |---|---|---|
 | Home | `/index.html` | **Done** |
-| Services overview | `/services/index.html` | To build |
-| 8 service pages | `/services/<slug>/index.html` | To build |
-| How I Work | `/how-i-work/index.html` | To build |
+| Services overview | `/services/index.html` | **Done** |
+| 8 service pages | `/services/<slug>/index.html` | **Done** |
+| How I Work | `/how-i-work/index.html` | **Done** |
 | Work (case study library) | `/work/index.html` | To build |
 | Case studies | `/work/<slug>/index.html` | To build |
 | About | `/about/index.html` | To build |
@@ -69,8 +70,9 @@ Global elements on every page: header (logo, nav: Services · How I Work · Work
 - Headline with rotating words: **Strategy that** scales / converts / endures. **Programs that** deliver / transform / last.
 - Subline: *I partner with founders, institutions and development organizations to design growth strategies and national-scale programs, and see them through to measurable results.*
 - Statement: *Eighteen years at the intersection of strategy, growth and national programs — turning complex mandates into clear direction and measurable outcomes.*
-- Counters: **18+** years of strategic leadership · **25K+** companies enabled on WUZZUF · **30K+** sign-ups in one national AI activation · **20K** summit registrations in 30 days.
-- Trusted by — Government & Institutions: Ministry of Higher Education · Central Bank of Egypt · ASRT · TIEC (ITIDA) · Cairo University. International & Corporate Partners: Google · HSBC · European Union · GIZ · ILO · Erasmus+ · Udacity · Sawiris Foundation · HTW Dresden. Academic & Industry Partners: **Nile University (always first)** · WUZZUF · Forasna · BrainsMingle · Daftra · almentor · Chefaa · Belda.
+- Impact numbers (six, 3×2 grid): **18+** years of strategic leadership · **40,000+** students & graduates reached (Gemini 30K + NP Explore 10K) · **20+** government, international & industry partners · **7.8×** platform user growth in six months (BrainsMingle 5K→39K) · **13** flagship programs & campaigns · **10** sectors served.
+- Hero must fit above the fold (desktop, laptop and phone; on phones a small portrait sits above the headline).
+- Trusted by — layout **C: three moving rows, one per group** (pills now show names; swap in official logo files under `assets/img/logos/` as they arrive). Government & Institutions: Ministry of Higher Education · Central Bank of Egypt · ASRT · TIEC (ITIDA) · Cairo University. International & Corporate Partners: Google · HSBC · European Union · GIZ · ILO · Erasmus+ · Udacity · Sawiris Foundation · HTW Dresden. Academic & Industry Partners: **Nile University (always first)** · WUZZUF · Forasna · BrainsMingle · Daftra · almentor · Chefaa · Belda.
 - Selected work order (stacked cards): 01 BrainsMingle → 02 Google Gemini Activation → 03 NilePreneurs Accelerator → 04 WUZZUF Internship Program → 05 Digital Pathways for Employment → 06 CUES 2026.
 - Approach: Diagnose · Architect · Deliver · Measure. Engagement models: Strategy Sprint · Project Engagement · Fractional Leadership · Advisory & Workshops.
 - Testimonials section: **hidden** until Dina collects quotes.
@@ -117,6 +119,8 @@ Service page template: Hero (name, one-line outcome, Book a consultation) → Wh
 | **NP Explore** | National youth program scaled to 10,000+ students across three disciplines. |
 | **Google & Udacity Scholarship** | Co-managed; 750+ candidates, 1,000+ jobs facilitated. |
 
+Case study page slugs (already linked from the Services pages — use exactly these): `brainsmingle`, `google-gemini-student-activation`, `nilepreneurs-accelerator`, `wuzzuf-internship-program`, `digital-pathways-for-employment`, `cues-2026`, `cu2050-entrepreneurial-university`, `cu-ai-nexus-innovation-arena`, `belda-rebrand`, `ecosys-plus`, `stream`, `np-explore`, `google-udacity-scholarship` → `/work/<slug>/index.html`.
+
 Case study template: Header (title, partners, year, tags, image) → At a glance (3 numbers) → Context → My role → Approach (3–5 moves) → Results → Partners → Related service + CTA.
 
 ### About page content
@@ -128,7 +132,7 @@ Case study template: Header (title, partners, year, tags, image) → At a glance
 ## 6. Technical setup
 
 - **Plain HTML + CSS + vanilla JS. No build step, no framework.** (npm is blocked in Claude's cloud workspace; do not introduce Astro/React/etc.)
-- **Paths must be relative** so the site works when opened from disk: from root use `assets/...`; from `/services/` use `../assets/...`; from `/services/<slug>/` use `../../assets/...`. Internal links use relative paths too (`../work/`, `../../contact/`). Canonical / Open Graph URLs stay absolute (`https://www.dinakhedr.com/...`).
+- **Paths must be relative** so the site works when opened from disk: from root use `assets/...`; from `/services/` use `../assets/...`; from `/services/<slug>/` use `../../assets/...`. Internal links use relative paths **ending in `index.html`** (e.g. `../work/index.html`, `../../contact/index.html`) so navigation works when opened from disk. Canonical / Open Graph URLs stay absolute (`https://www.dinakhedr.com/...`).
 - Each page includes the same `<head>` pattern as `index.html` (fonts, stylesheet, favicons, `<script>document.documentElement.classList.add('js');</script>`, meta description, canonical, Open Graph) and `main.js` with `defer`.
 - **Hosting: Netlify (free plan)**, connected to this GitHub repo; publish directory = repo root, no build command. Free plan is 300 credits/month (15 per production deploy, 20 per GB bandwidth) — keep images compressed and batch publishes.
 - **Contact form:** Netlify Forms (`<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact/thank-you/">` + hidden `form-name`). Fields: name, email, organization, role, "I am a" (Startup / SME / University / Government / Donor or development org / Corporate), services (the 8 + Other), timeline (ASAP / 1–3 months / 3+ months), budget range (optional), message. Response promise: "I reply within 2 business days" (to confirm with Dina).
@@ -159,8 +163,8 @@ Case study template: Header (title, partners, year, tags, image) → At a glance
 
 ## 9. Next steps (in order)
 
-1. Services overview + 8 service pages.
-2. How I Work.
+1. ~~Services overview + 8 service pages~~ (done — Dina to confirm FAQ assumptions: on-site/remote mix, Arabic proposals, typical durations).
+2. ~~How I Work~~ (done — Dina to confirm: fee formats per model, proposal within 5 business days, weekly check-ins + monthly report, NDA before discovery call, specialist network, regional work, 2–3 week start).
 3. Work listing + case studies (start with the 6 homepage stories, then CU2050, CU AI Nexus, Belda, ECOSYS+, STREAM).
 4. About.
 5. Insights listing + article template (migrate old posts when available).
