@@ -610,7 +610,24 @@ ol.deliverables { margin: 0; padding: 0; }
 .status-links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line); }
 .status-links__label { font-size: 14px; color: var(--muted); }
 
-/* ---------- Impact: four numbers (homepage) ---------- */
-.stats--four { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px 32px; }
-.stats--four .stat__value { font-size: clamp(44px, min(11vw, 5.4vw + 18px), 84px); }
-@media (max-width: 760px) { .stats--four { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 20px; } }
+/* ---------- Impact: statement + four numbers on black (homepage) ---------- */
+.impact { background: var(--ink); color: var(--white); }
+.impact__inner { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(40px, 6vw, 96px); align-items: center; }
+.impact .statement { font-size: clamp(28px, 3vw, 44px); color: var(--white); }
+.impact .statement em { font-style: normal; color: var(--taupe); }
+.impact__grid { display: grid; grid-template-columns: 1fr 1fr; }
+.impact__item { padding: 28px 0 28px 28px; border-left: 1px solid rgba(255, 255, 255, 0.16); display: flex; flex-direction: column; gap: 10px; }
+.impact__item:nth-child(-n+2) { border-bottom: 1px solid rgba(255, 255, 255, 0.16); }
+.impact__value { font-size: clamp(52px, 5vw, 76px); font-weight: 700; letter-spacing: -0.05em; line-height: 1; color: var(--beige); font-variant-numeric: tabular-nums; }
+.impact__label { font-size: 15px; line-height: 1.5; color: rgba(255, 255, 255, 0.72); max-width: 22ch; }
+@media (max-width: 860px) {
+  .impact__inner { grid-template-columns: 1fr; }
+  .impact__item { padding: 22px 0 22px 18px; }
+  .impact__item:nth-child(odd) { border-left: 0; padding-left: 0; }
+}
+@keyframes ink-light { from { color: rgba(255, 255, 255, 0.22); } to { color: var(--white); } }
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .impact .hl { animation-name: ink-light; }
+  }
+}
