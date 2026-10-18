@@ -35,8 +35,8 @@ The personal consulting website of **Dina Khedr**, an independent business & str
 | Case studies | `/work/<slug>/index.html` | **Done** (all 13) |
 | About | `/about/index.html` | **Done** |
 | Insights (blog) — "Strategy to Street" | `/insights/index.html` + 8 articles `/insights/<slug>/index.html` | **Done** |
-| Contact / Start a Project | `/contact/index.html` + `/contact/thank-you/index.html` | To build |
-| 404 | `/404.html` | To build |
+| Contact / Start a Project | `/contact/index.html` + `/contact/thank-you/index.html` | **Done** |
+| 404 | `/404.html` | **Done** (uses root-absolute paths `/assets/...` because Netlify serves it at any URL — the only page not previewable from disk) |
 | Config | `netlify.toml`, `robots.txt`, `sitemap.xml` | To build |
 
 Global elements on every page: header (logo, nav: Services · How I Work · Work · About · Insights, button **Book a consultation**), footer (logo, email, LinkedIn, **Capability statement (PDF)**, © year), closing CTA band.
@@ -135,7 +135,7 @@ Case study template: Header (title, partners, year, tags, image) → At a glance
 - **Paths must be relative** so the site works when opened from disk: from root use `assets/...`; from `/services/` use `../assets/...`; from `/services/<slug>/` use `../../assets/...`. Internal links use relative paths **ending in `index.html`** (e.g. `../work/index.html`, `../../contact/index.html`) so navigation works when opened from disk. Canonical / Open Graph URLs stay absolute (`https://www.dinakhedr.com/...`).
 - Each page includes the same `<head>` pattern as `index.html` (fonts, stylesheet, favicons, `<script>document.documentElement.classList.add('js');</script>`, meta description, canonical, Open Graph) and `main.js` with `defer`.
 - **Hosting: Netlify (free plan)**, connected to this GitHub repo; publish directory = repo root, no build command. Free plan is 300 credits/month (15 per production deploy, 20 per GB bandwidth) — keep images compressed and batch publishes.
-- **Contact form:** Netlify Forms (`<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact/thank-you/">` + hidden `form-name`). Fields: name, email, organization, role, "I am a" (Startup / SME / University / Government / Donor or development org / Corporate), services (the 8 + Other), timeline (ASAP / 1–3 months / 3+ months), budget range (optional), message. Response promise: "I reply within 2 business days" (to confirm with Dina).
+- **Contact form:** Netlify Forms (`<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact/thank-you/">` + hidden `form-name`). Fields: name, email, organization, role, "I am a" (Startup / SME / University / Government / Donor or development org / Corporate), services (the 8 + Other), timeline (ASAP / 1–3 months / 3+ months), budget range (optional), message. Response promise: "I reply within two business days" (confirmed). Budget bands in USD: Under $5,000 · $5,000–15,000 · $15,000–50,000 · $50,000+ · Prefer to discuss. Discovery call described as complimentary (confirmed). Contact page has no closing CTA band (Dina's decision).
 - **Domain:** registered at **GoDaddy**; keep DNS there (email unaffected). At launch: `A @ → 75.2.60.5` and `CNAME www → <site>.netlify.app`; primary domain **www.dinakhedr.com**.
 - **Redirects** (`netlify.toml`) from the old site (HubSpot): `/portfolio` and `/programs` → `/work/`, `/services` → `/services/`, `/about` → `/about/`, `/contact` → `/contact/`, `/blog` and `/blog/tag/*` → `/insights/`, and `/blog/*` → `/insights/:splat/` — **except** these three renamed slugs, which need explicit rules listed first:
   - `/blog/why-your-startup-meetings-suck-and-how-to-fix-them` → `/insights/why-startup-meetings-fail-and-how-to-fix-them/`
@@ -171,6 +171,6 @@ Case study template: Header (title, partners, year, tags, image) → At a glance
 3. ~~Work listing + case studies~~ (done — all 13; copy `work/brainsmingle/index.html` for new ones; "Next case study" links follow the listing order; roles and years corrected from Dina's resume). Dina to confirm: CUES 2026 sponsors; CU2050 pillar themes; CU AI Nexus and ECOSYS+ outcome figures; NP Explore discipline names.
 4. ~~About~~ (done — timeline from Dina's resume, Oct 2026; CU2050 deliberately left out of About).
 5. ~~Insights~~ (done — listing with category filter, article template with key takeaways, author box, related service and share; homepage "Perspectives" features Positioning vs. Promotion, Pricing Model and Silent Killer).
-6. Contact (Netlify form) + thank-you page + 404.
+6. ~~Contact (Netlify form) + thank-you page + 404~~ (done — form submits only once deployed on Netlify).
 7. `netlify.toml` (redirects, headers), `robots.txt`, `sitemap.xml`, OG image (`assets/img/og-image.jpg`, 1200×630).
 8. Full check (desktop + mobile, all links, `file://` preview), then connect Netlify and switch GoDaddy DNS.
