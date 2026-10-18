@@ -158,7 +158,7 @@ Case study template: Header (title, partners, year, tags, image) → At a glance
 - Project photos for the case studies (1–3 each).
 - Highest-quality logo (SVG or large PNG) — current one was taken from a screenshot.
 - Partner logos (optional, only with permission).
-- ~~CV PDF~~ → `assets/docs/dina-khedr-cv.pdf` (done: web version of Dina's resume `Resume 2026/DinaKhedr_Resume.docx` with the **phone number and the 130M EGP figure removed**. Any future CV update must repeat both removals before publishing.)
+- ~~CV PDF~~ → `assets/docs/dina-khedr-cv.pdf` (done: Dina's own `Resume 2026/DinaKhedr_Resume.pdf`, used **as is** at her explicit instruction on 19 Oct 2026 — it includes her phone number and the CU2050 130M EGP figure. This is the only approved exception to the 130M rule; web pages must still never show the figure.)
 - Capability statement PDF → `assets/docs/dina-khedr-capability-statement.pdf` (Claude can draft it).
 - ~~Old blog~~ (done: 8 posts migrated from HubSpot; old in-article CTAs removed; leftover drafting text and a stray sentence fixed; empty CRM table dropped). "6 Egyptian Women" founder images are placeholders until Dina confirms reuse.
 - Free guide (lead magnet) title and PDF — the homepage guide block is commented out until then.
