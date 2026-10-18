@@ -2,6 +2,7 @@
    - Mobile navigation toggle
    - Scroll reveal for elements with .reveal
    - Count-up numbers for elements with [data-count]
+   - Work page filter
    - Footer year
 */
 (function () {
@@ -76,6 +77,31 @@
       });
     }, { threshold: 0.6 });
     counters.forEach(function (el) { countObserver.observe(el); });
+  }
+
+  /* ---------- Work filter ---------- */
+  var filter = document.querySelector('.work-filter');
+  if (filter) {
+    var workCards = document.querySelectorAll('.work-card');
+    var empty = document.querySelector('.work-empty');
+    filter.hidden = false;
+    filter.addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-filter]');
+      if (!btn) return;
+      var key = btn.getAttribute('data-filter');
+      filter.querySelectorAll('[data-filter]').forEach(function (b) {
+        var on = b === btn;
+        b.classList.toggle('is-active', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      var shown = 0;
+      workCards.forEach(function (card) {
+        var match = key === 'all' || (' ' + card.getAttribute('data-tags') + ' ').indexOf(' ' + key + ' ') > -1;
+        card.hidden = !match;
+        if (match) { card.classList.add('is-visible'); shown++; }
+      });
+      if (empty) empty.hidden = shown > 0;
+    });
   }
 
   /* ---------- Footer year ---------- */

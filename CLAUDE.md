@@ -31,8 +31,8 @@ The personal consulting website of **Dina Khedr**, an independent business & str
 | Services overview | `/services/index.html` | **Done** |
 | 8 service pages | `/services/<slug>/index.html` | **Done** |
 | How I Work | `/how-i-work/index.html` | **Done** |
-| Work (case study library) | `/work/index.html` | To build |
-| Case studies | `/work/<slug>/index.html` | To build |
+| Work (case study library) | `/work/index.html` | **Done** (filter chips: Growth & Brand · Programs & Accelerators · Partnerships & Talent · Summits & Campaigns · Proposals & Funding) |
+| Case studies | `/work/<slug>/index.html` | **6 done** (the homepage six); 7 to build: CU2050, CU AI Nexus, Belda, ECOSYS+, STREAM, NP Explore, Google & Udacity |
 | About | `/about/index.html` | To build |
 | Insights (blog) | `/insights/index.html` + article template | To build |
 | Contact / Start a Project | `/contact/index.html` + `/contact/thank-you/index.html` | To build |
@@ -165,7 +165,7 @@ Case study template: Header (title, partners, year, tags, image) → At a glance
 
 1. ~~Services overview + 8 service pages~~ (done — Dina to confirm FAQ assumptions: on-site/remote mix, Arabic proposals, typical durations).
 2. ~~How I Work~~ (done — Dina to confirm: fee formats per model, proposal within 5 business days, weekly check-ins + monthly report, NDA before discovery call, specialist network, regional work, 2–3 week start).
-3. Work listing + case studies (start with the 6 homepage stories, then CU2050, CU AI Nexus, Belda, ECOSYS+, STREAM).
+3. Work listing + case studies — listing and the 6 homepage stories **done**; next batch: CU2050, CU AI Nexus, Belda, ECOSYS+, STREAM, NP Explore, Google & Udacity (copy the structure of `work/brainsmingle/index.html`; "Next case study" links follow the listing order). Dina to confirm: Gemini role/title, years for NP Explore and Google & Udacity, CUES 2026 sponsors/partners.
 4. About.
 5. Insights listing + article template (migrate old posts when available).
 6. Contact (Netlify form) + thank-you page + 404.
