@@ -159,7 +159,7 @@ Case study template: Header (title, partners, year, tags, image) → At a glance
 - Highest-quality logo (SVG or large PNG) — current one was taken from a screenshot.
 - Partner logos (optional, only with permission).
 - ~~CV PDF~~ → `assets/docs/dina-khedr-cv.pdf` (done: Dina's own `Resume 2026/DinaKhedr_Resume.pdf`, used **as is** at her explicit instruction on 19 Oct 2026 — it includes her phone number and the CU2050 130M EGP figure. This is the only approved exception to the 130M rule; web pages must still never show the figure.)
-- Capability statement PDF → `assets/docs/dina-khedr-capability-statement.pdf` (Claude can draft it).
+- ~~Capability statement PDF~~ → `assets/docs/dina-khedr-capability-statement.pdf` (done, approved 19 Oct 2026: 2-page A4 built from confirmed site content only — no 130M, no CU2050, no phone).
 - ~~Old blog~~ (done: 8 posts migrated from HubSpot; old in-article CTAs removed; leftover drafting text and a stray sentence fixed; empty CRM table dropped). "6 Egyptian Women" founder images are placeholders until Dina confirms reuse.
 - Free guide (lead magnet) title and PDF — the homepage guide block is commented out until then.
 - Testimonials (3–5 quotes) — section stays hidden until then.
@@ -172,5 +172,5 @@ Case study template: Header (title, partners, year, tags, image) → At a glance
 4. ~~About~~ (done — timeline from Dina's resume, Oct 2026; CU2050 deliberately left out of About).
 5. ~~Insights~~ (done — listing with category filter, article template with key takeaways, author box, related service and share; homepage "Perspectives" features Positioning vs. Promotion, Pricing Model and Silent Killer).
 6. ~~Contact (Netlify form) + thank-you page + 404~~ (done — form submits only once deployed on Netlify).
-7. ~~`netlify.toml`, `robots.txt`, `sitemap.xml`, OG image~~ (done — `netlify.toml` blocks public access to `/CLAUDE.md`, `/netlify.toml` and `/.claude/*` because the publish directory is the repo root; when adding or renaming a page, add it to `sitemap.xml`). Still missing before launch: **capability statement PDF** (linked in every footer).
+7. ~~`netlify.toml`, `robots.txt`, `sitemap.xml`, OG image~~ (done — `netlify.toml` blocks public access to `/CLAUDE.md`, `/netlify.toml` and `/.claude/*` because the publish directory is the repo root; when adding or renaming a page, add it to `sitemap.xml`).
 8. Full check (desktop + mobile, all links, `file://` preview), then connect Netlify and switch GoDaddy DNS.
