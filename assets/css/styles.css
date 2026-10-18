@@ -631,3 +631,24 @@ ol.deliverables { margin: 0; padding: 0; }
     .impact .hl { animation-name: ink-light; }
   }
 }
+
+/* ---------- Partners: labelled moving rows, logo-ready (homepage) ---------- */
+.partners__head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 48px; margin-bottom: 48px; }
+.partners__title { font-weight: 700; font-size: clamp(32px, 3.6vw, 52px); letter-spacing: -0.05em; line-height: 1.04; max-width: 14ch; }
+.partners__intro { max-width: 440px; font-size: 17px; color: var(--text); }
+.partners__rows { display: grid; gap: 14px; }
+.partners__row { display: grid; grid-template-columns: 200px minmax(0, 1fr); align-items: center; gap: 24px;
+  padding-left: max(var(--gutter), calc((100% - var(--container)) / 2 + var(--gutter))); }
+.partners__key { font-size: 12.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--bronze); line-height: 1.45; }
+.partner-logos .logo-pill { height: 80px; min-width: 180px; padding: 0 32px; font-size: 18px; color: var(--ink); background: var(--sand); }
+.partner-logos .logo-pill img { height: 44px; max-height: none; width: auto; max-width: 150px; object-fit: contain; filter: grayscale(1) contrast(1.1); opacity: .85; }
+.partner-logos .logo-pill:hover img { filter: none; opacity: 1; }
+.partner-logos .logo-track--left { animation-duration: 70s; }
+.partner-logos .logo-track--right { animation-duration: 85s; }
+.partner-logos .logo-track--slow { animation-duration: 80s; }
+@media (max-width: 760px) {
+  .partners__row { grid-template-columns: 1fr; gap: 10px; padding-left: 0; }
+  .partners__key { padding-left: var(--gutter); }
+  .partner-logos .logo-pill { height: 64px; min-width: 140px; padding: 0 24px; font-size: 15px; }
+  .partner-logos .logo-pill img { height: 34px; max-width: 120px; }
+}
