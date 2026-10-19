@@ -1011,3 +1011,9 @@ ol.deliverables { margin: 0; padding: 0; }
 .hack__link:hover { border-color: #00E39A; }
 .prog__link { margin-top: 28px; font-size: 15px; color: var(--ink); border-bottom: 1px solid var(--bronze); padding-bottom: 3px; }
 .prog__link:hover { color: var(--bronze); }
+/* Partner tiers: one row of six */
+.tiers { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.tier b { font-size: clamp(34px, 3vw, 44px); }
+.tier span { font-size: 14px; }
+@media (max-width: 1100px) { .tiers { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .tiers { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
