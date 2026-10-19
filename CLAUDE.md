@@ -19,8 +19,8 @@ The personal consulting website of **Dina Khedr**, an independent business & str
 - **English only.**
 - Tone of all copy: **professional, premium, consultant-grade.** Concise, confident, results-led. No hype, no clichés.
 - Two audiences, two pillars:
-  - **Founders & Growth Companies** (startups & SMEs)
-  - **Institutions & Development Partners** (universities, government bodies, donors, corporates)
+  - **Startups & SMEs** (renamed from "Founders & Growth Companies", Dina 19 Oct 2026)
+  - **Institutions & NGOs** (universities, government bodies, donors, corporates — renamed from "Institutions & Development Partners", Dina 19 Oct 2026)
 - Core message: **Strategy that scales. Programs that deliver.**
 
 ## 3. Sitemap
@@ -79,7 +79,7 @@ Global elements on every page: header (logo, nav: Services · How I Work · Work
   - Classes `.partner-logos`, `.partners__row`, `.partners__key` (do not reuse `.partners`, an older grid style). Size modifiers on pills: `logo-pill--tall` (crests: cairo-university, ministry-of-higher-education), `logo-pill--boost` (asrt, sawiris-foundation), `logo-pill--wide` (thin banners: erasmus-plus, htw-dresden).
   - The About page partner chips and the capability statement still use the earlier three groups (Government & Institutions / International & Corporate / Academic & Industry) without the new organizations — update them if Dina asks.
 - Selected work order (stacked cards): 01 BrainsMingle → 02 Google Gemini Activation → 03 NilePreneurs Accelerator → 04 WUZZUF Internship Program → 05 Digital Pathways for Employment → 06 CUES 2026.
-- "Who I partner with" (Dina's choice 19 Oct 2026, "Option A"): no A/B markers; two equal-height contrast cards (Founders in sand, Institutions in black) aligned with CSS subgrid (`.audience-cards`, `.audience-card--sand|--dark`); each card: title, intro, four service links, button (Services for founders → `services/index.html#track-a`, Services for institutions → `#track-b`).
+- "Who I partner with" (Dina's choice 19 Oct 2026, "Option A"): no A/B markers; two equal-height contrast cards (Startups & SMEs in sand, Institutions & NGOs in black) aligned with CSS subgrid (`.audience-cards`, `.audience-card--sand|--dark`); each card: title, intro, four service links, button ("Services for startups & SMEs" → `services/index.html#track-a`, "Services for institutions & NGOs" → `#track-b`).
 - Approach: Diagnose · Architect · Deliver · Measure. Engagement models: Strategy Sprint · Project Engagement · Fractional Leadership · Advisory & Workshops.
 - Testimonials section: **hidden** until Dina collects quotes.
 - Closing CTA: *Let's shape what comes next.* / *Begin with a 30-minute discovery conversation, or share the brief for your next initiative.* Buttons: Book a consultation · Share a brief.
@@ -93,18 +93,18 @@ Global elements on every page: header (logo, nav: Services · How I Work · Work
 ### The 8 services (slugs already linked from the homepage)
 | Audience | Service | Slug | Proof from Dina's record |
 |---|---|---|---|
-| Founders & Growth Companies | Growth & Go-to-Market Strategy | `growth-go-to-market-strategy` | JTS (Belda, Octopii, The Academy), Champions Global, iceAlex & TIEC mentoring |
+| Startups & SMEs | Growth & Go-to-Market Strategy | `growth-go-to-market-strategy` | JTS (Belda, Octopii, The Academy), Champions Global, iceAlex & TIEC mentoring |
 | | Brand Positioning & Architecture | `brand-positioning-architecture` | Belda rebrand (from HomeSurv), Chefaa brand rebuild, BrainsMingle positioning |
 | | Fractional Growth Leadership | `fractional-growth-leadership` | Marketing Director at JTS; Head of Product Marketing at BrainsMingle |
 | | Strategic Partnerships & Business Development | `strategic-partnerships-business-development` | Daftra partnerships + CRM, Buseet sales, 25K+ companies enabled on WUZZUF |
-| Institutions & Development Partners | Program Architecture & Delivery | `program-architecture-delivery` | DPE (4M EGP), NilePreneurs Accelerator, NP Explore, CU2050 (selected — no figure) |
+| Institutions & NGOs | Program Architecture & Delivery | `program-architecture-delivery` | DPE (4M EGP), NilePreneurs Accelerator, NP Explore, CU2050 (selected — no figure) |
 | | Ecosystem & University–Industry Partnerships | `ecosystem-university-industry-partnerships` | WUZZUF internship program (4,000+/yr), STREAM, Campus Ambassador Program |
 | | Flagship Summits & National Activations | `flagship-summits-national-activations` | BrainsMingle AI Summit, CUES 2026, CU AI Nexus Innovation Arena, Google Gemini activation (30K+) |
 | | Proposal & Funding Strategy | `proposal-funding-strategy` | ECOSYS+ (EU), STREAM (HTW Dresden), DPE (Sawiris), CU2050 proposal (selected) |
 
 Audience intros:
-- Founders & Growth Companies: *For founders and leadership teams ready to sharpen their position, enter new markets and build growth engines that outlast the launch.*
-- Institutions & Development Partners (shortened by Dina 19 Oct 2026 to match the Founders length; used on the homepage, Services page and capability statement): *For universities, government bodies, donors and corporates that need programs designed, funded and delivered to measurable impact.*
+- Startups & SMEs: *For founders and leadership teams ready to sharpen their position, enter new markets and build growth engines that outlast the launch.*
+- Institutions & NGOs (shortened by Dina 19 Oct 2026 to match the Founders length; used on the homepage, Services page and capability statement): *For universities, government bodies, donors and corporates that need programs designed, funded and delivered to measurable impact.*
 
 Service page template: Hero (name, one-line outcome, Book a consultation) → Who it's for (3–4 situations) → What you get (deliverables) → How it works (steps, typical duration) → Engagement options → Proof (related case studies) → FAQ (4–5) → Closing CTA.
 
