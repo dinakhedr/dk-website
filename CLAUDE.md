@@ -32,7 +32,7 @@ The personal consulting website of **Dina Khedr**, an independent business & str
 | Services overview | `/services/index.html` | **Done** |
 | 8 service pages | `/services/<slug>/index.html` | **Done** |
 | How I Work | `/how-i-work/index.html` | **Done** |
-| Work (case study library) | `/work/index.html` | **Done** (filter chips: Growth & Brand · Programs & Accelerators · Partnerships & Talent · Summits & Campaigns · Proposals & Funding). **Always keep it in sync with the homepage Selected work** (Dina, 19 Oct 2026): every homepage card has a Work card, in the same order at the top, with the same title and headline figure; update both pages together. |
+| Work (case study library) | `/work/index.html` | **Done** (filter chips: Growth & Brand · Programs & Accelerators · Partnerships & Talent · Summits & Campaigns · Proposals & Funding). **Cards are ordered by year, newest first** (by end year, then start year; Dina, 19 Oct 2026): 2026 BrainsMingle AI Summit · BrainsMingle Knowledge Base & Guest View · CUES 2026 → 2025 Google Gemini · CU2050 · CU AI Nexus · Belda → 2022 Digital Pathways · STREAM · ECOSYS+ · NilePreneurs Accelerator · NP Explore → 2018 WUZZUF Internship · Google & Udacity. Every homepage card must also have a Work card with the same title and headline figure; update both pages together. "Next case study" links follow this Work order (the last links back to the first). |
 | Case studies | `/work/<slug>/index.html` | **Done** (14 — `brainsmingle-platform` added 19 Oct 2026) |
 | About | `/about/index.html` | **Done** |
 | Insights (blog) — "Strategy to Street" | `/insights/index.html` + 8 articles `/insights/<slug>/index.html` | **Done** |
@@ -179,7 +179,7 @@ Case study template: Header (title, partners, year, tags, image) → At a glance
 
 1. ~~Services overview + 8 service pages~~ (done — Dina to confirm FAQ assumptions: on-site/remote mix, Arabic proposals, typical durations).
 2. ~~How I Work~~ (done — Dina to confirm: fee formats per model, proposal within 5 business days, weekly check-ins + monthly report, NDA before discovery call, specialist network, regional work, 2–3 week start).
-3. ~~Work listing + case studies~~ (done — all 13; copy `work/brainsmingle/index.html` for new ones; "Next case study" links follow the listing order; roles and years corrected from Dina's resume). Dina to confirm: CUES 2026 sponsors; CU2050 pillar themes; CU AI Nexus and ECOSYS+ outcome figures; NP Explore discipline names.
+3. ~~Work listing + case studies~~ (done — all 13; copy `work/brainsmingle/index.html` for new ones; "Next case study" links follow the Work order (by year); roles and years corrected from Dina's resume). Dina to confirm: CUES 2026 sponsors; CU2050 pillar themes; CU AI Nexus and ECOSYS+ outcome figures; NP Explore discipline names.
 4. ~~About~~ (done — timeline from Dina's resume, Oct 2026; CU2050 deliberately left out of About).
 5. ~~Insights~~ (done — listing with category filter, article template with key takeaways, author box, related service and share; homepage "Perspectives" features Positioning vs. Promotion, Pricing Model and Silent Killer).
 6. ~~Contact (Netlify form) + thank-you page + 404~~ (done — form submits only once deployed on Netlify).
