@@ -1174,3 +1174,23 @@ html.lightbox-open { overflow: hidden; }
 .feature__claim-icon { width: 34px; height: 34px; flex: none; padding: 7px; border-radius: 50%; background: var(--beige); color: var(--ink); }
 .feature__claim--light { background: rgba(255, 255, 255, 0.55); border-color: rgba(12, 12, 11, 0.12); color: var(--ink); }
 .feature__claim--light .feature__claim-icon { background: var(--ink); color: var(--beige); }
+/* Gemini case study: university bars + photo grid */
+.ubars { display: flex; flex-direction: column; gap: 14px; margin-top: 16px; }
+.ubar { display: grid; grid-template-columns: 150px minmax(0, 1fr) 70px; align-items: center; gap: 14px; }
+.ubar__name { font-size: 15px; font-weight: 600; color: var(--ink); }
+.ubar__track { height: 14px; border-radius: 999px; background: var(--sand); overflow: hidden; }
+.ubar__fill { display: block; height: 100%; width: var(--w); min-width: 6px; border-radius: 999px; background: var(--ink); }
+.ubar b { font-size: 16px; font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; }
+.ubars__note { margin-top: 18px; font-size: 14px; line-height: 1.6; color: var(--muted); }
+.gphotos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 56px; }
+.gphoto { margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.gphoto img { width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: cover; border-radius: 16px; display: block; }
+.gphoto figcaption { font-size: 13.5px; color: var(--muted); }
+@media (max-width: 900px) { .gphotos { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .gphotos { grid-template-columns: 1fr; } .ubar { grid-template-columns: 110px minmax(0, 1fr) 56px; gap: 10px; } }
+/* Approach steps: rows aligned across all four cards (Dina, 19 Oct 2026) */
+.steps { grid-template-rows: auto auto auto auto; }
+.steps .step { display: grid; grid-row: span 3; grid-template-rows: subgrid; row-gap: 14px; align-content: start; }
+.steps:has(.step__out) .step { grid-row: span 4; }
+@media (max-width: 760px) { .steps { grid-template-rows: none; } .steps .step { grid-row: auto; grid-template-rows: none; } }
+.steps .step__out { margin-top: 0; align-self: start; }
