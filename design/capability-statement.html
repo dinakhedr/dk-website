@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dina Khedr — Capability Statement 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+  :root { --ink: #0C0C0B; --beige: #E9DFCE; --sand: #F3ECE0; --taupe: #9C8462; --bronze: #7A6242; --text: #3B352C; --muted: #5E5547; --line: rgba(12,12,11,.14); }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; font-variation-settings: 'opsz' 28; color: var(--text); font-size: 9.6pt; line-height: 1.5; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: 210mm; height: 297mm; padding: 15mm 15mm 12mm; position: relative; overflow: hidden; page-break-after: always; display: flex; flex-direction: column; }
+  .page:last-child { page-break-after: auto; }
+  a { color: inherit; text-decoration: none; }
+  h2 { font-size: 7.6pt; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--bronze); margin-bottom: 3.2mm; }
+  strong { color: var(--ink); font-weight: 600; }
+
+  .top { display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 5mm; border-bottom: 1px solid var(--line); }
+  .top img { height: 13mm; }
+  .top--slim { padding-bottom: 3.5mm; }
+  .top--slim img { height: 9.5mm; }
+  .top__meta { text-align: right; font-size: 8pt; color: var(--muted); line-height: 1.6; }
+  .top__meta b { display: block; font-size: 7.6pt; letter-spacing: .18em; text-transform: uppercase; color: var(--bronze); font-weight: 600; }
+
+  .hero { display: grid; grid-template-columns: 1fr 40mm; gap: 9mm; align-items: center; margin-top: 6mm; }
+  .hero h1 { font-size: 27pt; font-weight: 700; letter-spacing: -0.05em; line-height: 1.02; color: var(--ink); }
+  .hero h1 span { color: var(--taupe); }
+  .hero p { margin-top: 3.5mm; font-size: 9.8pt; line-height: 1.5; }
+  .portrait { width: 40mm; height: 40mm; border-radius: 50%; overflow: hidden; border: 2mm solid var(--sand); }
+  .portrait img { width: 100%; height: 100%; object-fit: cover; }
+
+  .numbers { margin-top: 6mm; display: grid; grid-template-columns: repeat(6, 1fr); gap: 3mm; background: var(--ink); color: #fff; border-radius: 5mm; padding: 4.5mm 6mm; }
+  .numbers div { display: flex; flex-direction: column; gap: 1.2mm; }
+  .numbers b { font-size: 17pt; font-weight: 700; letter-spacing: -0.04em; line-height: 1; color: var(--beige); }
+  .numbers span { font-size: 7.2pt; line-height: 1.35; color: rgba(255,255,255,.78); }
+
+  .caps { margin-top: 6mm; display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
+  .track { background: var(--sand); border-radius: 5mm; padding: 5mm 5.5mm; }
+  .track__name { font-size: 12.5pt; font-weight: 700; letter-spacing: -0.03em; color: var(--ink); line-height: 1.2; }
+  .track__intro { margin-top: 1.6mm; font-size: 8.4pt; color: var(--muted); line-height: 1.5; }
+  .track ol { list-style: none; margin-top: 3mm; display: grid; gap: 2.2mm; }
+  .track li { padding-top: 2.2mm; border-top: 1px solid var(--line); line-height: 1.35; }
+  .track li strong { display: block; font-size: 9.6pt; }
+  .track li span { display: block; margin-top: .6mm; font-size: 8.2pt; line-height: 1.4; }
+
+  .row2 { margin-top: 6mm; display: grid; grid-template-columns: 1fr 1fr; gap: 9mm; }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5mm; }
+  .steps div { border-top: 2px solid var(--taupe); padding-top: 2.4mm; }
+  .steps b { display: block; font-size: 9.6pt; color: var(--ink); }
+  .steps span { font-size: 7.6pt; line-height: 1.4; display: block; margin-top: 1mm; }
+  .models { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5mm 5mm; }
+  .models b { display: block; font-size: 9.2pt; color: var(--ink); }
+  .models span { display: block; font-size: 7.8pt; line-height: 1.4; }
+
+  .foot { margin-top: auto; padding-top: 3mm; border-top: 1px solid var(--line); display: flex; justify-content: space-between; font-size: 7.8pt; color: var(--muted); }
+
+  .work { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; margin-top: 5mm; }
+  .case { border: 1px solid var(--line); border-radius: 4mm; padding: 3.6mm 4.5mm; display: flex; flex-direction: column; gap: 1.1mm; }
+  .case--dark { background: var(--ink); border-color: var(--ink); color: rgba(255,255,255,.82); }
+  .case--dark .case__title { color: #fff; }
+  .case--dark .case__fig { color: var(--beige); }
+  .case__tag { font-size: 6.8pt; letter-spacing: .14em; text-transform: uppercase; color: var(--bronze); font-weight: 600; }
+  .case--dark .case__tag { color: var(--taupe); }
+  .case__title { font-size: 10.4pt; font-weight: 700; letter-spacing: -0.02em; color: var(--ink); line-height: 1.25; }
+  .case__text { font-size: 7.8pt; line-height: 1.4; }
+  .case__fig { margin-top: auto; padding-top: .8mm; font-size: 10.8pt; font-weight: 700; letter-spacing: -0.03em; color: var(--ink); }
+
+  .why { margin-top: 5mm; display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; }
+  .why div { background: var(--sand); border-radius: 4mm; padding: 3.4mm 3.6mm; }
+  .why b { display: block; font-size: 8.8pt; color: var(--ink); line-height: 1.25; margin-bottom: 1mm; }
+  .why span { font-size: 7.6pt; line-height: 1.4; display: block; }
+
+  .row3 { margin-top: 6mm; display: grid; grid-template-columns: 1.35fr 1fr; gap: 9mm; }
+  .partners p { font-size: 7.9pt; line-height: 1.45; margin-bottom: 1.8mm; }
+  .partners p b { display: block; font-size: 7.2pt; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: .6mm; }
+  .creds { list-style: none; display: grid; gap: 2mm; }
+  .creds li { font-size: 8.2pt; line-height: 1.4; }
+  .creds b { display: block; font-size: 9pt; color: var(--ink); }
+
+  .contact { margin-top: 6mm; background: var(--beige); border-radius: 5mm; padding: 5mm 6mm; display: grid; grid-template-columns: 1fr auto; gap: 6mm; align-items: center; }
+  .contact__title { font-size: 14pt; font-weight: 700; letter-spacing: -0.04em; color: var(--ink); line-height: 1.1; }
+  .contact__text { margin-top: 1.6mm; font-size: 8.6pt; }
+  .contact__list { font-size: 8.4pt; line-height: 1.65; text-align: right; }
+  .contact__list b { color: var(--ink); }
+  .btn { display: inline-block; margin-top: 2.4mm; background: var(--ink); color: #fff; border-radius: 99px; padding: 2.2mm 5mm; font-size: 8.4pt; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<section class="page">
+  <div class="top">
+    <img src="../assets/img/logo-dina-khedr.png" alt="Dina Khedr">
+    <div class="top__meta"><b>Capability Statement · 2026</b>Independent Business &amp; Strategy Consultant · Cairo, Egypt</div>
+  </div>
+
+  <div class="hero">
+    <div>
+      <h1>Strategy that <span>scales.</span><br>Programs that <span>deliver.</span></h1>
+      <p>Dina Khedr partners with founders, institutions and development organizations to design growth strategies and national-scale programs, and see them through to measurable results. Eighteen years at the intersection of strategy, growth and national programs — turning complex mandates into clear direction and measurable outcomes.</p>
+    </div>
+    <div class="portrait"><img src="../assets/img/dina-khedr-portrait.jpg" alt=""></div>
+  </div>
+
+  <div class="numbers">
+    <div><b>18+</b><span>years of strategic leadership</span></div>
+    <div><b>40,000+</b><span>students &amp; graduates reached</span></div>
+    <div><b>20+</b><span>government, international &amp; industry partners</span></div>
+    <div><b>7.8×</b><span>platform user growth in six months</span></div>
+    <div><b>13</b><span>flagship programs &amp; campaigns</span></div>
+    <div><b>10</b><span>sectors served</span></div>
+  </div>
+
+  <div class="caps">
+    <div class="track">
+      <h2>Track A</h2>
+      <p class="track__name">Founders &amp; Growth Companies</p>
+      <p class="track__intro">For founders and leadership teams ready to sharpen their position, enter new markets and build growth engines that outlast the launch.</p>
+      <ol>
+        <li><strong>Growth &amp; Go-to-Market Strategy</strong><span>Decide where to play, how to win and what to do first.</span></li>
+        <li><strong>Brand Positioning &amp; Architecture</strong><span>Positioning, messaging and identity that make you the obvious choice.</span></li>
+        <li><strong>Fractional Growth Leadership</strong><span>A senior growth leader in your team, part-time.</span></li>
+        <li><strong>Strategic Partnerships &amp; Business Development</strong><span>Partnerships, pipeline and the systems to grow B2B revenue.</span></li>
+      </ol>
+    </div>
+    <div class="track">
+      <h2>Track B</h2>
+      <p class="track__name">Institutions &amp; Development Partners</p>
+      <p class="track__intro">For universities, government bodies, donors and corporates that need programs rigorously designed, credibly funded and delivered to measurable impact.</p>
+      <ol>
+        <li><strong>Program Architecture &amp; Delivery</strong><span>From blank page to funded, delivered and measured.</span></li>
+        <li><strong>Ecosystem &amp; University–Industry Partnerships</strong><span>Connecting universities, employers and ecosystems at scale.</span></li>
+        <li><strong>Flagship Summits &amp; National Activations</strong><span>Summits and campaigns designed for reach and results.</span></li>
+        <li><strong>Proposal &amp; Funding Strategy</strong><span>Proposals designed to be selected — and delivered.</span></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="row2">
+    <div>
+      <h2>A disciplined approach</h2>
+      <div class="steps">
+        <div><b>Diagnose</b><span>Market, organization and stakeholders.</span></div>
+        <div><b>Architect</b><span>Design built for the realities on the ground.</span></div>
+        <div><b>Deliver</b><span>Execution, launch and team enablement.</span></div>
+        <div><b>Measure</b><span>KPIs, reporting and refinement.</span></div>
+      </div>
+    </div>
+    <div>
+      <h2>Ways to engage</h2>
+      <div class="models">
+        <div><b>Strategy Sprint</b><span>Set direction · 2–4 weeks</span></div>
+        <div><b>Project Engagement</b><span>End-to-end scope · 1–6 months</span></div>
+        <div><b>Fractional Leadership</b><span>Embedded, part-time · 3+ months</span></div>
+        <div><b>Advisory &amp; Workshops</b><span>Sessions and ongoing counsel</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot"><span>www.dinakhedr.com</span><span>info@dinakhedr.com · linkedin.com/in/dinakhedr</span><span>1 / 2</span></div>
+</section>
+
+<section class="page">
+  <div class="top top--slim">
+    <img src="../assets/img/logo-dina-khedr.png" alt="Dina Khedr">
+    <div class="top__meta"><b>Selected work &amp; credentials</b>Capability Statement · 2026</div>
+  </div>
+
+  <div class="work">
+    <div class="case case--dark"><span class="case__tag">BrainsMingle · 2026</span><span class="case__title">BrainsMingle — Growth &amp; AI Summit</span><span class="case__text">Positioning, demand generation and community growth for an AI platform, culminating in a free 7-day virtual summit with 100+ speakers. Users grew 5K → 39K.</span><span class="case__fig">20K registrations in one month</span></div>
+    <div class="case"><span class="case__tag">Google × WUZZUF · 2025</span><span class="case__title">Google Gemini Pro Student Activation</span><span class="case__text">An integrated campus and digital campaign across Cairo University, Mansoura University, AUC and the Arab Academy.</span><span class="case__fig">30,000+ student sign-ups</span></div>
+    <div class="case"><span class="case__tag">HSBC Egypt · NilePreneurs · 2019–2022</span><span class="case__title">NilePreneurs Accelerator</span><span class="case__text">A six-month growth-stage accelerator designed and led across two full cycles, from structured mentorship to investor readiness.</span><span class="case__fig">50+ startups graduated</span></div>
+    <div class="case"><span class="case__tag">WUZZUF · 2016–2018</span><span class="case__title">WUZZUF Internship Program</span><span class="case__text">Egypt's first structured internship program, with university and employer partnerships enabling 25,000+ companies on WUZZUF.</span><span class="case__fig">4,000+ placements a year</span></div>
+    <div class="case"><span class="case__tag">Sawiris Foundation · Nile University · 2022</span><span class="case__title">Digital Pathways for Employment</span><span class="case__text">A 4M EGP workforce program training graduates across six tracks, from UX/UI and front-end to business development.</span><span class="case__fig">300+ graduates trained</span></div>
+    <div class="case"><span class="case__tag">Cairo University · 2026</span><span class="case__title">Cairo University Entrepreneurship Summit</span><span class="case__text">Led end to end — agenda, startup exhibition, identity, website and registration — with 6 panels, 3 keynotes and 10 startups.</span><span class="case__fig">2,000+ attendees</span></div>
+  </div>
+
+  <div class="why">
+    <div><b>Strategist and builder</b><span>Engineering roots, growth leadership across Egypt's tech platforms, then national programs.</span></div>
+    <div><b>Proven at national scale</b><span>Programs reaching 40,000+ students and graduates with 20+ partners.</span></div>
+    <div><b>Fluent across sectors</b><span>Employment, e-learning, health-tech, SaaS, marketplaces, AI and more.</span></div>
+    <div><b>Senior attention throughout</b><span>Direct involvement from first conversation to final report.</span></div>
+  </div>
+
+  <div class="row3">
+    <div class="partners">
+      <h2>Partners along the way</h2>
+      <p><b>Government &amp; Institutions</b>Ministry of Higher Education · Central Bank of Egypt · ASRT · TIEC (ITIDA)</p>
+      <p><b>International &amp; Corporate</b>Google · HSBC · European Union · GIZ · ILO · Erasmus+ · Udacity · Sawiris Foundation · HTW Dresden</p>
+      <p><b>Academic &amp; Industry</b>Nile University · Cairo University · WUZZUF · Forasna · BrainsMingle · Daftra · almentor · Chefaa · Belda</p>
+    </div>
+    <div>
+      <h2>Credentials</h2>
+      <ul class="creds">
+        <li><b>MBA, Small &amp; Medium Enterprises</b>AAST Graduate School of Business · 2025 · GPA 3.94</li>
+        <li><b>B.Sc. Communications &amp; Electronics</b>Faculty of Engineering, Alexandria University · 2008</li>
+        <li><b>Software Development, ITI</b>9-month CSAD program · 2009</li>
+        <li><b>Startup mentor</b>iceAlex &amp; TIEC</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="contact">
+    <div>
+      <p class="contact__title">Let's shape what comes next.</p>
+      <p class="contact__text">Begin with a complimentary 30-minute discovery conversation, or share the brief for your next initiative.</p>
+      <a class="btn" href="https://calendar.app.google/dwxgqnSqhQKSAXD16">Book a discovery call</a>
+    </div>
+    <div class="contact__list">
+      <a href="mailto:info@dinakhedr.com"><b>info@dinakhedr.com</b></a><br>
+      <a href="https://www.linkedin.com/in/dinakhedr">linkedin.com/in/dinakhedr</a><br>
+      <a href="https://www.dinakhedr.com">www.dinakhedr.com</a><br>
+      Cairo, Egypt
+    </div>
+  </div>
+
+  <div class="foot"><span>www.dinakhedr.com</span><span>info@dinakhedr.com · linkedin.com/in/dinakhedr</span><span>2 / 2</span></div>
+</section>
+
+</body>
+</html>
