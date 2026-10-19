@@ -1097,3 +1097,7 @@ html.lightbox-open { overflow: hidden; }
 .cs-pair__item span { font-size: 14px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--bronze); }
 .cs-sub { font-size: 20px; font-weight: 600; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 10px; }
 @media (max-width: 700px) { .cs-pair { grid-template-columns: 1fr; } }
+/* Hero descriptions span 75% of the page width (Dina, 19 Oct 2026); full width on phones and inside split heroes */
+.page-hero__lead { max-width: 75%; }
+.about-hero .page-hero__lead { max-width: none; }
+@media (max-width: 760px) { .page-hero__lead { max-width: none; } }
