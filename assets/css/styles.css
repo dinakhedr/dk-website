@@ -1255,3 +1255,10 @@ html.lightbox-open { overflow: hidden; }
 .glogos__row li.glogo--crest img { transform: scale(1.9); }
 @media (max-width: 760px) { .glogos__row li { height: 110px; } }
 .glogos__row li.glogo--crest img { object-fit: cover; transform: scale(1.3); }
+/* Masonry photo gallery */
+.masonry { columns: 3; column-gap: 14px; margin-top: 8px; }
+.masonry__item { break-inside: avoid; margin: 0 0 14px; }
+.masonry__item img { width: 100%; height: auto; display: block; border-radius: 14px; cursor: zoom-in; }
+.masonry__item figcaption { margin-top: 8px; font-size: 13px; color: var(--muted); }
+@media (max-width: 900px) { .masonry { columns: 2; } }
+@media (max-width: 520px) { .masonry { columns: 1; } }
