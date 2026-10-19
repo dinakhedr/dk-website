@@ -979,3 +979,14 @@ ol.deliverables { margin: 0; padding: 0; }
 .summit-hero .summit-band__grid { margin-top: clamp(40px, 5vw, 64px); padding-top: 36px; border-top: 1px solid rgba(255, 255, 255, 0.14); }
 .summit-hero .summit-band__foot { margin-top: 32px; }
 @media (max-width: 900px) { .summit-hero__grid { grid-template-columns: 1fr; } .summit-hero__media { max-width: 560px; } }
+/* AI Summit hero: headline figures in two grouped rows of tiles */
+.nums { margin-top: clamp(40px, 5vw, 64px); }
+.nums__key { font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: rgba(255, 255, 255, 0.55); margin: 0 0 12px; }
+.nums__row + .nums__key { margin-top: 28px; }
+.nums__row { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; }
+.nums__tile { background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 18px; padding: 18px 18px 20px; display: flex; flex-direction: column; }
+.nums__icon { width: 22px; height: 22px; color: #00E39A; }
+.nums__value { margin-top: 22px; font-size: clamp(30px, 2.6vw, 42px); font-weight: 700; letter-spacing: -0.05em; line-height: 1; color: var(--beige); font-variant-numeric: tabular-nums; }
+.nums__label { margin-top: 8px; font-size: 13.5px; line-height: 1.4; color: rgba(255, 255, 255, 0.7); }
+@media (max-width: 1100px) { .nums__row { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .nums__row { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; } .nums__tile { padding: 14px; border-radius: 14px; } .nums__value { margin-top: 14px; } }
