@@ -252,6 +252,17 @@
     });
   }
 
+  /* ---------- Video: jump to a timestamp ---------- */
+  document.querySelectorAll('[data-seek]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var v = btn.closest('figure').querySelector('video');
+      if (!v) return;
+      var t = parseFloat(btn.getAttribute('data-seek'));
+      var go = function () { v.currentTime = t; v.play(); };
+      if (v.readyState >= 1) go(); else { v.preload = 'auto'; v.addEventListener('loadedmetadata', go, { once: true }); v.load(); }
+    });
+  });
+
   /* ---------- Footer year ---------- */
   var year = document.querySelector('[data-year]');
   if (year) year.textContent = new Date().getFullYear();
