@@ -1307,3 +1307,5 @@ html.lightbox-open { overflow: hidden; }
 .vhero__partners img[alt="HSBC"] { height: 30px; }
 .vhero__partners { flex-wrap: nowrap; }
 @media (max-width: 520px) { .vhero__partners { gap: 14px; } .vhero__partners img[alt="Nile University"] { height: 36px; } .vhero__partners img[alt="NilePreneurs"] { height: 46px; } .vhero__partners img[alt="HSBC"] { height: 22px; } }
+.cycle__strip .fcard { margin: 0; scroll-snap-align: start; }
+.cycle__strip .fcard img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 14px; cursor: zoom-in; }
