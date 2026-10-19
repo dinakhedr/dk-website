@@ -805,3 +805,16 @@ ol.deliverables { margin: 0; padding: 0; }
 .deliverables--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 @media (max-width: 900px) { .deliverables--3 { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .deliverables--3 { grid-template-columns: 1fr; } }
+/* Daily lineup gallery (AI Summit case study) */
+.lineups { margin-top: 72px; }
+.lineups__head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 24px; }
+.lineups__title { font-size: clamp(22px, 2.2vw, 30px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.2; }
+.lineups__hint { font-size: 14px; font-weight: 600; color: var(--bronze); white-space: nowrap; }
+.lineups__strip { display: grid; grid-auto-flow: column; grid-auto-columns: clamp(240px, 26vw, 330px); gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 16px; scrollbar-width: thin; }
+.lineups__strip:focus-visible { outline: 2px solid var(--bronze); outline-offset: 4px; }
+.lineups__item { margin: 0; scroll-snap-align: start; display: flex; flex-direction: column; gap: 12px; }
+.lineups__item img { width: 100%; height: auto; display: block; border-radius: var(--radius-md); background: var(--ink); }
+.lineups__item figcaption { display: flex; flex-direction: column; gap: 2px; }
+.lineups__item b { font-size: 15px; font-weight: 600; color: var(--ink); }
+.lineups__item span { font-size: 13.5px; color: var(--muted); }
+@media (max-width: 600px) { .lineups__strip { grid-auto-columns: 78%; } }
