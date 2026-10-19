@@ -1249,3 +1249,9 @@ html.lightbox-open { overflow: hidden; }
 .sdesign figcaption { font-size: 13.5px; color: var(--muted); line-height: 1.4; }
 @media (max-width: 1000px) { .sdesigns { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 600px) { .sdesigns { grid-template-columns: 1fr 1fr; } }
+/* Logo tiles: plates have built-in padding, so enlarge them inside the tile */
+.glogos__row li { height: 140px; overflow: hidden; }
+.glogos__row li.glogo--plate img { transform: scale(1.35); }
+.glogos__row li.glogo--crest img { transform: scale(1.9); }
+@media (max-width: 760px) { .glogos__row li { height: 110px; } }
+.glogos__row li.glogo--crest img { object-fit: cover; transform: scale(1.3); }
