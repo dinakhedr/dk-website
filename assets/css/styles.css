@@ -990,3 +990,5 @@ ol.deliverables { margin: 0; padding: 0; }
 .nums__label { margin-top: 8px; font-size: 13.5px; line-height: 1.4; color: rgba(255, 255, 255, 0.7); }
 @media (max-width: 1100px) { .nums__row { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 520px) { .nums__row { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; } .nums__tile { padding: 14px; border-radius: 14px; } .nums__value { margin-top: 14px; } }
+.summit-hero__format { margin-top: 24px; font-size: clamp(17px, 1.4vw, 20px); font-weight: 600; letter-spacing: -0.01em; color: #00E39A; }
+.summit-hero__format + .summit-hero__tags { margin-top: 14px; }
