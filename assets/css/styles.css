@@ -1194,3 +1194,8 @@ html.lightbox-open { overflow: hidden; }
 .steps:has(.step__out) .step { grid-row: span 4; }
 @media (max-width: 760px) { .steps { grid-template-rows: none; } .steps .step { grid-row: auto; grid-template-rows: none; } }
 .steps .step__out { margin-top: 0; align-self: start; }
+/* Journey cards: rows aligned across cards */
+.journey { grid-template-rows: auto auto auto auto; }
+.journey__step { display: grid; grid-row: span 4; grid-template-rows: subgrid; row-gap: 8px; align-content: start; }
+.journey__step .journey__icon { margin-bottom: 4px; }
+@media (max-width: 1000px) { .journey { grid-template-rows: none; } .journey__step { grid-row: auto; grid-template-rows: none; } }
