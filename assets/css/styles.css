@@ -729,7 +729,7 @@ ol.deliverables { margin: 0; padding: 0; }
 .summit-dark__text { color: rgba(255, 255, 255, 0.75); max-width: 640px; }
 .summit-dark__sub { margin: 80px 0 24px; font-size: clamp(22px, 2vw, 28px); font-weight: 600; letter-spacing: -0.03em; }
 .tracks5 { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-top: 48px; }
-.track5 { border-radius: 20px; padding: 24px 22px; display: grid; grid-row: span 5; grid-template-rows: subgrid; row-gap: 10px; align-content: start; border: 1px solid color-mix(in srgb, var(--c) 40%, transparent);
+.track5 { border-radius: 20px; padding: 24px 22px; display: grid; grid-row: span 3; grid-template-rows: subgrid; row-gap: 10px; align-content: start; border: 1px solid color-mix(in srgb, var(--c) 40%, transparent);
   background: linear-gradient(180deg, color-mix(in srgb, var(--c) 16%, #0B1412), #0B1412 60%); }
 .track5__icon { width: 44px; height: 44px; display: block; margin-bottom: 4px; }
 .track5__key { margin-top: 8px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.12); font-size: 12px !important; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--c) !important; }
