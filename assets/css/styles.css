@@ -1086,3 +1086,14 @@ html.lightbox-open { overflow: hidden; }
 .audience-card .svc-list a:hover::after { opacity: 1; transform: translateX(4px); }
 .cs-shot { margin: 0; border-radius: 20px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 24px 50px rgba(12, 12, 11, 0.08); }
 .cs-shot img { display: block; width: 100%; height: auto; }
+/* Hero titles: the accent phrase never wraps (JS shrinks the title to fit) */
+.js .page-hero__title .accent, .js .summit-hero__title span { white-space: nowrap; display: inline-block; }
+.page-hero__title { max-width: none !important; }
+/* Two-project case study: hero pair + sub-headings */
+.cs-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.cs-pair__item { display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: var(--ink); }
+.cs-pair__item img { display: block; width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--line); box-shadow: 0 20px 44px rgba(12, 12, 11, 0.08); transition: transform .35s var(--ease); }
+.cs-pair__item:hover img { transform: translateY(-4px); }
+.cs-pair__item span { font-size: 14px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--bronze); }
+.cs-sub { font-size: 20px; font-weight: 600; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 10px; }
+@media (max-width: 700px) { .cs-pair { grid-template-columns: 1fr; } }

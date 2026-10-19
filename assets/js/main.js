@@ -186,6 +186,30 @@
     });
   }
 
+  /* ---------- Hero titles: keep the accent (beige) phrase on one line ---------- */
+  var fitTitles = function () {
+    document.querySelectorAll('.page-hero__title, .summit-hero__title').forEach(function (h) {
+      var acc = h.querySelector('.accent, span');
+      if (!acc) return;
+      h.style.fontSize = '';
+      acc.style.whiteSpace = 'normal';
+      acc.style.display = 'inline';
+      var avail = h.clientWidth;
+      acc.style.whiteSpace = '';
+      acc.style.display = '';
+      var size = parseFloat(getComputedStyle(h).fontSize);
+      var guard = 0;
+      while (acc.getBoundingClientRect().width > avail + 1 && size > 22 && guard < 60) {
+        size -= 1; guard++;
+        h.style.fontSize = size + 'px';
+      }
+    });
+  };
+  fitTitles();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitTitles);
+  var fitTimer;
+  window.addEventListener('resize', function () { clearTimeout(fitTimer); fitTimer = setTimeout(fitTitles, 120); });
+
   /* ---------- Footer year ---------- */
   var year = document.querySelector('[data-year]');
   if (year) year.textContent = new Date().getFullYear();
