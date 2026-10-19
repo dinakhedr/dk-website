@@ -1128,3 +1128,14 @@ html.lightbox-open { overflow: hidden; }
 .bento--on-sand .bento__item .bento__icon { background: var(--sand); }
 .bento__item--wide { grid-column: 1 / -1; }
 @media (min-width: 901px) { .bento__item--wide { display: grid; grid-template-columns: 44px minmax(0, 0.6fr) minmax(0, 1.4fr); align-items: center; column-gap: 20px; } .bento__item--wide .bento__icon { margin: 0; } }
+/* Bento + objective spacing fixes (Dina, 19 Oct 2026) */
+.bento h4 { margin: 0; }
+.bento__icon { margin-bottom: 8px; }
+.bento__lead h4 { margin-top: 0; }
+.bento__item, .bento__lead { gap: 10px; }
+.kb-top { max-width: none; }
+.kb-top .cs-text { max-width: 75%; }
+@media (max-width: 760px) { .kb-top .cs-text { max-width: none; } }
+.bento__chips { margin-top: auto; padding-top: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }
+.bento__chips span { display: flex; flex-direction: column; gap: 2px; padding: 14px 16px; border-radius: 16px; background: rgba(255, 255, 255, 0.07); border: 1px solid rgba(255, 255, 255, 0.1); font-size: 13px; color: rgba(255, 255, 255, 0.65); }
+.bento__chips b { font-size: 16px; font-weight: 600; color: var(--beige); }
