@@ -74,9 +74,8 @@ Global elements on every page: header (logo, nav: Services · How I Work · Work
 - Hero must fit above the fold (desktop, laptop and phone; on phones a small portrait sits above the headline).
 - Partners section (Dina's choices 19 Oct 2026): heading **Organizations I've worked with** + intro *Government bodies, international partners, universities and companies across Egypt and the region.* Three slow moving rows of **logos** (all in, original colours), each with a fixed label on the left (above the row on phones):
   - **Government & Academia:** Nile University (always first) · Cairo University · Ministry of Higher Education · Central Bank of Egypt · Egyptian Banking Institute · ASRT · TIEC (ITIDA)
-  - **International & Corporate:** Google · HSBC · Erasmus+ · ILO · GIZ · Udacity · Sawiris Foundation · HTW Dresden · Barça Innovation Hub · Andalusia · iceAlex (European Union removed by Dina)
+  - **International & Corporate:** Google · Gemini · HSBC · Erasmus+ · ILO · GIZ · Udacity · Sawiris Foundation · HTW Dresden · Barça Innovation Hub · Andalusia · iceAlex (European Union removed by Dina)
   - **Startups & Scaleups:** WUZZUF · Forasna · BrainsMingle · Daftra · almentor · Chefaa · Belda · Bkam · Buseet · Champions Global · iCareer · JTS · The Academy
-  - Gemini logo (`gemini.png`) deliberately not shown (repeat of Google); file left uncommitted.
   - Classes `.partner-logos`, `.partners__row`, `.partners__key` (do not reuse `.partners`, an older grid style). Size modifiers on pills: `logo-pill--tall` (crests: cairo-university, ministry-of-higher-education), `logo-pill--boost` (asrt, sawiris-foundation), `logo-pill--wide` (thin banners: erasmus-plus, htw-dresden).
   - The About page partner chips and the capability statement still use the earlier three groups (Government & Institutions / International & Corporate / Academic & Industry) without the new organizations — update them if Dina asks.
 - Selected work order (stacked cards): 01 BrainsMingle → 02 Google Gemini Activation → 03 NilePreneurs Accelerator → 04 WUZZUF Internship Program → 05 Digital Pathways for Employment → 06 CUES 2026.
