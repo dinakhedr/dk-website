@@ -1199,3 +1199,7 @@ html.lightbox-open { overflow: hidden; }
 .journey__step { display: grid; grid-row: span 4; grid-template-rows: subgrid; row-gap: 8px; align-content: start; }
 .journey__step .journey__icon { margin-bottom: 4px; }
 @media (max-width: 1000px) { .journey { grid-template-rows: none; } .journey__step { grid-row: auto; grid-template-rows: none; } }
+/* Photo lightbox */
+.gphoto img, .cs-shot img { cursor: zoom-in; transition: transform .3s var(--ease); }
+.gphoto img:hover { transform: scale(1.015); }
+.lightbox__img { max-width: 100%; max-height: calc(100vh - 170px); width: auto; height: auto; border-radius: 14px; display: block; animation: lb-zoom .3s ease; }

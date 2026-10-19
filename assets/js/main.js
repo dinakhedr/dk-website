@@ -210,6 +210,48 @@
   var fitTimer;
   window.addEventListener('resize', function () { clearTimeout(fitTimer); fitTimer = setTimeout(fitTitles, 120); });
 
+  /* ---------- Photo lightbox: click any case study photo to enlarge ---------- */
+  var zoomImgs = Array.prototype.slice.call(document.querySelectorAll('.gphoto img, .cs-shot img'));
+  if (zoomImgs.length) {
+    var zb = document.createElement('div');
+    zb.className = 'lightbox lightbox--photo';
+    zb.setAttribute('role', 'dialog');
+    zb.setAttribute('aria-modal', 'true');
+    zb.setAttribute('aria-label', 'Enlarged photo');
+    zb.hidden = true;
+    zb.innerHTML = '<div class="lightbox__inner"><img class="lightbox__img" alt=""><p class="lightbox__cap"></p></div>' +
+      '<button class="lightbox__btn lightbox__close" type="button" aria-label="Close">\u2715</button>' +
+      '<button class="lightbox__btn lightbox__prev" type="button" aria-label="Previous photo">\u2190</button>' +
+      '<button class="lightbox__btn lightbox__next" type="button" aria-label="Next photo">\u2192</button>';
+    document.body.appendChild(zb);
+    var zImg = zb.querySelector('.lightbox__img'), zCap = zb.querySelector('.lightbox__cap'), zi = 0, zLast = null;
+    var zShow = function (i) {
+      zi = (i + zoomImgs.length) % zoomImgs.length;
+      var src = zoomImgs[zi];
+      zImg.src = src.currentSrc || src.src;
+      zImg.alt = src.alt;
+      var fc = src.closest('figure') && src.closest('figure').querySelector('figcaption');
+      zCap.textContent = fc ? fc.textContent : '';
+    };
+    var zClose = function () { zb.hidden = true; document.documentElement.classList.remove('lightbox-open'); if (zLast) zLast.focus(); };
+    zoomImgs.forEach(function (img, i) {
+      img.setAttribute('tabindex', '0');
+      img.setAttribute('role', 'button');
+      img.addEventListener('click', function () { zLast = img; zShow(i); zb.hidden = false; document.documentElement.classList.add('lightbox-open'); zb.querySelector('.lightbox__close').focus(); });
+      img.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); img.click(); } });
+    });
+    zb.querySelector('.lightbox__close').addEventListener('click', zClose);
+    zb.querySelector('.lightbox__prev').addEventListener('click', function () { zShow(zi - 1); });
+    zb.querySelector('.lightbox__next').addEventListener('click', function () { zShow(zi + 1); });
+    zb.addEventListener('click', function (e) { if (e.target === zb || e.target.classList.contains('lightbox__inner')) zClose(); });
+    document.addEventListener('keydown', function (e) {
+      if (zb.hidden) return;
+      if (e.key === 'Escape') zClose();
+      else if (e.key === 'ArrowLeft') zShow(zi - 1);
+      else if (e.key === 'ArrowRight') zShow(zi + 1);
+    });
+  }
+
   /* ---------- Footer year ---------- */
   var year = document.querySelector('[data-year]');
   if (year) year.textContent = new Date().getFullYear();
