@@ -1242,3 +1242,10 @@ html.lightbox-open { overflow: hidden; }
 .booth .cs-text { margin-top: 8px; }
 .gphotos--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 28px; }
 @media (max-width: 560px) { .gphotos--2 { grid-template-columns: 1fr; } }
+/* CUES session designs */
+.sdesigns { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 32px; }
+.sdesign { margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.sdesign img { width: 100%; height: auto; aspect-ratio: 5 / 4; object-fit: cover; border-radius: 14px; cursor: zoom-in; display: block; }
+.sdesign figcaption { font-size: 13.5px; color: var(--muted); line-height: 1.4; }
+@media (max-width: 1000px) { .sdesigns { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .sdesigns { grid-template-columns: 1fr 1fr; } }
