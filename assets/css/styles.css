@@ -646,6 +646,10 @@ ol.deliverables { margin: 0; padding: 0; }
 .partner-logos .logo-track--left { animation-duration: 70s; }
 .partner-logos .logo-track--right { animation-duration: 85s; }
 .partner-logos .logo-track--slow { animation-duration: 80s; }
+/* Tall, stacked logos (crests) read smaller in a wide pill: enlarge them within the plate's transparent margins */
+.partner-logos .logo-pill--tall { min-width: 0; padding: 0 28px; }
+.partner-logos .logo-pill--tall img { width: 150px; object-fit: cover; transform: scale(1.4); }
+@media (max-width: 760px) { .partner-logos .logo-pill--tall img { width: 104px; } }
 @media (max-width: 760px) {
   .partners__row { grid-template-columns: 1fr; gap: 10px; padding-left: 0; }
   .partners__key { padding-left: var(--gutter); }
