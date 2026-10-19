@@ -1148,3 +1148,5 @@ html.lightbox-open { overflow: hidden; }
 @media (max-width: 700px) { .cs-shots--row { grid-template-columns: 1fr; } }
 .kb-delivered .cs-text { max-width: 75%; }
 @media (max-width: 760px) { .kb-delivered .cs-text { max-width: none; } }
+/* Descriptions use the full content width (Dina, 19 Oct 2026, second pass) */
+.page-hero__lead, .cs-text, .section-intro, .summit-dark__text, .kb-top .cs-text, .kb-delivered .cs-text, .summit-hero__lead { max-width: none; }
