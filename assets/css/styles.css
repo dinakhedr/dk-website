@@ -952,11 +952,6 @@ ol.deliverables { margin: 0; padding: 0; }
 .women-card__title { margin-top: 14px; font-size: clamp(28px, 2.6vw, 38px); font-weight: 700; letter-spacing: -0.04em; line-height: 1.05; }
 .women-card__title b { display: block; font-size: clamp(72px, 7vw, 112px); letter-spacing: -0.06em; line-height: .9; color: var(--beige); }
 .women-card__text { margin-top: 16px; font-size: 16px; line-height: 1.6; color: rgba(255, 255, 255, 0.75); max-width: 460px; }
-.women-card__faces { margin-top: auto; padding-top: 28px; display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); gap: 8px; }
-@media (max-width: 480px) { .women-card__faces { grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; } }
-.women-card__faces img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; object-position: top; border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.14); background: #222; }
-.women-card__foot { margin-top: auto; padding-top: 24px; display: flex; flex-wrap: wrap; gap: 8px; }
-.women-card__foot span { font-size: 13px; padding: 8px 14px; border-radius: 999px; background: rgba(255, 255, 255, 0.08); color: rgba(255, 255, 255, 0.85); }
 @media (max-width: 960px) { .div-grid { grid-template-columns: 1fr; } }
 @media (max-width: 480px) { .div-stats b { font-size: 34px; } .div-stats span { font-size: 12.5px; } }
 .spot { grid-template-columns: minmax(0, 1fr) !important; }
@@ -992,3 +987,27 @@ ol.deliverables { margin: 0; padding: 0; }
 @media (max-width: 520px) { .nums__row { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; } .nums__tile { padding: 14px; border-radius: 14px; } .nums__value { margin-top: 14px; } }
 .summit-hero__format { margin-top: 24px; font-size: clamp(17px, 1.4vw, 20px); font-weight: 600; letter-spacing: -0.01em; color: #00E39A; }
 .summit-hero__format + .summit-hero__tags { margin-top: 14px; }
+/* Women in AI: full-width card with named speakers */
+.women-card { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 2fr); gap: clamp(28px, 4vw, 56px); align-items: start; }
+.women-card__list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(128px, 1fr)); gap: 22px 14px; }
+.women-card__list li { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 3px; }
+.women-card__list img { width: 84px; height: 84px; object-fit: cover; object-position: top; border-radius: 50%; border: 2px solid rgba(0, 227, 154, 0.35); background: #222; margin-bottom: 8px; }
+.women-card__list b { font-size: 13.5px; font-weight: 600; line-height: 1.3; color: var(--white); }
+.women-card__list span { font-size: 12px; line-height: 1.35; color: rgba(255, 255, 255, 0.6); }
+@media (max-width: 960px) { .women-card { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .women-card__list { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px 8px; } .women-card__list img { width: 64px; height: 64px; } .women-card__list b { font-size: 12.5px; } .women-card__list span { font-size: 11.5px; } }
+.div-grid { grid-template-columns: minmax(0, 1fr); }
+.div-col { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 2fr); gap: 16px; }
+.div-col .div-stats { grid-template-columns: 1fr; align-content: center; }
+.div-col .div-card:last-child .voices__group { display: grid; grid-template-columns: 170px minmax(0, 1fr); align-items: center; gap: 12px; }
+.div-col .div-card:last-child .voices__group .chips { margin-top: 0; }
+@media (max-width: 640px) { .div-col .div-card:last-child .voices__group { grid-template-columns: 1fr; gap: 0; } .div-col .div-card:last-child .voices__group .chips { margin-top: 12px; } }
+@media (max-width: 960px) { .div-col { grid-template-columns: 1fr; } .div-col .div-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+/* External links on the AI Summit page */
+.summit-hero__link, .hack__link, .prog__link { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; text-decoration: none; }
+.summit-hero__link { margin-top: 26px; font-size: 15px; color: var(--white); border-bottom: 1px solid #00E39A; padding-bottom: 3px; }
+.summit-hero__link:hover { color: #00E39A; }
+.hack__link { margin-top: 22px; font-size: 15px; color: #00E39A; border-bottom: 1px solid rgba(0, 227, 154, 0.5); padding-bottom: 3px; }
+.hack__link:hover { border-color: #00E39A; }
+.prog__link { margin-top: 28px; font-size: 15px; color: var(--ink); border-bottom: 1px solid var(--bronze); padding-bottom: 3px; }
+.prog__link:hover { color: var(--bronze); }
