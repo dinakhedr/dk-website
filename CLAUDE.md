@@ -79,6 +79,7 @@ Global elements on every page: header (logo, nav: Services · How I Work · Work
   - Classes `.partner-logos`, `.partners__row`, `.partners__key` (do not reuse `.partners`, an older grid style). Size modifiers on pills: `logo-pill--tall` (crests: cairo-university, ministry-of-higher-education), `logo-pill--boost` (asrt, sawiris-foundation), `logo-pill--wide` (thin banners: erasmus-plus, htw-dresden).
   - The About page partner chips and the capability statement still use the earlier three groups (Government & Institutions / International & Corporate / Academic & Industry) without the new organizations — update them if Dina asks.
 - Selected work order (stacked cards): 01 BrainsMingle → 02 Google Gemini Activation → 03 NilePreneurs Accelerator → 04 WUZZUF Internship Program → 05 Digital Pathways for Employment → 06 CUES 2026.
+- "Who I partner with" (Dina's choice 19 Oct 2026, "Option A"): no A/B markers; two equal-height contrast cards (Founders in sand, Institutions in black) aligned with CSS subgrid (`.audience-cards`, `.audience-card--sand|--dark`); each card: title, intro, four service links, button (Services for founders → `services/index.html#track-a`, Services for institutions → `#track-b`).
 - Approach: Diagnose · Architect · Deliver · Measure. Engagement models: Strategy Sprint · Project Engagement · Fractional Leadership · Advisory & Workshops.
 - Testimonials section: **hidden** until Dina collects quotes.
 - Closing CTA: *Let's shape what comes next.* / *Begin with a 30-minute discovery conversation, or share the brief for your next initiative.* Buttons: Book a consultation · Share a brief.
@@ -104,6 +105,7 @@ Global elements on every page: header (logo, nav: Services · How I Work · Work
 Audience intros:
 - Founders & Growth Companies: *For founders and leadership teams ready to sharpen their position, enter new markets and build growth engines that outlast the launch.*
 - Institutions & Development Partners: *For universities, government bodies, donors and corporates that need programs rigorously designed, credibly funded and delivered to measurable impact.*
+  - Homepage card version (Dina, 19 Oct 2026, shortened to match the Founders text length): *For universities, government bodies, donors and corporates that need programs designed, funded and delivered to measurable impact.*
 
 Service page template: Hero (name, one-line outcome, Book a consultation) → Who it's for (3–4 situations) → What you get (deliverables) → How it works (steps, typical duration) → Engagement options → Proof (related case studies) → FAQ (4–5) → Closing CTA.
 
