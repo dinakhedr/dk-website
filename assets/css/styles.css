@@ -756,11 +756,6 @@ ol.deliverables { margin: 0; padding: 0; }
 .voices__group .chips { margin-top: 12px; }
 .voices__group .chip { background: var(--white); }
 .voices__orgs { margin-top: 32px; font-size: 16px; line-height: 1.65; color: var(--text); max-width: 620px; }
-.voices__poster { margin: 0; position: sticky; top: 100px; }
-.voices__poster img { width: 100%; height: auto; border-radius: var(--radius-md); display: block; box-shadow: 0 30px 60px rgba(12, 12, 11, 0.12); }
-.voices__poster figcaption { margin-top: 14px; font-size: 14px; color: var(--muted); line-height: 1.5; }
-@media (max-width: 900px) { .voices { grid-template-columns: 1fr; } .voices__poster { position: static; max-width: 460px; } }
-
 .tiers { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 12px; }
 .tier { background: var(--sand); border-radius: 22px; padding: 24px; display: flex; flex-direction: column; gap: 10px; }
 .tier b { font-size: 44px; font-weight: 700; letter-spacing: -0.05em; line-height: 1; color: var(--ink); }
@@ -940,3 +935,31 @@ ol.deliverables { margin: 0; padding: 0; }
 .spot__who a:hover, .spot__who a:focus-visible { color: var(--ink); text-decoration-color: var(--bronze); }
 .spot__who em { font-style: normal; color: var(--muted); font-size: 13px; }
 .prog__note { margin-top: 24px; font-size: 13.5px; color: var(--muted); }
+/* AI Summit: diversity grid + women card */
+.div-head { max-width: 720px; margin-bottom: 40px; }
+.div-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 16px; align-items: stretch; }
+.div-col { display: flex; flex-direction: column; gap: 16px; }
+.div-card { background: var(--white); border-radius: 24px; padding: clamp(22px, 2.6vw, 32px); }
+.div-card__title { font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: var(--ink); }
+.div-card .voices__group { margin-top: 22px; }
+.div-card .chip { background: var(--sand); }
+.div-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.div-stats b { display: block; font-size: clamp(38px, 3.6vw, 54px); font-weight: 700; letter-spacing: -0.05em; line-height: 1; color: var(--ink); }
+.div-stats span { display: block; margin-top: 8px; font-size: 14px; line-height: 1.4; color: var(--muted); }
+.women-card { position: relative; overflow: hidden; border-radius: 24px; padding: clamp(26px, 3vw, 40px); color: var(--white); display: flex; flex-direction: column;
+  background: radial-gradient(120% 70% at 100% 0%, rgba(0, 227, 154, 0.22), transparent 60%), var(--ink); }
+.women-card__key { font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #00E39A; }
+.women-card__title { margin-top: 14px; font-size: clamp(28px, 2.6vw, 38px); font-weight: 700; letter-spacing: -0.04em; line-height: 1.05; }
+.women-card__title b { display: block; font-size: clamp(72px, 7vw, 112px); letter-spacing: -0.06em; line-height: .9; color: var(--beige); }
+.women-card__text { margin-top: 16px; font-size: 16px; line-height: 1.6; color: rgba(255, 255, 255, 0.75); max-width: 460px; }
+.women-card__faces { margin-top: auto; padding-top: 28px; display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); gap: 8px; }
+@media (max-width: 480px) { .women-card__faces { grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; } }
+.women-card__faces img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; object-position: top; border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.14); background: #222; }
+.women-card__foot { margin-top: auto; padding-top: 24px; display: flex; flex-wrap: wrap; gap: 8px; }
+.women-card__foot span { font-size: 13px; padding: 8px 14px; border-radius: 999px; background: rgba(255, 255, 255, 0.08); color: rgba(255, 255, 255, 0.85); }
+@media (max-width: 960px) { .div-grid { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .div-stats b { font-size: 34px; } .div-stats span { font-size: 12.5px; } }
+.spot { grid-template-columns: minmax(0, 1fr) !important; }
+.spot__title a { color: var(--ink); text-decoration: none; background-image: linear-gradient(var(--bronze), var(--bronze)); background-size: 0 1px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size .3s; }
+.spot__title a:hover, .spot__title a:focus-visible { background-size: 100% 1px; }
+.spot__title a::after { content: " ↗"; color: var(--bronze); font-weight: 500; }
