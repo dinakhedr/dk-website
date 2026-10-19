@@ -1275,3 +1275,17 @@ html.lightbox-open { overflow: hidden; }
 @media (max-width: 900px) { .vhero { grid-template-columns: 1fr; } }
 .vhero__jump { border: 0; background: none; padding: 0; font: inherit; font-weight: 600; color: var(--bronze); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
 .vhero__jump:hover { color: var(--ink); }
+/* NP Academy cycle panels with scrolling founder cards */
+.cycles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 16px; }
+.cycle { background: var(--white); border: 1px solid var(--line); border-radius: 24px; overflow: hidden; display: flex; flex-direction: column; }
+.cycle__cover { display: block; width: 100%; height: auto; aspect-ratio: 35 / 18; object-fit: cover; }
+.cycle__body { padding: 22px 22px 24px; min-width: 0; }
+.cycle__head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.cycle__hint { font-size: 13px; font-weight: 600; color: var(--bronze); white-space: nowrap; }
+.cycle__sub { margin-top: 6px; font-size: 14.5px; color: var(--muted); }
+.cycle__strip { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(220px, 72%); gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; margin-top: 16px; padding-bottom: 10px; scrollbar-width: thin; }
+.cycle__strip .gcard { scroll-snap-align: start; background: var(--sand); }
+.cycle__strip .gcard__icon { background: var(--white); }
+.cycle__strip:focus-visible { outline: 2px solid var(--bronze); outline-offset: 3px; }
+@media (min-width: 1200px) { .cycle__strip { grid-auto-columns: calc(50% - 5px); } }
+@media (max-width: 900px) { .cycles { grid-template-columns: 1fr; } }
