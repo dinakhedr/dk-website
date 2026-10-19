@@ -126,6 +126,66 @@
     });
   });
 
+  /* ---------- Lightbox for the day spreads (AI Summit) ---------- */
+  var spreads = Array.prototype.slice.call(document.querySelectorAll('.spread'));
+  if (spreads.length) {
+    var box = document.createElement('div');
+    box.className = 'lightbox';
+    box.setAttribute('role', 'dialog');
+    box.setAttribute('aria-modal', 'true');
+    box.setAttribute('aria-label', 'Day lineup and agenda');
+    box.hidden = true;
+    box.innerHTML = '<div class="lightbox__inner"><div class="lightbox__book"></div><p class="lightbox__cap"></p></div>' +
+      '<button class="lightbox__btn lightbox__close" type="button" aria-label="Close">\u2715</button>' +
+      '<button class="lightbox__btn lightbox__prev" type="button" aria-label="Previous day">\u2190</button>' +
+      '<button class="lightbox__btn lightbox__next" type="button" aria-label="Next day">\u2192</button>';
+    document.body.appendChild(box);
+    var book = box.querySelector('.lightbox__book');
+    var cap = box.querySelector('.lightbox__cap');
+    var current = 0, lastFocus = null;
+    var show = function (i) {
+      current = (i + spreads.length) % spreads.length;
+      var s = spreads[current];
+      book.innerHTML = '';
+      s.querySelectorAll('.spread__book img').forEach(function (img) {
+        var c = img.cloneNode();
+        c.removeAttribute('loading');
+        book.appendChild(c);
+      });
+      var fc = s.querySelector('figcaption');
+      cap.innerHTML = fc ? fc.innerHTML : '';
+    };
+    var open = function (i) {
+      lastFocus = document.activeElement;
+      show(i);
+      box.hidden = false;
+      document.documentElement.classList.add('lightbox-open');
+      box.querySelector('.lightbox__close').focus();
+    };
+    var close = function () {
+      box.hidden = true;
+      document.documentElement.classList.remove('lightbox-open');
+      if (lastFocus) lastFocus.focus();
+    };
+    spreads.forEach(function (s, i) {
+      s.setAttribute('tabindex', '0');
+      s.setAttribute('role', 'button');
+      s.setAttribute('aria-label', 'Enlarge ' + (s.querySelector('figcaption b') || {}).textContent);
+      s.addEventListener('click', function () { open(i); });
+      s.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(i); } });
+    });
+    box.querySelector('.lightbox__close').addEventListener('click', close);
+    box.querySelector('.lightbox__prev').addEventListener('click', function () { show(current - 1); });
+    box.querySelector('.lightbox__next').addEventListener('click', function () { show(current + 1); });
+    box.addEventListener('click', function (e) { if (e.target === box || e.target.classList.contains('lightbox__inner')) close(); });
+    document.addEventListener('keydown', function (e) {
+      if (box.hidden) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowLeft') show(current - 1);
+      else if (e.key === 'ArrowRight') show(current + 1);
+    });
+  }
+
   /* ---------- Footer year ---------- */
   var year = document.querySelector('[data-year]');
   if (year) year.textContent = new Date().getFullYear();

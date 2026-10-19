@@ -1020,3 +1020,42 @@ ol.deliverables { margin: 0; padding: 0; }
 .nums__row--5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 @media (max-width: 1100px) { .nums__row--5 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 520px) { .nums__row--5 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+/* AI Summit: speaker journey */
+.journey { list-style: none; margin: 40px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; counter-reset: none; }
+.journey__step { position: relative; background: var(--white); border-radius: 24px; padding: 26px 24px 28px; display: flex; flex-direction: column; gap: 8px; }
+.journey__step:not(:last-child)::after { content: "→"; position: absolute; right: -14px; top: 34px; z-index: 1; width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; background: var(--ink); color: var(--white); font-size: 14px; }
+.journey__icon { width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; background: var(--beige); color: var(--ink); margin-bottom: 10px; }
+.journey__icon .ico { width: 22px; height: 22px; }
+.journey__num { font-size: 13px; font-weight: 600; letter-spacing: .12em; color: var(--bronze); }
+.journey__title { font-size: 22px; font-weight: 600; letter-spacing: -0.03em; color: var(--ink); }
+.journey__step p { font-size: 15px; line-height: 1.6; color: var(--text); }
+@media (max-width: 1000px) { .journey { grid-template-columns: 1fr 1fr; } .journey__step:nth-child(2)::after { display: none; } }
+@media (max-width: 560px) { .journey { grid-template-columns: 1fr; } .journey__step:not(:last-child)::after { content: "↓"; right: auto; left: 36px; top: auto; bottom: -20px; display: grid; } }
+/* Lightbox for the day spreads */
+.spread { cursor: zoom-in; }
+.spread:focus-visible { outline: 2px solid var(--bronze); outline-offset: 4px; border-radius: 18px; }
+.spread .spread__book { transition: transform .3s ease; }
+.spread:hover .spread__book { transform: scale(1.015); }
+.lightbox { position: fixed; inset: 0; z-index: 1000; background: rgba(5, 8, 7, 0.92); display: flex; align-items: center; justify-content: center; padding: 64px 72px; animation: lb-in .25s ease; }
+.lightbox[hidden] { display: none; }
+.lightbox__inner { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; }
+.lightbox__book { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; max-width: min(100%, calc((100vh - 180px) * 1.6)); width: 100%; animation: lb-zoom .3s ease; }
+.lightbox__book img { width: 100%; height: auto; display: block; border-radius: 12px; }
+.lightbox__cap { display: flex; gap: 12px; align-items: baseline; color: var(--white); font-size: 15px; }
+.lightbox__cap span { color: rgba(255, 255, 255, 0.65); font-size: 14px; }
+.lightbox__btn { position: absolute; width: 48px; height: 48px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.25); background: rgba(255, 255, 255, 0.06); color: var(--white); font: inherit; font-size: 18px; cursor: pointer; }
+.lightbox__btn:hover { background: rgba(255, 255, 255, 0.16); }
+.lightbox__btn:focus-visible { outline: 2px solid #00E39A; outline-offset: 3px; }
+.lightbox__close { top: 16px; right: 16px; }
+.lightbox__prev { left: 12px; top: 50%; transform: translateY(-50%); }
+.lightbox__next { right: 12px; top: 50%; transform: translateY(-50%); }
+html.lightbox-open { overflow: hidden; }
+@keyframes lb-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lb-zoom { from { transform: scale(.94); opacity: 0; } to { transform: none; opacity: 1; } }
+@media (max-width: 700px) {
+  .lightbox { padding: 72px 12px 88px; }
+  .lightbox__book { grid-template-columns: 1fr; max-width: 420px; overflow-y: auto; max-height: 100%; }
+  .lightbox__prev, .lightbox__next { top: auto; bottom: 20px; transform: none; }
+  .lightbox__prev { left: calc(50% - 60px); } .lightbox__next { right: calc(50% - 60px); }
+}
+.metric__note { font-size: 15px; font-weight: 500; letter-spacing: 0; color: var(--muted); }
