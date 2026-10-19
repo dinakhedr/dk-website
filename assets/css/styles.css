@@ -1203,3 +1203,24 @@ html.lightbox-open { overflow: hidden; }
 .gphoto img, .cs-shot img { cursor: zoom-in; transition: transform .3s var(--ease); }
 .gphoto img:hover { transform: scale(1.015); }
 .lightbox__img { max-width: 100%; max-height: calc(100vh - 170px); width: auto; height: auto; border-radius: 14px; display: block; animation: lb-zoom .3s ease; }
+/* Gemini campaign section */
+.chans { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.chan { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px; background: var(--sand); font-size: 14.5px; font-weight: 500; }
+.chan .ico { width: 18px; height: 18px; color: var(--bronze); }
+.camp-block { margin-top: 72px; }
+.camp-block__head .cs-text { margin-top: 8px; }
+.creels { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; margin-top: 32px; align-items: end; }
+.creel { margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.creel img { width: 100%; height: auto; aspect-ratio: 9 / 15; object-fit: cover; object-position: top; border-radius: 14px; border: 1px solid var(--line); cursor: zoom-in; background: var(--ink); }
+.creel figcaption { display: flex; flex-direction: column; gap: 2px; }
+.creel b { font-size: 14px; font-weight: 600; }
+.creel span { font-size: 12.5px; color: var(--muted); }
+.cposts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.cposts .creel img { aspect-ratio: 4 / 5; }
+.clicks { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.clicks li { display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+.clicks b { font-weight: 700; font-variant-numeric: tabular-nums; }
+.clicks__total { font-weight: 600; }
+.clicks__total b { color: var(--bronze); font-size: 18px; }
+@media (max-width: 1100px) { .creels { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .creels { grid-template-columns: 1fr 1fr; } }

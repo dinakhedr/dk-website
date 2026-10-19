@@ -211,7 +211,7 @@
   window.addEventListener('resize', function () { clearTimeout(fitTimer); fitTimer = setTimeout(fitTitles, 120); });
 
   /* ---------- Photo lightbox: click any case study photo to enlarge ---------- */
-  var zoomImgs = Array.prototype.slice.call(document.querySelectorAll('.gphoto img, .cs-shot img'));
+  var zoomImgs = Array.prototype.slice.call(document.querySelectorAll('.gphoto img, .cs-shot img, .creel img'));
   if (zoomImgs.length) {
     var zb = document.createElement('div');
     zb.className = 'lightbox lightbox--photo';
