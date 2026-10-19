@@ -696,3 +696,9 @@ ol.deliverables { margin: 0; padding: 0; }
 .feature__stat span { font-size: 13px; color: var(--on-dark-muted); }
 @media (max-width: 900px) { .story--feature { grid-template-columns: 1fr; } }
 @media (max-width: 600px) { .feature__stats { grid-template-columns: 1fr 1fr; } }
+
+/* ---------- Case study: real image + four-figure glance ---------- */
+.cs-media--img { margin-inline: 0; aspect-ratio: 1536 / 836; overflow: hidden; background: var(--ink); }
+.cs-media--img img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.stats--four-cs { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 48px; }
+@media (max-width: 760px) { .stats--four-cs { grid-template-columns: 1fr 1fr; gap: 28px 20px; } }
