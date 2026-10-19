@@ -113,6 +113,19 @@
     });
   });
 
+  /* ---------- Gallery prev / next buttons (AI Summit day spreads) ---------- */
+  document.querySelectorAll('.lineups').forEach(function (box) {
+    var strip = box.querySelector('.lineups__strip');
+    if (!strip) return;
+    box.querySelectorAll('[data-dir]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var item = strip.firstElementChild;
+        var step = item ? item.getBoundingClientRect().width + parseFloat(getComputedStyle(strip).columnGap || 0) : strip.clientWidth;
+        strip.scrollBy({ left: step * Number(btn.getAttribute('data-dir')), behavior: 'smooth' });
+      });
+    });
+  });
+
   /* ---------- Footer year ---------- */
   var year = document.querySelector('[data-year]');
   if (year) year.textContent = new Date().getFullYear();
