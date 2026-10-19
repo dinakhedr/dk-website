@@ -688,7 +688,7 @@ ol.deliverables { margin: 0; padding: 0; }
 .feature__link { color: var(--white); font-size: 15px; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: rgba(255, 255, 255, 0.35); }
 .feature__link:hover { color: var(--beige); text-decoration-color: var(--beige); }
 .feature__visual { display: flex; flex-direction: column; justify-content: center; gap: 10px; }
-.feature__media { border-radius: var(--radius-md); overflow: hidden; aspect-ratio: 1536 / 836; background: var(--dark-panel); }
+.feature__media { border-radius: var(--radius-md); overflow: hidden; aspect-ratio: 1080 / 788; background: var(--dark-panel); }
 .feature__media img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .feature__stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
 .feature__stat { background: var(--dark-panel); border-radius: 18px; padding: 18px; display: flex; flex-direction: column; gap: 6px; }
@@ -698,7 +698,7 @@ ol.deliverables { margin: 0; padding: 0; }
 @media (max-width: 600px) { .feature__stats { grid-template-columns: 1fr 1fr; } }
 
 /* ---------- Case study: real image + four-figure glance ---------- */
-.cs-media--img { margin-inline: 0; aspect-ratio: 1536 / 836; overflow: hidden; background: var(--ink); }
-.cs-media--img img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.cs-media--img { margin-inline: 0; aspect-ratio: auto; max-width: 880px; overflow: hidden; background: var(--ink); }
+.cs-media--img img { display: block; width: 100%; height: auto; }
 .stats--four-cs { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 48px; }
 @media (max-width: 760px) { .stats--four-cs { grid-template-columns: 1fr 1fr; gap: 28px 20px; } }
