@@ -1266,3 +1266,10 @@ html.lightbox-open { overflow: hidden; }
 @media (max-width: 1000px) { .sdesigns--5 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 600px) { .sdesigns--5 { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .results--3 { grid-template-columns: 1fr; } .result__value { overflow-wrap: anywhere; } }
+/* Video hero (two columns) */
+.vhero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
+.vhero .page-hero__lead { max-width: none; }
+.vhero__media { margin: 0; }
+.vhero__media video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 24px; background: var(--ink); box-shadow: 0 30px 60px rgba(12, 12, 11, 0.14); }
+.vhero__media figcaption { margin-top: 12px; font-size: 13.5px; color: var(--muted); }
+@media (max-width: 900px) { .vhero { grid-template-columns: 1fr; } }
