@@ -22,6 +22,7 @@ The personal consulting website of **Dina Khedr**, an independent business & str
   - **Startups & SMEs** (renamed from "Founders & Growth Companies", Dina 19 Oct 2026)
   - **Institutions & NGOs** (universities, government bodies, donors, corporates — renamed from "Institutions & Development Partners", Dina 19 Oct 2026)
 - Core message: **Strategy that scales. Programs that deliver.**
+- **No "Track A / Track B" labels anywhere** (Dina, 19 Oct 2026): audiences are named only "Startups & SMEs" and "Institutions & NGOs"; service cards on the Services page are numbered 01–04 within each group. (HTML ids `#track-a` / `#track-b` remain as anchors only.)
 
 ## 3. Sitemap
 
