@@ -54,6 +54,7 @@ Global elements on every page: header (logo, nav: Services · How I Work · Work
   - `--taupe #9C8462` (headline accent, outlined numbers) · `--bronze #7A6242` (eyebrows, small accent text)
   - `--text #3B352C` (body copy) · `--muted #5E5547` · `--subtle #6B6256`
 - Large headings: weight 700, tight tracking (`letter-spacing: -0.055em`). Rounded cards (32px), pill buttons.
+- **Section descriptions (`.cs-text`, `.section-intro`, `.summit-dark__text`) also span 75% of the content width**; inside two-column layouts they fill their column; full width on phones (Dina, 19 Oct 2026).
 - **Hero descriptions (`.page-hero__lead`) span 75% of the content width** (full width on phones; the About split hero keeps its column) (Dina, 19 Oct 2026).
 - **Hero titles: the beige accent phrase is always on one line** (Dina, 19 Oct 2026). CSS sets `white-space: nowrap` on `.page-hero__title .accent` (and the summit hero span) when JS runs, and `fitTitles()` in `main.js` shrinks the title font until the phrase fits its column; keep accents short so the title stays large on phones.
 - **Reuse existing classes** before adding new ones: `.container`, `.section`, `.section--sand`, `.section--line`, `.h-display`, `.eyebrow`, `.lead`, `.btn btn--dark|--beige|--white`, `.lnk`, `.split`, `.audience`, `.svc-list`, `.stack` + `.story` (+ `--dark|--sand|--beige|--white`), `.metrics`, `.steps` + `.step`, `.chips`, `.posts` + `.post`, `.guide`, `.cta-wrap` + `.cta`, `.stats` + `.stat`, `.partners`, `.ph` (image placeholder).

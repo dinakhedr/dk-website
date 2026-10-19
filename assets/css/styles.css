@@ -1139,3 +1139,12 @@ html.lightbox-open { overflow: hidden; }
 .bento__chips { margin-top: auto; padding-top: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }
 .bento__chips span { display: flex; flex-direction: column; gap: 2px; padding: 14px 16px; border-radius: 16px; background: rgba(255, 255, 255, 0.07); border: 1px solid rgba(255, 255, 255, 0.1); font-size: 13px; color: rgba(255, 255, 255, 0.65); }
 .bento__chips b { font-size: 16px; font-weight: 600; color: var(--beige); }
+/* Section descriptions span 75% of the content width site-wide (Dina, 19 Oct 2026); inside columns they use the full column */
+.cs-text, .section-intro, .summit-dark__text { max-width: 75%; }
+.two-col .cs-text, .div-col .cs-text, .about-hero .cs-text, .split .cs-text { max-width: none; }
+.div-head { max-width: none; }
+@media (max-width: 760px) { .cs-text, .section-intro, .summit-dark__text { max-width: none; } }
+.cs-shots--row { flex-direction: row; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 700px) { .cs-shots--row { grid-template-columns: 1fr; } }
+.kb-delivered .cs-text { max-width: 75%; }
+@media (max-width: 760px) { .kb-delivered .cs-text { max-width: none; } }
