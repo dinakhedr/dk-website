@@ -1265,3 +1265,4 @@ html.lightbox-open { overflow: hidden; }
 .sdesigns--5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 @media (max-width: 1000px) { .sdesigns--5 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 600px) { .sdesigns--5 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .results--3 { grid-template-columns: 1fr; } .result__value { overflow-wrap: anywhere; } }
