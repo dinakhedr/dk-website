@@ -1239,3 +1239,6 @@ html.lightbox-open { overflow: hidden; }
 .glogos__row li { height: 120px; padding: 14px 18px; }
 .glogos__row img { width: 100%; height: 100%; aspect-ratio: auto; object-fit: contain; }
 @media (max-width: 760px) { .glogos__row { grid-template-columns: repeat(2, minmax(0, 1fr)); } .glogos__row li { height: 96px; } }
+.booth .cs-text { margin-top: 8px; }
+.gphotos--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 28px; }
+@media (max-width: 560px) { .gphotos--2 { grid-template-columns: 1fr; } }
