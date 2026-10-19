@@ -1124,3 +1124,7 @@ html.lightbox-open { overflow: hidden; }
 .bento__lead p { font-size: 16px; color: rgba(255, 255, 255, 0.75); }
 @media (max-width: 900px) { .bento { grid-template-columns: 1fr 1fr; } .bento__lead { grid-column: 1 / -1; grid-row: auto; } .bento__lead h4 { margin-top: 8px; } }
 @media (max-width: 560px) { .bento { grid-template-columns: 1fr; } }
+.bento--on-sand .bento__item { background: var(--white); }
+.bento--on-sand .bento__item .bento__icon { background: var(--sand); }
+.bento__item--wide { grid-column: 1 / -1; }
+@media (min-width: 901px) { .bento__item--wide { display: grid; grid-template-columns: 44px minmax(0, 0.6fr) minmax(0, 1.4fr); align-items: center; column-gap: 20px; } .bento__item--wide .bento__icon { margin: 0; } }
