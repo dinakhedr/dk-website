@@ -1084,3 +1084,5 @@ html.lightbox-open { overflow: hidden; }
 .audience-card .svc-list a { padding-block: 13px; font-size: clamp(16px, 1.25vw, 18px); }
 .audience-card .svc-list a::after { opacity: .55; transform: none; }
 .audience-card .svc-list a:hover::after { opacity: 1; transform: translateX(4px); }
+.cs-shot { margin: 0; border-radius: 20px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 24px 50px rgba(12, 12, 11, 0.08); }
+.cs-shot img { display: block; width: 100%; height: auto; }
