@@ -702,3 +702,6 @@ ol.deliverables { margin: 0; padding: 0; }
 .cs-media--img img { display: block; width: 100%; height: auto; }
 .stats--four-cs { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 48px; }
 @media (max-width: 760px) { .stats--four-cs { grid-template-columns: 1fr 1fr; gap: 28px 20px; } }
+.stats--five-cs { grid-template-columns: repeat(5, minmax(0, 1fr)); margin-top: 48px; }
+@media (max-width: 960px) { .stats--five-cs { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 20px; } }
+@media (max-width: 560px) { .stats--five-cs { grid-template-columns: 1fr 1fr; } }
