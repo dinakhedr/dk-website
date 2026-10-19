@@ -32,7 +32,7 @@ The personal consulting website of **Dina Khedr**, an independent business & str
 | Services overview | `/services/index.html` | **Done** |
 | 8 service pages | `/services/<slug>/index.html` | **Done** |
 | How I Work | `/how-i-work/index.html` | **Done** |
-| Work (case study library) | `/work/index.html` | **Done** (filter chips: Growth & Brand · Programs & Accelerators · Partnerships & Talent · Summits & Campaigns · Proposals & Funding) |
+| Work (case study library) | `/work/index.html` | **Done** (filter chips: Growth & Brand · Programs & Accelerators · Partnerships & Talent · Summits & Campaigns · Proposals & Funding). **Always keep it in sync with the homepage Selected work** (Dina, 19 Oct 2026): every homepage card has a Work card, in the same order at the top, with the same title and headline figure; update both pages together. |
 | Case studies | `/work/<slug>/index.html` | **Done** (14 — `brainsmingle-platform` added 19 Oct 2026) |
 | About | `/about/index.html` | **Done** |
 | Insights (blog) — "Strategy to Street" | `/insights/index.html` + 8 articles `/insights/<slug>/index.html` | **Done** |
