@@ -104,8 +104,7 @@ Global elements on every page: header (logo, nav: Services · How I Work · Work
 
 Audience intros:
 - Founders & Growth Companies: *For founders and leadership teams ready to sharpen their position, enter new markets and build growth engines that outlast the launch.*
-- Institutions & Development Partners: *For universities, government bodies, donors and corporates that need programs rigorously designed, credibly funded and delivered to measurable impact.*
-  - Homepage card version (Dina, 19 Oct 2026, shortened to match the Founders text length): *For universities, government bodies, donors and corporates that need programs designed, funded and delivered to measurable impact.*
+- Institutions & Development Partners (shortened by Dina 19 Oct 2026 to match the Founders length; used on the homepage, Services page and capability statement): *For universities, government bodies, donors and corporates that need programs designed, funded and delivered to measurable impact.*
 
 Service page template: Hero (name, one-line outcome, Book a consultation) → Who it's for (3–4 situations) → What you get (deliverables) → How it works (steps, typical duration) → Engagement options → Proof (related case studies) → FAQ (4–5) → Closing CTA.
 
