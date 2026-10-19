@@ -1080,3 +1080,7 @@ html.lightbox-open { overflow: hidden; }
 @media (max-width: 1100px) { .flow { grid-template-columns: 1fr; } .flow__arrow { justify-self: center; transform: rotate(90deg); } .flow__out { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; column-gap: 28px; } .flow__out-key { grid-column: 1 / -1; } .flow__out b { grid-row: 2; } .flow__out span:not(.flow__out-key) { grid-row: 3; } }
 @media (max-width: 760px) { .flow__sources, .moves { grid-template-columns: 1fr; } }
 .moves li:last-child:nth-child(odd) { grid-column: 1 / -1; }
+/* Homepage "Who I partner with": compact service lists with visible arrows */
+.audience-card .svc-list a { padding-block: 13px; font-size: clamp(16px, 1.25vw, 18px); }
+.audience-card .svc-list a::after { opacity: .55; transform: none; }
+.audience-card .svc-list a:hover::after { opacity: 1; transform: translateX(4px); }
