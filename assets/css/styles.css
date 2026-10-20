@@ -1488,3 +1488,14 @@ a.tag--link:hover { background: var(--ink); color: var(--white); }
 .prog-brand--inline { margin: 20px 0 4px; width: clamp(140px, 14vw, 180px); }
 .section__head:has(.prog-brand) { align-items: flex-end; gap: 24px; flex-wrap: wrap; }
 .prog-brand--inline { margin: 24px 0 16px; }
+/* WUZZUF programs: hero without visual; every section logo on a white plate (Dina, 21 Oct 2026) */
+.vhero--solo { grid-template-columns: minmax(0, 1fr); }
+.vhero--solo .vhero__text { max-width: none; }
+.prog-brand, .prog-logo { background: var(--white); border-radius: 20px; padding: 18px 22px; box-sizing: content-box; box-shadow: 0 0 0 1px rgba(12, 12, 11, 0.06); }
+.prog-brand { width: clamp(140px, 14vw, 190px); }
+.prog-logo { height: 52px; }
+.cb-logo, .unlock-plate { background: var(--white); border: 1px solid rgba(12, 12, 11, 0.08); }
+.unlock-plate img { filter: none; }
+.bootcamp img { background: var(--white); border-radius: 14px; padding: 10px 14px; box-sizing: content-box; height: 44px; }
+.prog-logo { height: 64px; }
+.bootcamp img { width: auto; max-width: calc(100% - 28px); align-self: flex-start; object-position: center; }
