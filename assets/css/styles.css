@@ -1448,3 +1448,9 @@ a.tag--link:hover { background: var(--ink); color: var(--white); }
 .work-card__body > .card__title { margin-bottom: 18px; }
 .work-claim { margin-top: auto; font-size: 16px; gap: 10px; padding: 9px 18px 9px 9px; }
 .work-claim .feature__claim-icon { width: 30px; height: 30px; padding: 6px; }
+/* WUZZUF programs: MAL logos and Unlock '18 plate */
+.mal-logos { background: var(--white); border: 1px solid rgba(12, 12, 11, 0.08); border-radius: 28px; padding: clamp(24px, 4vw, 48px); display: flex; align-items: center; justify-content: center; gap: clamp(20px, 4vw, 48px); }
+.mal-logos img { width: auto; height: auto; max-width: 48%; max-height: 150px; display: block; }
+.mal-logos img[alt^="mal"] { max-height: 70px; }
+.unlock-plate { background: #00105C; border-radius: 28px; min-height: 220px; display: grid; place-items: center; padding: 32px; }
+.unlock-plate img { width: min(80%, 360px); height: auto; display: block; filter: brightness(1.6); }

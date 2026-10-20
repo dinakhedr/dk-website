@@ -32,6 +32,22 @@
   force = true
 
 # ---------------------------------------------------------------
+# Merged case studies (20 Oct 2026): WUZZUF Internship Program and
+# Google & Udacity Scholarship are now one page, WUZZUF Ecosystem Programs
+# ---------------------------------------------------------------
+[[redirects]]
+  from = "/work/wuzzuf-internship-program/*"
+  to = "/work/wuzzuf-programs/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/work/google-udacity-scholarship/*"
+  to = "/work/wuzzuf-programs/"
+  status = 301
+  force = true
+
+# ---------------------------------------------------------------
 # Old site (HubSpot) → new site
 # Specific rules first; Netlify uses the first match.
 # ---------------------------------------------------------------
