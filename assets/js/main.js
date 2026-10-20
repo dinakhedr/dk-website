@@ -263,6 +263,27 @@
     });
   });
 
+  /* ---------- About: animated career journey ---------- */
+  var tl = document.querySelector('.journey-tl');
+  if (tl) {
+    var fill = tl.querySelector('.journey-tl__fill');
+    var items = tl.querySelectorAll('.jt-anim');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
+      }, { threshold: 0.3 });
+      items.forEach(function (it) { io.observe(it); });
+    } else { items.forEach(function (it) { it.classList.add('is-in'); }); }
+    var tick = function () {
+      var r = tl.getBoundingClientRect(), vh = window.innerHeight;
+      var p = Math.min(1, Math.max(0, (vh * 0.6 - r.top) / r.height));
+      fill.style.setProperty('--p', (p * 100).toFixed(1) + '%');
+    };
+    tick();
+    window.addEventListener('scroll', tick, { passive: true });
+    window.addEventListener('resize', tick);
+  }
+
   /* ---------- Footer year ---------- */
   var year = document.querySelector('[data-year]');
   if (year) year.textContent = new Date().getFullYear();
