@@ -1501,3 +1501,9 @@ a.tag--link:hover { background: var(--ink); color: var(--white); }
 .bootcamp img { width: auto; max-width: calc(100% - 28px); align-self: flex-start; object-position: center; }
 /* Code Battle logo back on its original purple (Dina, 21 Oct 2026) */
 .cb-logo { background: #3A1260; border: 0; }
+/* NilePreneurs Explore: WUZZUF badge tracks */
+.badge-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; margin-top: 28px; }
+.badge-grid span { background: var(--white); border-radius: 18px; padding: 16px 18px; display: flex; flex-direction: column; gap: 4px; font-size: 14.5px; color: var(--text); }
+.badge-grid b { font-size: 24px; font-weight: 700; letter-spacing: -0.03em; color: var(--ink); }
+.sdesigns--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 640px) { .sdesigns--3 { grid-template-columns: 1fr 1fr; } }
