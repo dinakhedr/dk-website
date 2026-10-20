@@ -1454,3 +1454,18 @@ a.tag--link:hover { background: var(--ink); color: var(--white); }
 .mal-logos img[alt^="mal"] { max-height: 70px; }
 .unlock-plate { background: #00105C; border-radius: 28px; min-height: 220px; display: grid; place-items: center; padding: 32px; }
 .unlock-plate img { width: min(80%, 360px); height: auto; display: block; filter: brightness(1.6); }
+/* WUZZUF programs: program index, section logos, bootcamps, NTL plate */
+.prog-index { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 48px; }
+.prog-index a { text-decoration: none; background: var(--sand); color: var(--ink); border-radius: 999px; padding: 10px 16px; font-size: 14px; font-weight: 500; transition: background .2s, color .2s; }
+.prog-index a:hover { background: var(--ink); color: var(--white); }
+.prog-sec { scroll-margin-top: 90px; }
+.prog-logo { height: 56px; width: auto; display: block; }
+.results--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.cb-logo { background: #3A1260; border-radius: 28px; min-height: 220px; display: grid; place-items: center; padding: 32px; }
+.cb-logo img { width: min(85%, 420px); height: auto; display: block; }
+.bootcamp { background: var(--white); border-radius: 28px; padding: clamp(24px, 3vw, 36px); display: flex; flex-direction: column; gap: 14px; }
+.bootcamp img { height: 56px; width: auto; max-width: 70%; object-fit: contain; object-position: left; display: block; margin-bottom: 8px; }
+.ntl-plate { background: var(--white); border: 1px solid rgba(12, 12, 11, 0.08); border-radius: 28px; min-height: 240px; display: grid; place-items: center; padding: 32px; }
+.ntl-plate img { width: min(80%, 380px); height: auto; display: block; }
+.journey__step:not(:has(.journey__icon)) .journey__num { margin-top: 2px; }
+@media (max-width: 640px) { .results--2 { grid-template-columns: 1fr 1fr; } .prog-logo { height: 40px; } }
