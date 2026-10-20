@@ -1484,3 +1484,7 @@ a.tag--link:hover { background: var(--ink); color: var(--white); }
 .ssp-steps span { font-size: 14px; color: var(--text); }
 @media (max-width: 1000px) { .gcards--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 640px) { .gcards--4 { grid-template-columns: 1fr; } }
+.prog-brand { width: clamp(150px, 16vw, 210px); height: auto; display: block; flex: none; }
+.prog-brand--inline { margin: 20px 0 4px; width: clamp(140px, 14vw, 180px); }
+.section__head:has(.prog-brand) { align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+.prog-brand--inline { margin: 24px 0 16px; }
