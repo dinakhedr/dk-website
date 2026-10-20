@@ -1372,3 +1372,11 @@ html.lightbox-open { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) { .journey-tl.is-ready .jt-anim { opacity: 1; transform: none; } .journey-tl__fill { height: 100% !important; } }
 .jt__logo img[alt="NilePreneurs"], .jt__logo img[alt="Cairo University"] { transform: scale(2); }
 .jt--edu { min-width: 0; } .jt__ribbon { max-width: 100%; box-sizing: border-box; } @media (max-width: 640px) { .jt__ribbon { display: flex; } }
+.jt__logo--pair { grid-template-columns: 1.4fr 1fr; display: grid; gap: 4px; }
+.jt__logo--pair img { transform: scale(1.3) !important; }
+.jt__logo--pair img[alt="NilePreneurs"] { transform: scale(2.2) !important; }
+.jt--work { grid-template-columns: 160px minmax(0, 1fr); }
+.jt__logo--pair { height: 64px; grid-template-columns: 1.5fr 1fr; gap: 10px; }
+.jt__logo--pair img { transform: scale(1.45) !important; }
+.jt__logo--pair img[alt="NilePreneurs"] { transform: scale(2.4) !important; }
+@media (max-width: 640px) { .jt--work { grid-template-columns: 1fr; } .jt__logo--pair { width: 170px; } }
