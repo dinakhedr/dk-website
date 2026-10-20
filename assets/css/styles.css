@@ -1387,3 +1387,7 @@ html.lightbox-open { overflow: hidden; }
 .jt__logo img, .jt__logo--pair img { max-height: 52px !important; max-width: 100% !important; }
 .jt__logo--pair { grid-template-columns: auto auto; justify-content: start; gap: 8px; }
 .jt__logo img[alt^="BasharSoft"] { max-height: 52px !important; }
+/* Career journey: crest logos (Cairo University) shown taller so they read at the same weight as wordmarks */
+.jt__logo:has(img[alt="Cairo University"]) { height: 96px; }
+.jt__logo img[alt="Cairo University"] { max-height: 92px !important; }
+@media (max-width: 640px) { .jt__logo:has(img[alt="Cairo University"]) { height: 84px; } .jt__logo img[alt="Cairo University"] { max-height: 80px !important; } }
