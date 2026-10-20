@@ -1444,3 +1444,7 @@ a.tag--link:hover { background: var(--ink); color: var(--white); }
 .work-card__body .card__figure { margin-top: auto; padding-top: 18px; }
 @media (max-width: 640px) { .work-card__plate { height: 128px; gap: 14px; } }
 .work-card__plate img { min-width: 0; flex: 0 1 auto; }
+/* Work cards: headline figure as the homepage claim pill (Dina, 20 Oct 2026) */
+.work-card__body > .card__title { margin-bottom: 18px; }
+.work-claim { margin-top: auto; font-size: 16px; gap: 10px; padding: 9px 18px 9px 9px; }
+.work-claim .feature__claim-icon { width: 30px; height: 30px; padding: 6px; }
