@@ -1499,3 +1499,5 @@ a.tag--link:hover { background: var(--ink); color: var(--white); }
 .bootcamp img { background: var(--white); border-radius: 14px; padding: 10px 14px; box-sizing: content-box; height: 44px; }
 .prog-logo { height: 64px; }
 .bootcamp img { width: auto; max-width: calc(100% - 28px); align-self: flex-start; object-position: center; }
+/* Code Battle logo back on its original purple (Dina, 21 Oct 2026) */
+.cb-logo { background: #3A1260; border: 0; }
