@@ -2,6 +2,7 @@
    - Mobile navigation toggle
    - Scroll reveal for elements with .reveal
    - Count-up numbers for elements with [data-count]
+   - Case study filters on the Work page
    - Footer year
 */
 (function () {
@@ -75,6 +76,19 @@
     }, { threshold: 0.6 });
     counters.forEach(function (el) { countObserver.observe(el); });
   }
+
+  /* ---------- Work library filters ---------- */
+  var filters = document.querySelectorAll('.filter[data-filter]');
+  filters.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var track = btn.getAttribute('data-filter');
+      filters.forEach(function (b) { b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
+      document.querySelectorAll('.work-card[data-track]').forEach(function (card) {
+        card.hidden = track !== 'all' && card.getAttribute('data-track') !== track;
+        if (!card.hidden) card.classList.add('is-visible');
+      });
+    });
+  });
 
   /* ---------- Footer year ---------- */
   var year = document.querySelector('[data-year]');

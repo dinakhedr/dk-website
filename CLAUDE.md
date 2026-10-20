@@ -29,14 +29,14 @@ The personal consulting website of **Dina Khedr**, an independent business & str
 | Home | `/index.html` | **Done** |
 | Services overview | `/services/index.html` | **Done** |
 | 8 service pages | `/services/<slug>/index.html` | **Done** |
-| How I Work | `/how-i-work/index.html` | To build |
-| Work (case study library) | `/work/index.html` | To build |
-| Case studies | `/work/<slug>/index.html` | To build |
-| About | `/about/index.html` | To build |
-| Insights (blog) | `/insights/index.html` + article template | To build |
-| Contact / Start a Project | `/contact/index.html` + `/contact/thank-you/index.html` | To build |
-| 404 | `/404.html` | To build |
-| Config | `netlify.toml`, `robots.txt`, `sitemap.xml` | To build |
+| How I Work | `/how-i-work/index.html` | **Done** |
+| Work (case study library) | `/work/index.html` | **Done** (filter by track) |
+| Case studies | `/work/<slug>/index.html` | **Done** (all 13; image placeholders) |
+| About | `/about/index.html` | **Done** (CV button is a mailto until the PDF arrives) |
+| Insights (blog) | `/insights/index.html` + `/insights/article-template/` (noindex — copy the folder per article) | **Done** (no articles yet) |
+| Contact / Start a Project | `/contact/index.html` + `/contact/thank-you/index.html` | **Done** (Netlify form) |
+| 404 | `/404.html` | **Done** (uses root-absolute paths — only served by Netlify) |
+| Config | `netlify.toml`, `robots.txt`, `sitemap.xml`, `assets/img/og-image.jpg` | **Done** — add new pages to `sitemap.xml` |
 
 Global elements on every page: header (logo, nav: Services · How I Work · Work · About · Insights, button **Book a consultation**), footer (logo, email, LinkedIn, **Capability statement (PDF)**, © year), closing CTA band.
 
@@ -162,10 +162,8 @@ Case study template: Header (title, partners, year, tags, image) → At a glance
 ## 9. Next steps (in order)
 
 1. ~~Services overview + 8 service pages~~ (done — Dina to confirm FAQ assumptions: on-site/remote mix, Arabic proposals, typical durations).
-2. How I Work.
-3. Work listing + case studies (start with the 6 homepage stories, then CU2050, CU AI Nexus, Belda, ECOSYS+, STREAM).
-4. About.
-5. Insights listing + article template (migrate old posts when available).
-6. Contact (Netlify form) + thank-you page + 404.
-7. `netlify.toml` (redirects, headers), `robots.txt`, `sitemap.xml`, OG image (`assets/img/og-image.jpg`, 1200×630).
+2. ~~How I Work, Work + 13 case studies, About, Insights + article template, Contact + thank-you, 404, config, OG image~~ (done 2026-10-20). Dina to confirm: case-study "My role" wording (esp. Gemini, STREAM, NP Explore, Google & Udacity), About timeline order for Bkam / Buseet / almentor / Daftra / Chefaa, contact budget ranges (USD), How I Work FAQs on fees and NDA.
+3. Replace image placeholders with project photos; add CV and capability statement PDFs (footer link currently 404s).
+4. Migrate old blog posts into Insights; replace homepage Perspectives placeholders; switch `/blog/*` redirect to `/insights/:splat`.
+5. After the first Netlify form submission, enable email notifications in Netlify → Forms.
 8. Full check (desktop + mobile, all links, `file://` preview). (Netlify + GoDaddy DNS already connected — site is live.)

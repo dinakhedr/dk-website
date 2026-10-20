@@ -1,0 +1,39 @@
+# Netlify configuration — plain static site, no build step.
+[build]
+  publish = "."
+
+# Redirects from the previous (HubSpot) site.
+# Old blog posts go to the Insights listing until the posts are migrated;
+# switch to "/insights/:splat" once matching article slugs exist.
+[[redirects]]
+  from = "/portfolio"
+  to = "/work/"
+  status = 301
+
+[[redirects]]
+  from = "/programs"
+  to = "/work/"
+  status = 301
+
+[[redirects]]
+  from = "/blog"
+  to = "/insights/"
+  status = 302
+
+[[redirects]]
+  from = "/blog/*"
+  to = "/insights/"
+  status = 302
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
