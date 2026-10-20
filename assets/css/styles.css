@@ -1435,3 +1435,12 @@ a.tag--link:hover { background: var(--ink); color: var(--white); }
 .rebrand__label { position: absolute; top: 20px; left: 24px; font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--bronze); }
 .rebrand__arrow { align-self: center; width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; background: var(--ink); color: var(--white); font-size: 20px; }
 @media (max-width: 640px) { .rebrand { grid-template-columns: 1fr; } .rebrand__arrow { justify-self: center; transform: rotate(90deg); } .rebrand__card { min-height: 200px; } }
+/* Work page: logo-plate cards (Option B, Dina 20 Oct 2026) */
+.work-card { padding: 12px; display: flex; flex-direction: column; min-height: 0; }
+.work-card__plate { background: var(--white); border-radius: 24px; height: 150px; display: flex; align-items: center; justify-content: center; gap: 18px; padding: 0 20px; flex: none; }
+.work-card__plate img { width: auto; max-width: 100%; display: block; object-fit: contain; }
+.card--beige .work-card__plate, .work-card:not(.card--dark) .work-card__plate { box-shadow: none; }
+.work-card__body { padding: 20px 18px 16px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.work-card__body .card__figure { margin-top: auto; padding-top: 18px; }
+@media (max-width: 640px) { .work-card__plate { height: 128px; gap: 14px; } }
+.work-card__plate img { min-width: 0; flex: 0 1 auto; }
