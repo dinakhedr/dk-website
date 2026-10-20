@@ -1309,3 +1309,29 @@ html.lightbox-open { overflow: hidden; }
 @media (max-width: 520px) { .vhero__partners { gap: 14px; } .vhero__partners img[alt="Nile University"] { height: 36px; } .vhero__partners img[alt="NilePreneurs"] { height: 46px; } .vhero__partners img[alt="HSBC"] { height: 22px; } }
 .cycle__strip .fcard { margin: 0; scroll-snap-align: start; }
 .cycle__strip .fcard img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 14px; cursor: zoom-in; }
+/* About: My story in four eras */
+.story-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 40px; }
+.story-stats > div { background: var(--sand); border-radius: 22px; padding: 22px 24px; display: flex; flex-direction: column; gap: 6px; }
+.story-stats b { font-size: clamp(36px, 3.4vw, 52px); font-weight: 700; letter-spacing: -0.05em; line-height: 1; color: var(--ink); }
+.story-stats span { font-size: 14.5px; color: var(--muted); }
+.story-stats__lead { background: var(--ink) !important; }
+.story-stats__lead b { color: var(--beige); }
+.story-stats__lead span { color: rgba(255, 255, 255, 0.7); }
+.era-bar, .era-bar__years { display: grid; grid-template-columns: 5fr 6fr 3fr 4fr; gap: 6px; }
+.era-bar { margin-top: 48px; }
+.era-bar i { display: block; height: 10px; border-radius: 6px; }
+.era-bar i:nth-child(1) { background: var(--beige); } .era-bar i:nth-child(2) { background: var(--taupe); } .era-bar i:nth-child(3) { background: var(--bronze); } .era-bar i:nth-child(4) { background: var(--ink); }
+.era-bar__years { margin-top: 8px; font-size: 12.5px; font-weight: 600; letter-spacing: .1em; color: var(--bronze); }
+.eras { list-style: none; margin: 24px 0 0; padding: 0; }
+.era { display: grid; grid-template-columns: 150px minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(20px, 3vw, 48px); padding: 32px 0; border-top: 1px solid var(--line); align-items: start; }
+.era:last-child { border-bottom: 1px solid var(--line); }
+.era__num b { display: block; font-size: clamp(44px, 4vw, 60px); font-weight: 800; letter-spacing: -0.05em; line-height: 1; color: transparent; -webkit-text-stroke: 1px var(--taupe); }
+.era:last-child .era__num b { color: var(--taupe); }
+.era__num span { display: block; margin-top: 10px; font-size: 13px; font-weight: 600; letter-spacing: .1em; color: var(--bronze); }
+.era__story h3 { font-size: clamp(24px, 2.2vw, 30px); font-weight: 700; letter-spacing: -0.04em; color: var(--ink); }
+.era__story p { margin-top: 10px; font-size: 16.5px; line-height: 1.65; color: var(--text); }
+.era__orgs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.era__orgs .org { font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--taupe); color: var(--ink); }
+.era__tags .chips { gap: 6px; }
+@media (max-width: 900px) { .era { grid-template-columns: 1fr; gap: 14px; } .story-stats { grid-template-columns: 1fr 1fr; } }
+.era__tags .chips { margin-top: 0; } .era__tags .chip { font-size: 13px; padding: 7px 13px; }
