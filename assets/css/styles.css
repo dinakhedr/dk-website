@@ -1473,3 +1473,14 @@ a.tag--link:hover { background: var(--ink); color: var(--white); }
 .ntl-plate__by { display: flex; align-items: center; gap: 10px; font-size: 12px; color: var(--muted); }
 .ntl-plate__by img { height: 26px; width: auto; display: block; }
 .prog-sec.section--line .gcard { background: var(--sand); }
+/* WUZZUF programs: Startup Support Program */
+.gcard__out { margin-top: auto; padding-top: 12px; border-top: 1px solid rgba(12, 12, 11, 0.1); font-size: 13px; font-weight: 600; color: var(--bronze); line-height: 1.5; }
+.gcards--4 .gcard { display: flex; flex-direction: column; gap: 8px; }
+.section--line .bootcamp { background: var(--sand); }
+.ssp-steps { list-style: none; margin: 0; padding: 0; counter-reset: s; display: grid; gap: 10px; }
+.ssp-steps li { counter-increment: s; display: grid; grid-template-columns: 40px 1fr; column-gap: 14px; align-items: center; background: var(--sand); border-radius: 18px; padding: 14px 18px; }
+.ssp-steps li::before { content: counter(s); grid-row: span 2; width: 36px; height: 36px; border-radius: 50%; background: var(--ink); color: var(--white); display: grid; place-items: center; font-size: 14px; font-weight: 600; }
+.ssp-steps b { font-size: 16px; color: var(--ink); }
+.ssp-steps span { font-size: 14px; color: var(--text); }
+@media (max-width: 1000px) { .gcards--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .gcards--4 { grid-template-columns: 1fr; } }
