@@ -1391,3 +1391,5 @@ html.lightbox-open { overflow: hidden; }
 .jt__logo:has(img[alt="Cairo University"]) { height: 96px; }
 .jt__logo img[alt="Cairo University"] { max-height: 92px !important; }
 @media (max-width: 640px) { .jt__logo:has(img[alt="Cairo University"]) { height: 84px; } .jt__logo img[alt="Cairo University"] { max-height: 80px !important; } }
+/* Homepage work cards: bolder titles (Dina, 20 Oct 2026) */
+.story__title, .feature__title { font-weight: 800; }
