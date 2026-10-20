@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  dinakhedr.com — Partner logo plate template
+  Artboard: 480 × 180 px (8:3), transparent background.
+  1. Place the partner's horizontal logo inside the SAFE AREA (400 × 120), centred on both guides.
+  2. Wordmarks: fit the width (up to 400 px). Emblems / square marks: fit the height (up to 120 px).
+     Balance by eye so every logo feels the same visual size.
+  3. Keep the logo in its ORIGINAL colours, unaltered. Remove only the background.
+  4. Hide or delete the "guides" layer, then export as SVG (preferred) or PNG at 960 × 360 (2×), transparent.
+  5. Name the file with the slug from the list, e.g. google.svg, and send it to Dina's site folder assets/img/logos/.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="180" viewBox="0 0 480 180">
+  <g id="guides">
+    <rect x="0.5" y="0.5" width="479" height="179" fill="#F3ECE0" stroke="#9C8462" stroke-width="1"/>
+    <rect x="40" y="30" width="400" height="120" fill="#FFFFFF" stroke="#C0392B" stroke-width="1" stroke-dasharray="6 4"/>
+    <line x1="240" y1="0" x2="240" y2="180" stroke="#9C8462" stroke-width="0.75" stroke-dasharray="3 3"/>
+    <line x1="0" y1="90" x2="480" y2="90" stroke="#9C8462" stroke-width="0.75" stroke-dasharray="3 3"/>
+    <text x="44" y="46" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" fill="#C0392B">SAFE AREA 400 × 120 — logo stays inside</text>
+    <text x="8" y="172" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" fill="#7A6242">Artboard 480 × 180 · original colours · transparent · hide this layer before export</text>
+  </g>
+  <g id="logo">
+    <!-- Place the logo here -->
+  </g>
+</svg>

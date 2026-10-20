@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /contact/thank-you/
-Disallow: /insights/article-template/
+Allow: /
 
 Sitemap: https://www.dinakhedr.com/sitemap.xml

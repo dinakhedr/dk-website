@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..900&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261021e">
   <script>document.documentElement.classList.add('js');</script>
 
   <!-- Structured data for search engines -->
@@ -33,7 +33,7 @@
     "@type": "ProfessionalService",
     "name": "Dina Khedr — Business & Strategy Consultant",
     "url": "https://www.dinakhedr.com/",
-    "email": "dina.khedr@gmail.com",
+    "email": "info@dinakhedr.com",
     "areaServed": "MENA",
     "address": { "@type": "PostalAddress", "addressLocality": "Cairo", "addressCountry": "EG" },
     "founder": {
@@ -111,18 +111,18 @@
     <!-- =========================================================
          2. STATEMENT + IMPACT
          ========================================================= -->
-    <section class="section section--sand" aria-label="Impact">
-      <div class="container">
+    <section class="section impact" aria-label="Impact">
+      <div class="container impact__inner">
         <p class="statement">
           <span class="hl">Eighteen years at the intersection of strategy,</span>
           <span class="hl">growth and national programs — turning complex</span>
-          <span class="hl">mandates into clear direction and measurable outcomes.</span>
+          <span class="hl">mandates into <em>clear direction and measurable outcomes.</em></span>
         </p>
-        <div class="stats">
-          <div class="stat reveal"><span class="stat__value" data-count="18" data-suffix="+">18+</span><span class="stat__label">years of strategic leadership</span></div>
-          <div class="stat reveal" style="--d:.1s"><span class="stat__value" data-count="25" data-suffix="K+">25K+</span><span class="stat__label">companies enabled on WUZZUF</span></div>
-          <div class="stat reveal" style="--d:.2s"><span class="stat__value" data-count="30" data-suffix="K+">30K+</span><span class="stat__label">sign-ups in one national AI activation</span></div>
-          <div class="stat reveal" style="--d:.3s"><span class="stat__value" data-count="20" data-suffix="K">20K</span><span class="stat__label">summit registrations in 30 days</span></div>
+        <div class="impact__grid">
+          <div class="impact__item reveal"><span class="impact__value" data-count="18" data-suffix="+">18+</span><span class="impact__label">years of strategic leadership</span></div>
+          <div class="impact__item reveal" style="--d:.08s"><span class="impact__value" data-count="20" data-suffix="+">20+</span><span class="impact__label">government, international &amp; industry partners</span></div>
+          <div class="impact__item reveal" style="--d:.16s"><span class="impact__value" data-count="13">13</span><span class="impact__label">flagship programs &amp; campaigns</span></div>
+          <div class="impact__item reveal" style="--d:.24s"><span class="impact__value" data-count="10">10</span><span class="impact__label">sectors served</span></div>
         </div>
       </div>
     </section>
@@ -130,21 +130,100 @@
     <!-- =========================================================
          3. TRUSTED BY
          ========================================================= -->
-    <section class="section" aria-labelledby="partners-title" style="padding-block: 96px">
+    <section class="section logos partner-logos" aria-labelledby="partners-title">
       <div class="container">
-        <h2 class="eyebrow reveal" id="partners-title">Trusted by</h2>
-        <div class="partners">
-          <div class="partner-group reveal">
-            <h3 class="partner-group__title">Government &amp; Institutions</h3>
-            <p class="partner-group__list">Ministry of Higher Education · Central Bank of Egypt · ASRT · TIEC (ITIDA) · Cairo University</p>
+        <div class="partners__head reveal">
+          <h2 class="partners__title" id="partners-title">Organizations I've worked with</h2>
+          <p class="partners__intro">Government bodies, international partners, universities and companies across Egypt and the region.</p>
+        </div>
+      </div>
+      <!-- Logos: when a file arrives in assets/img/logos/ (see the logo plate spec in CLAUDE.md),
+           replace <span>Name</span> with <img src="assets/img/logos/SLUG.svg" alt="Name" width="240" height="90" loading="lazy">
+           in every copy of that pill (SLUG = the pill's data-logo value). -->
+      <div class="partners__rows reveal">
+        <div class="partners__row">
+          <p class="partners__key">Government &amp; Academia</p>
+          <div class="logo-row" aria-label="Government and academic institutions">
+            <ul class="logo-track logo-track--left" role="list" style="animation-duration: 57s">
+              <li class="logo-pill logo-pill--img" data-logo="nile-university"><img src="assets/img/logos/nile-university.png" alt="Nile University" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img logo-pill--tall" data-logo="cairo-university"><img src="assets/img/logos/cairo-university.png" alt="Cairo University" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img logo-pill--tall" data-logo="ministry-of-higher-education"><img src="assets/img/logos/ministry-of-higher-education.png" alt="Ministry of Higher Education" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="central-bank-of-egypt"><img src="assets/img/logos/central-bank-of-egypt.png" alt="Central Bank of Egypt" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="egyptian-banking-institute"><img src="assets/img/logos/egyptian-banking-institute.png" alt="Egyptian Banking Institute" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img logo-pill--boost" data-logo="asrt"><img src="assets/img/logos/asrt.png" alt="ASRT" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="tiec-itida"><img src="assets/img/logos/tiec-itida.png" alt="TIEC (ITIDA)" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="nile-university" aria-hidden="true"><img src="assets/img/logos/nile-university.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img logo-pill--tall" data-logo="cairo-university" aria-hidden="true"><img src="assets/img/logos/cairo-university.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img logo-pill--tall" data-logo="ministry-of-higher-education" aria-hidden="true"><img src="assets/img/logos/ministry-of-higher-education.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="central-bank-of-egypt" aria-hidden="true"><img src="assets/img/logos/central-bank-of-egypt.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="egyptian-banking-institute" aria-hidden="true"><img src="assets/img/logos/egyptian-banking-institute.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img logo-pill--boost" data-logo="asrt" aria-hidden="true"><img src="assets/img/logos/asrt.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="tiec-itida" aria-hidden="true"><img src="assets/img/logos/tiec-itida.png" alt="" width="240" height="90" loading="lazy"></li>
+            </ul>
           </div>
-          <div class="partner-group reveal" style="--d:.1s">
-            <h3 class="partner-group__title">International &amp; Corporate Partners</h3>
-            <p class="partner-group__list">Google · HSBC · European Union · GIZ · ILO · Erasmus+ · Udacity · Sawiris Foundation · HTW Dresden</p>
+        </div>
+        <div class="partners__row">
+          <p class="partners__key">International &amp; Corporate</p>
+          <div class="logo-row" aria-label="International and corporate partners">
+            <ul class="logo-track logo-track--right" role="list" style="animation-duration: 118s">
+              <li class="logo-pill logo-pill--img" data-logo="google"><img src="assets/img/logos/google.png" alt="Google" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="gemini"><img src="assets/img/logos/gemini.png" alt="Gemini" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="hsbc"><img src="assets/img/logos/hsbc.png" alt="HSBC" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img logo-pill--wide" data-logo="erasmus-plus"><img src="assets/img/logos/erasmus-plus.png" alt="Erasmus+" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="ilo"><img src="assets/img/logos/ilo.png" alt="ILO" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="giz"><img src="assets/img/logos/giz.png" alt="GIZ" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="udacity"><img src="assets/img/logos/udacity.png" alt="Udacity" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img logo-pill--boost" data-logo="sawiris-foundation"><img src="assets/img/logos/sawiris-foundation.png" alt="Sawiris Foundation" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img logo-pill--wide" data-logo="htw-dresden"><img src="assets/img/logos/htw-dresden.png" alt="HTW Dresden" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="barca-innovation-hub"><img src="assets/img/logos/barca-innovation-hub.png" alt="Barça Innovation Hub" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="andalusia"><img src="assets/img/logos/andalusia.png" alt="Andalusia" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="icealex"><img src="assets/img/logos/icealex.png" alt="iceAlex" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="google" aria-hidden="true"><img src="assets/img/logos/google.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="gemini" aria-hidden="true"><img src="assets/img/logos/gemini.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="hsbc" aria-hidden="true"><img src="assets/img/logos/hsbc.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img logo-pill--wide" data-logo="erasmus-plus" aria-hidden="true"><img src="assets/img/logos/erasmus-plus.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="ilo" aria-hidden="true"><img src="assets/img/logos/ilo.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="giz" aria-hidden="true"><img src="assets/img/logos/giz.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="udacity" aria-hidden="true"><img src="assets/img/logos/udacity.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img logo-pill--boost" data-logo="sawiris-foundation" aria-hidden="true"><img src="assets/img/logos/sawiris-foundation.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img logo-pill--wide" data-logo="htw-dresden" aria-hidden="true"><img src="assets/img/logos/htw-dresden.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="barca-innovation-hub" aria-hidden="true"><img src="assets/img/logos/barca-innovation-hub.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="andalusia" aria-hidden="true"><img src="assets/img/logos/andalusia.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="icealex" aria-hidden="true"><img src="assets/img/logos/icealex.png" alt="" width="240" height="90" loading="lazy"></li>
+            </ul>
           </div>
-          <div class="partner-group reveal" style="--d:.2s">
-            <h3 class="partner-group__title">Academic &amp; Industry Partners</h3>
-            <p class="partner-group__list">Nile University · WUZZUF · Forasna · BrainsMingle · Daftra · almentor · Chefaa · Belda</p>
+        </div>
+        <div class="partners__row">
+          <p class="partners__key">Startups &amp; Scaleups</p>
+          <div class="logo-row" aria-label="Startups and scaleups">
+            <ul class="logo-track logo-track--left" role="list" style="animation-duration: 121s">
+              <li class="logo-pill logo-pill--img" data-logo="wuzzuf"><img src="assets/img/logos/wuzzuf.png" alt="WUZZUF" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="forasna"><img src="assets/img/logos/forasna.png" alt="Forasna" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="brainsmingle"><img src="assets/img/logos/brainsmingle.png" alt="BrainsMingle" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="daftra"><img src="assets/img/logos/daftra.png" alt="Daftra" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="almentor"><img src="assets/img/logos/almentor.png" alt="almentor" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="chefaa"><img src="assets/img/logos/chefaa.png" alt="Chefaa" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="belda"><img src="assets/img/logos/belda.png" alt="Belda" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="bkam"><img src="assets/img/logos/bkam.png" alt="Bkam" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="buseet"><img src="assets/img/logos/buseet.png" alt="Buseet" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="champions-global"><img src="assets/img/logos/champions-global.png" alt="Champions Global" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="icareer"><img src="assets/img/logos/icareer.png" alt="iCareer" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="jts"><img src="assets/img/logos/jts.png" alt="JTS" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="the-academy"><img src="assets/img/logos/the-academy.png" alt="The Academy" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="wuzzuf" aria-hidden="true"><img src="assets/img/logos/wuzzuf.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="forasna" aria-hidden="true"><img src="assets/img/logos/forasna.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="brainsmingle" aria-hidden="true"><img src="assets/img/logos/brainsmingle.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="daftra" aria-hidden="true"><img src="assets/img/logos/daftra.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="almentor" aria-hidden="true"><img src="assets/img/logos/almentor.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="chefaa" aria-hidden="true"><img src="assets/img/logos/chefaa.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="belda" aria-hidden="true"><img src="assets/img/logos/belda.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="bkam" aria-hidden="true"><img src="assets/img/logos/bkam.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="buseet" aria-hidden="true"><img src="assets/img/logos/buseet.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="champions-global" aria-hidden="true"><img src="assets/img/logos/champions-global.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="icareer" aria-hidden="true"><img src="assets/img/logos/icareer.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="jts" aria-hidden="true"><img src="assets/img/logos/jts.png" alt="" width="240" height="90" loading="lazy"></li>
+              <li class="logo-pill logo-pill--img" data-logo="the-academy" aria-hidden="true"><img src="assets/img/logos/the-academy.png" alt="" width="240" height="90" loading="lazy"></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -156,29 +235,30 @@
     <section class="section section--line" id="services" aria-labelledby="services-title">
       <div class="container">
         <h2 class="h-display reveal" id="services-title" style="margin-bottom: 56px">Who I partner with</h2>
-        <div class="split">
-          <div class="audience reveal">
-            <div class="audience__head"><span class="audience__key">A</span><h3 class="audience__title">Founders &amp; Growth Companies</h3></div>
+        <div class="audience-cards">
+          <div class="audience-card audience-card--sand reveal">
+            <h3 class="audience__title">Startups &amp; SMEs</h3>
             <p class="audience__intro">For founders and leadership teams ready to sharpen their position, enter new markets and build growth engines that outlast the launch.</p>
-            <nav class="svc-list" aria-label="Services for founders and growth companies">
+            <nav class="svc-list" aria-label="Services for startups and SMEs">
               <a href="services/growth-go-to-market-strategy/index.html">Growth &amp; Go-to-Market Strategy</a>
               <a href="services/brand-positioning-architecture/index.html">Brand Positioning &amp; Architecture</a>
               <a href="services/fractional-growth-leadership/index.html">Fractional Growth Leadership</a>
               <a href="services/strategic-partnerships-business-development/index.html">Strategic Partnerships &amp; Business Development</a>
             </nav>
+            <p class="audience-card__more"><a href="services/index.html#track-a" class="btn btn--dark">Services for startups &amp; SMEs</a></p>
           </div>
-          <div class="audience reveal" style="--d:.1s">
-            <div class="audience__head"><span class="audience__key">B</span><h3 class="audience__title">Institutions &amp; Development Partners</h3></div>
-            <p class="audience__intro">For universities, government bodies, donors and corporates that need programs rigorously designed, credibly funded and delivered to measurable impact.</p>
-            <nav class="svc-list" aria-label="Services for institutions and development partners">
+          <div class="audience-card audience-card--dark reveal" style="--d:.1s">
+            <h3 class="audience__title">Institutions &amp; NGOs</h3>
+            <p class="audience__intro">For universities, government bodies, donors and corporates that need programs designed, funded and delivered to measurable impact.</p>
+            <nav class="svc-list" aria-label="Services for institutions and NGOs">
               <a href="services/program-architecture-delivery/index.html">Program Architecture &amp; Delivery</a>
               <a href="services/ecosystem-university-industry-partnerships/index.html">Ecosystem &amp; University–Industry Partnerships</a>
               <a href="services/flagship-summits-national-activations/index.html">Flagship Summits &amp; National Activations</a>
               <a href="services/proposal-funding-strategy/index.html">Proposal &amp; Funding Strategy</a>
             </nav>
+            <p class="audience-card__more"><a href="services/index.html#track-b" class="btn btn--beige">Services for institutions &amp; NGOs</a></p>
           </div>
         </div>
-        <p style="margin-top: 48px"><a href="services/index.html" class="lnk lnk--strong">Explore advisory services →</a></p>
       </div>
     </section>
 
@@ -193,87 +273,124 @@
         </div>
 
         <div class="stack">
-          <!-- 01 BrainsMingle -->
-          <article class="story story--dark" style="--i:0">
-            <div class="story__body">
-              <p class="story__tag">01 · AI Platform &amp; Community · May–Oct 2026</p>
+          <!-- 01 BrainsMingle AI Summit -->
+          <article class="story story--dark story--feature" style="--i:0">
+            <div class="feature__body">
+              <p class="story__tag">01 · BrainsMingle · AI Summit · October 2026</p>
               <div>
-                <h3 class="story__title">BrainsMingle — Growth &amp; the BrainsMingle AI Summit</h3>
-                <p class="story__text">Led positioning, demand generation and community growth for a fast-scaling AI platform, culminating in a free, fully virtual 7-day summit across five tracks with 100+ speakers.</p>
+                <h3 class="feature__title">BrainsMingle<br><span>AI Summit 2026</span></h3>
+                <p class="story__text">A free, fully virtual week across five tracks — L&amp;D, Creative, Startups, Business and Tech. I led its positioning, campaign and community growth as Head of Product Marketing.</p>
               </div>
-              <div class="story__figure"><span class="story__number">20K</span><span class="story__caption">summit registrations in one month</span></div>
+              <p class="feature__claim"><svg class="feature__claim-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.7V17c0 .6-.5 1-1 1.2C7.8 18.8 7 20.2 7 22M14 14.7V17c0 .6.5 1 1 1.2 1.2.6 2 2 2 3.8M18 2H6v7a6 6 0 0 0 12 0z"/></svg><span>The largest virtual AI summit in MENA</span></p>
+              <p><a href="work/brainsmingle/index.html" class="feature__link">Read the case study →</a></p>
             </div>
-            <div class="metrics" aria-label="Growth during the engagement">
-              <div class="metric"><span class="metric__label">Platform users</span><span class="metric__value">5K <span>→</span> 39K</span></div>
-              <div class="metric"><span class="metric__label">LinkedIn followers</span><span class="metric__value">4K <span>→</span> 11K</span></div>
-              <div class="metric"><span class="metric__label">Facebook followers</span><span class="metric__value">50 <span>→</span> 5K</span></div>
-              <div class="metric"><span class="metric__label">Instagram followers</span><span class="metric__value">30 <span>→</span> 1,163</span></div>
+            <div class="feature__visual">
+              <div class="feature__media"><img src="assets/img/work/aisummit/brainsmingle-ai-summit-tracks.webp" alt="BrainsMingle AI Summit: five tracks — AI in L&amp;D, Creative, Startups, Business and Tech" width="1080" height="788" loading="lazy"></div>
+              <div class="feature__stats" aria-label="Summit at a glance">
+                <div class="feature__stat"><b>570K+</b><span>minutes watched</span></div>
+                <div class="feature__stat"><b>64</b><span>countries</span></div>
+                <div class="feature__stat"><b>135</b><span>speakers</span></div>
+                <div class="feature__stat"><b>5</b><span>tracks</span></div>
+              </div>
             </div>
           </article>
 
-          <!-- 02 Google Gemini -->
-          <article class="story story--sand" style="--i:1">
+          <!-- 02 BrainsMingle Knowledge Base & Guest View -->
+          <article class="story story--beige" style="--i:1">
             <div class="story__body">
-              <p class="story__tag">02 · Google × WUZZUF · 2025</p>
+              <p class="story__tag">02 · BrainsMingle · 2026</p>
               <div>
-                <h3 class="story__title">Google Gemini Pro Student Activation</h3>
-                <p class="story__text">An integrated campus and digital campaign across Cairo University, Mansoura University, AUC and the Arab Academy, combining on-ground activation with influencer and multi-channel reach.</p>
+                <h3 class="story__title">BrainsMingle Knowledge Base &amp; Guest View</h3>
+                <p class="story__text">Made a broad platform easy to understand and easy to use: a self-serve knowledge base for members and admins, and a guest view that shows professionals and organizations what BrainsMingle can do for them before they sign up.</p>
               </div>
-              <div class="story__figure"><span class="story__number">30,000+</span><span class="story__caption">student sign-ups</span></div>
+              <p class="feature__claim feature__claim--light"><svg class="feature__claim-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 12 10 5 10-5M2 17l10 5 10-5"/></svg><span>One platform story for B2C and B2B</span></p>
+              <p><a href="work/brainsmingle-platform/index.html" class="lnk lnk--strong">Read the case study →</a></p>
             </div>
-            <div class="story__media"><div class="ph" style="height:100%">[ Campaign visual ]</div></div>
+            <div class="story__media"><img src="assets/img/work/brainsmingle-platform/brainsmingle-guest.webp" alt="BrainsMingle guest view: Where professionals meet, learn, and earn" width="1440" height="900" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:left top;display:block"></div>
           </article>
 
-          <!-- 03 NilePreneurs -->
-          <article class="story story--white" style="--i:2">
+          <!-- 03 CUES 2026 -->
+          <article class="story story--sand" style="--i:2">
             <div class="story__body">
-              <p class="story__tag">03 · HSBC Egypt · NilePreneurs · 2019–2022</p>
+              <p class="story__tag">03 · Cairo University · 2026</p>
               <div>
-                <h3 class="story__title">NilePreneurs Accelerator</h3>
-                <p class="story__text">Designed and led a six-month growth-stage accelerator across two full cycles, taking founders from structured mentorship to investor readiness.</p>
-              </div>
-              <div class="story__figure"><span class="story__number">50+</span><span class="story__caption">startups graduated</span></div>
-            </div>
-            <div class="story__media"><div class="ph" style="height:100%">[ Program visual ]</div></div>
-          </article>
-
-          <!-- 04 WUZZUF Internship Program -->
-          <article class="story story--beige" style="--i:3">
-            <div class="story__body">
-              <p class="story__tag">04 · WUZZUF · Employment &amp; Talent</p>
-              <div>
-                <h3 class="story__title">WUZZUF Internship Program</h3>
-                <p class="story__text">Created Egypt's first structured internship program, connecting universities and employers at national scale.</p>
-              </div>
-              <div class="story__figure"><span class="story__number">4,000+</span><span class="story__caption">placements a year</span></div>
-            </div>
-            <div class="story__media"><div class="ph" style="height:100%">[ Program visual ]</div></div>
-          </article>
-
-          <!-- 05 Digital Pathways for Employment -->
-          <article class="story story--dark" style="--i:4">
-            <div class="story__body">
-              <p class="story__tag">05 · Sawiris Foundation · Nile University · 2022</p>
-              <div>
-                <h3 class="story__title">Digital Pathways for Employment</h3>
-                <p class="story__text">Managed a 4M EGP workforce program training graduates across six tracks: UX/UI, front-end, mobile, marketing, business development and customer success.</p>
-              </div>
-              <div class="story__figure"><span class="story__number">300+</span><span class="story__caption">graduates trained</span></div>
-            </div>
-            <div class="story__media"><div class="ph" style="height:100%">[ Program visual ]</div></div>
-          </article>
-
-          <!-- 06 CUES 2026 -->
-          <article class="story story--sand" style="--i:5">
-            <div class="story__body">
-              <p class="story__tag">06 · Cairo University · 2026</p>
-              <div>
-                <h3 class="story__title">Cairo University Entrepreneurship Summit</h3>
+                <h3 class="story__title">Cairo University Entrepreneurship Summit 2026</h3>
                 <p class="story__text">Led the summit end to end — agenda, startup exhibition, identity, website and registration — bringing together students, investors, academia and ecosystem enablers.</p>
               </div>
               <div class="story__figure"><span class="story__number">2,000+</span><span class="story__caption">attendees · 6 panels · 3 keynotes</span></div>
+              <p><a href="work/cues-2026/index.html" class="lnk lnk--strong">Read the case study →</a></p>
             </div>
-            <div class="story__media"><div class="ph" style="height:100%">[ Summit visual ]</div></div>
+            <div class="story__media"><img src="assets/img/work/cues/cues-gallery-opening-front-row.webp" alt="University leadership and a full auditorium at the opening of the Cairo University Entrepreneurship Summit" width="1600" height="1067" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+          </article>
+
+          <!-- 04 Google Gemini -->
+          <article class="story story--white" style="--i:3">
+            <div class="story__body">
+              <p class="story__tag">04 · Google × WUZZUF · 2025</p>
+              <div>
+                <h3 class="story__title">Google Gemini Pro Student Activation</h3>
+                <p class="story__text">A nationwide campaign bringing Gemini Pro to Egyptian students through campus booths, 350 student ambassadors, 40+ workshops and a creator-led digital campaign.</p>
+              </div>
+              <div class="story__figure"><span class="story__number">30,000+</span><span class="story__caption">student sign-ups</span></div>
+              <p><a href="work/google-gemini-student-activation/index.html" class="lnk lnk--strong">Read the case study →</a></p>
+            </div>
+            <div class="story__media"><img src="assets/img/work/gemini/gemini-cairo-university-team.webp" alt="The Google Gemini booth team at Cairo University" width="1600" height="804" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+          </article>
+
+          <!-- 05 Belda -->
+          <article class="story story--beige" style="--i:4">
+            <div class="story__body">
+              <p class="story__tag">05 · JTS · Belda · 2025</p>
+              <div>
+                <h3 class="story__title">Belda Rebrand &amp; Market Launch</h3>
+                <p class="story__text">The full rebrand of HomeSurv into Belda, a service marketplace for homes and businesses: name, identity and voice, a bilingual brand guideline, launch films and a rebuilt website.</p>
+              </div>
+              <div class="story__figure"><span class="story__number">EN + AR</span><span class="story__caption">one bilingual brand system</span></div>
+              <p><a href="work/belda-rebrand/index.html" class="lnk lnk--strong">Read the case study →</a></p>
+            </div>
+            <div class="story__media"><img src="assets/img/work/belda/belda-brand-reveal.webp?v=2" alt="The Belda logo: Belda, Seamless Services" width="1280" height="720" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+          </article>
+
+          <!-- 06 Digital Pathways for Employment -->
+          <article class="story story--dark" style="--i:5">
+            <div class="story__body">
+              <p class="story__tag">06 · Sawiris Foundation · Nile University · 2022–2023</p>
+              <div>
+                <h3 class="story__title">Digital Pathways for Employment</h3>
+                <p class="story__text">From the first concept note to a 4M EGP grant: a free employability program training graduates across six digital tracks and connecting them with employers.</p>
+              </div>
+              <div class="story__figure"><span class="story__number">300+</span><span class="story__caption">graduates trained</span></div>
+              <p><a href="work/digital-pathways-for-employment/index.html" class="lnk lnk--strong">Read the case study →</a></p>
+            </div>
+            <div class="story__media"><img src="assets/img/work/dpe/dpe-logo-cover.webp?v=2" alt="DPE, Digital Pathways for Employment" width="1400" height="900" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+          </article>
+
+          <!-- 07 NilePreneurs -->
+          <article class="story story--sand" style="--i:6">
+            <div class="story__body">
+              <p class="story__tag">07 · HSBC Egypt · NilePreneurs · 2020–2022</p>
+              <div>
+                <h3 class="story__title">NilePreneurs Academy</h3>
+                <p class="story__text">Designed and led NP Academy, a fully funded, no-equity accelerator sponsored by HSBC Egypt: six months, six learning modules and two cycles of growth-stage startups.</p>
+              </div>
+              <div class="story__figure"><span class="story__number">50</span><span class="story__caption">startups accelerated</span></div>
+              <p><a href="work/nilepreneurs-accelerator/index.html" class="lnk lnk--strong">Read the case study →</a></p>
+            </div>
+            <div class="story__media"><img src="assets/img/work/np-academy/np-academy-logo-cover.webp?v=2" alt="NilePreneurs Academy" width="1400" height="900" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+          </article>
+
+          <!-- 08 WUZZUF Ecosystem Programs -->
+          <article class="story story--white" style="--i:7">
+            <div class="story__body">
+              <p class="story__tag">08 · WUZZUF · BasharSoft · 2016–2018 · 2025–2026</p>
+              <div>
+                <h3 class="story__title">WUZZUF Ecosystem Programs</h3>
+                <p class="story__text">Internships, startup talent matchmaking at RiseUp, Google’s Mobile Application Launchpad and career fairs, Egypt’s first national software tournament, bootcamps, TIEC’s Next Technology Leaders, meetups, and the Startup Support Program.</p>
+              </div>
+              <div class="story__figure"><span class="story__number">9</span><span class="story__caption">programs and partnerships</span></div>
+              <p><a href="work/wuzzuf-programs/index.html" class="lnk lnk--strong">Read the case study →</a></p>
+            </div>
+            <div class="story__media"><img src="assets/img/work/wuzzuf/mdcf-group-2.webp" alt="Participating companies and the WUZZUF team at the Mobile Developer Career Fair" width="814" height="485" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
           </article>
         </div>
       </div>
@@ -289,8 +406,8 @@
         <div class="steps">
           <div class="step reveal"><span class="step__num" aria-hidden="true">01</span><h3 class="step__title">Diagnose</h3><p class="step__text">A clear-eyed view of the market, the organization and its stakeholders.</p></div>
           <div class="step reveal" style="--d:.1s"><span class="step__num" aria-hidden="true">02</span><h3 class="step__title">Architect</h3><p class="step__text">The strategy, framework or program design, built for the realities on the ground.</p></div>
-          <div class="step reveal" style="--d:.2s"><span class="step__num" aria-hidden="true">03</span><h3 class="step__title">Deliver</h3><p class="step__text">Hands-on execution, launch and team enablement.</p></div>
-          <div class="step reveal" style="--d:.3s"><span class="step__num" aria-hidden="true">04</span><h3 class="step__title">Measure</h3><p class="step__text">Defined KPIs, transparent reporting and continuous refinement.</p></div>
+          <div class="step reveal" style="--d:.2s"><span class="step__num" aria-hidden="true">03</span><h3 class="step__title">Deliver</h3><p class="step__text">Hands-on execution, launch and team enablement, inside your organization.</p></div>
+          <div class="step reveal" style="--d:.3s"><span class="step__num" aria-hidden="true">04</span><h3 class="step__title">Measure</h3><p class="step__text">Defined KPIs, transparent reporting and continuous refinement of results.</p></div>
         </div>
         <div class="chips reveal">
           <span class="chips__label">Engagement models</span>
@@ -308,7 +425,7 @@
          ========================================================= -->
 
     <!-- =========================================================
-         8. PERSPECTIVES (latest articles)
+         8. PERSPECTIVES (three featured articles)
          ========================================================= -->
     <section class="section section--sand" aria-labelledby="insights-title">
       <div class="container">
@@ -316,15 +433,17 @@
           <h2 class="h-display" id="insights-title">Perspectives</h2>
           <a href="insights/index.html" class="lnk lnk--strong">All articles →</a>
         </div>
-        <div class="posts">
-          <a href="insights/index.html" class="post reveal"><div class="post__media"><div class="ph">[ Article image ]</div></div><span class="post__meta">[Category] · [Read time]</span><span class="post__title">[Latest article title]</span></a>
-          <a href="insights/index.html" class="post reveal" style="--d:.1s"><div class="post__media"><div class="ph">[ Article image ]</div></div><span class="post__meta">[Category] · [Read time]</span><span class="post__title">[Second article title]</span></a>
-          <a href="insights/index.html" class="post reveal" style="--d:.2s"><div class="post__media"><div class="ph">[ Article image ]</div></div><span class="post__meta">[Category] · [Read time]</span><span class="post__title">[Third article title]</span></a>
+        <div class="posts posts--cards">
+          <a href="insights/positioning-vs-promotion/index.html" class="post reveal"><span class="post__meta">Strategy &amp; Positioning · 3 min read</span><span class="post__title">Positioning vs. Promotion: Why Most Startups Get It Wrong</span><span class="post__excerpt">Most startups invest in promotion before they can answer one question: why should anyone choose us?</span></a>
+          <a href="insights/choosing-the-right-pricing-model-for-your-startup/index.html" class="post reveal" style="--d:.1s"><span class="post__meta">Strategy &amp; Positioning · 7 min read</span><span class="post__title">Choosing the Right Pricing Model for Your Business</span><span class="post__excerpt">How you price shapes how customers perceive your value — and your whole business model.</span></a>
+          <a href="insights/the-silent-killer-of-startup-growth/index.html" class="post reveal" style="--d:.2s"><span class="post__meta">Growth &amp; Marketing · 3 min read</span><span class="post__title">The Silent Killer of Startup Growth</span><span class="post__excerpt">When growth feels messy, the cause is often simple: a startup that never set up a CRM.</span></a>
         </div>
+        <!-- Free guide: hidden until the guide title and PDF are ready.
         <div class="guide reveal">
           <div><p class="eyebrow">Free guide</p><p class="guide__title">[Guide title to confirm]</p></div>
           <a href="insights/index.html" class="btn btn--dark">Download the guide</a>
         </div>
+        -->
       </div>
     </section>
 
@@ -350,7 +469,7 @@
     <div class="container site-footer__inner">
       <img class="site-footer__logo" src="assets/img/logo-dina-khedr.png" alt="Dina Khedr — Business Consultant" width="699" height="192" loading="lazy">
       <nav class="site-footer__links" aria-label="Footer">
-        <a href="mailto:dina.khedr@gmail.com" class="lnk">dina.khedr@gmail.com</a>
+        <a href="mailto:info@dinakhedr.com" class="lnk">info@dinakhedr.com</a>
         <a href="https://www.linkedin.com/in/dinakhedr" class="lnk" target="_blank" rel="noopener">LinkedIn</a>
         <a href="assets/docs/dina-khedr-capability-statement.pdf" class="lnk">Capability statement (PDF)</a>
       </nav>
@@ -358,6 +477,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/main.js?v=20261021e" defer></script>
 </body>
 </html>
