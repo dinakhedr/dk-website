@@ -1404,3 +1404,8 @@ html.lightbox-open { overflow: hidden; }
   .vhero__pair img[alt="Nile University"] { height: 38px !important; }
   .vhero__pair img[alt="Knowledge Officer"] { height: 28px !important; }
 }
+/* DPE hero: Knowledge Officer always beside Nile University (Dina, 20 Oct 2026) */
+.vhero__pair { flex-wrap: nowrap; gap: 14px; }
+@media (max-width: 1100px) { .vhero__pair img[alt="Nile University"] { height: 40px !important; } .vhero__pair img[alt="Knowledge Officer"] { height: 29px !important; } }
+@media (max-width: 640px) { .vhero__pair { gap: 10px; } .vhero__pair img[alt="Nile University"] { height: 30px !important; } .vhero__pair img[alt="Knowledge Officer"] { height: 22px !important; } }
+@media (max-width: 1100px) { .vhero__partners:has(.vhero__pair) { flex-direction: column; gap: 22px; } .vhero__partners:has(.vhero__pair) .vhero__divider { display: none; } .vhero__partners:has(.vhero__pair) .vhero__powered { align-items: center; } }
