@@ -1469,3 +1469,7 @@ a.tag--link:hover { background: var(--ink); color: var(--white); }
 .ntl-plate img { width: min(80%, 380px); height: auto; display: block; }
 .journey__step:not(:has(.journey__icon)) .journey__num { margin-top: 2px; }
 @media (max-width: 640px) { .results--2 { grid-template-columns: 1fr 1fr; } .prog-logo { height: 40px; } }
+.ntl-plate { gap: 20px; }
+.ntl-plate__by { display: flex; align-items: center; gap: 10px; font-size: 12px; color: var(--muted); }
+.ntl-plate__by img { height: 26px; width: auto; display: block; }
+.prog-sec.section--line .gcard { background: var(--sand); }
