@@ -1362,14 +1362,13 @@ html.lightbox-open { overflow: hidden; }
 .jt__ribbon svg { width: 18px; height: 18px; color: var(--bronze); flex: none; }
 .jt__ribbon b { font-size: 15px; font-weight: 600; color: var(--ink); }
 .jt__ribbon .jt__org { margin: 0; font-size: 14px; }
-.js .jt-anim { opacity: 0; transform: translateX(24px); transition: opacity .6s var(--ease), transform .6s var(--ease); }
-.js .jt-anim.is-in { opacity: 1; transform: none; }
+.journey-tl.is-ready .jt-anim { opacity: 0; transform: translateY(18px); transition: opacity .6s var(--ease), transform .6s var(--ease); }
+.journey-tl.is-ready .jt-anim.is-in { opacity: 1; transform: none; }
 @media (max-width: 640px) {
   .journey-tl { padding-left: 32px; } .journey-tl__line { left: 9px; } .jt::before { left: -29px; }
   .jt--work { grid-template-columns: 1fr; gap: 10px; padding: 16px; } .jt__logo { width: 120px; height: 46px; justify-items: start; }
   .jt__ribbon { border-radius: 18px; }
 }
-@media (prefers-reduced-motion: reduce) { .js .jt-anim { opacity: 1; transform: none; } .journey-tl__fill { height: 100% !important; } }
+@media (prefers-reduced-motion: reduce) { .journey-tl.is-ready .jt-anim { opacity: 1; transform: none; } .journey-tl__fill { height: 100% !important; } }
 .jt__logo img[alt="NilePreneurs"], .jt__logo img[alt="Cairo University"] { transform: scale(2); }
 .jt--edu { min-width: 0; } .jt__ribbon { max-width: 100%; box-sizing: border-box; } @media (max-width: 640px) { .jt__ribbon { display: flex; } }
-.js .jt-anim { transform: translateY(18px); } .js .jt-anim.is-in { transform: none; }

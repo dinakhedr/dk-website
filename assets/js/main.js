@@ -267,6 +267,7 @@
   var tl = document.querySelector('.journey-tl');
   if (tl) {
     var fill = tl.querySelector('.journey-tl__fill');
+    tl.classList.add('is-ready');
     var items = tl.querySelectorAll('.jt-anim');
     if ('IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (es) {
