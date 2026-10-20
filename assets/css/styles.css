@@ -1409,3 +1409,22 @@ html.lightbox-open { overflow: hidden; }
 @media (max-width: 1100px) { .vhero__pair img[alt="Nile University"] { height: 40px !important; } .vhero__pair img[alt="Knowledge Officer"] { height: 29px !important; } }
 @media (max-width: 640px) { .vhero__pair { gap: 10px; } .vhero__pair img[alt="Nile University"] { height: 30px !important; } .vhero__pair img[alt="Knowledge Officer"] { height: 22px !important; } }
 @media (max-width: 1100px) { .vhero__partners:has(.vhero__pair) { flex-direction: column; gap: 22px; } .vhero__partners:has(.vhero__pair) .vhero__divider { display: none; } .vhero__partners:has(.vhero__pair) .vhero__powered { align-items: center; } }
+/* Belda case study: image hero, paired films, brand identity (Dina, 20 Oct 2026) */
+.vhero__visual { margin: 0; }
+.vhero__visual img { width: 100%; height: auto; border-radius: 28px; box-shadow: 0 30px 60px rgba(12, 12, 11, 0.12); }
+a.tag--link { text-decoration: none; color: var(--ink); background: var(--white); border: 1px solid rgba(12, 12, 11, 0.18); }
+a.tag--link:hover { background: var(--ink); color: var(--white); }
+.vfilms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 2.5vw, 32px); margin-top: 32px; }
+.bid { display: grid; grid-template-columns: 1.3fr 1fr; gap: clamp(24px, 4vw, 56px); margin-top: 40px; }
+.swatches { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 16px; }
+.swatch { min-height: 104px; border-radius: 18px; padding: 14px; display: flex; flex-direction: column; justify-content: flex-end; gap: 2px; color: var(--ink); border: 1px solid rgba(12, 12, 11, 0.06); }
+.swatch b { font-size: 14px; font-weight: 600; }
+.swatch small { font-size: 12px; opacity: .8; }
+.swatch--wide { grid-column: 1 / -1; color: var(--white); }
+.bid__note { margin-top: 14px; font-size: 15px; line-height: 1.6; color: var(--text); }
+.bid__type { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 10px; }
+.bid__type li { background: var(--sand); border-radius: 18px; padding: 16px 20px; display: flex; flex-direction: column; gap: 4px; }
+.bid__type b { font-size: 22px; font-weight: 700; letter-spacing: -0.03em; color: var(--ink); }
+.bid__type span { font-size: 14.5px; color: var(--text); }
+@media (max-width: 860px) { .vfilms, .bid { grid-template-columns: 1fr; } .swatches { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.masonry--slides img { border: 1px solid rgba(12, 12, 11, 0.1); }
