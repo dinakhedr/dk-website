@@ -5,6 +5,7 @@
    - Category filter (Work, Insights)
    - Copy link button (articles)
    - Footer year
+   - Google Analytics events: contact_form_sent, book_consultation
 */
 (function () {
   'use strict';
@@ -288,4 +289,16 @@
   /* ---------- Footer year ---------- */
   var year = document.querySelector('[data-year]');
   if (year) year.textContent = new Date().getFullYear();
+
+  /* ---------- Google Analytics events ----------
+     Sent only where the GA4 tag is configured (live domain, not ?notrack). */
+  if (window.dkTrack === true && typeof window.gtag === 'function') {
+    if (/\/contact\/thank-you\//.test(location.pathname)) {
+      window.gtag('event', 'contact_form_sent');
+    }
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href*="calendar.app.google"]');
+      if (a) window.gtag('event', 'book_consultation', { link_url: a.href });
+    });
+  }
 })();
