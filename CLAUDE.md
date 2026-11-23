@@ -37,10 +37,11 @@ The personal consulting website of **Dina Khedr**, an independent business & str
 | About | `/about/index.html` | **Done** |
 | Blog — "Strategy to Street" | `/blog/index.html` + 8 articles `/blog/<slug>/index.html` (moved from `/insights/` on 23 Nov 2026 to keep the old site's `/blog/` address; the label "Insights" was renamed "Blog" everywhere on the site (menu, breadcrumbs, eyebrow, page title, "More from the blog") at Dina's request the same day; `/insights/*` 301-redirects to `/blog/`) | **Done** |
 | Contact / Start a Project | `/contact/index.html` + `/contact/thank-you/index.html` | **Done** |
+| Privacy notice | `/privacy/index.html` | **Done** (23 Nov 2026, text approved by Dina; linked in every footer and from the contact form note; update it if tracking, forms or providers change) |
 | 404 | `/404.html` | **Done** (uses root-absolute paths `/assets/...` because Netlify serves it at any URL — the only page not previewable from disk) |
 | Config | `netlify.toml`, `robots.txt`, `sitemap.xml`, `assets/img/og-image.jpg` | **Done** |
 
-Global elements on every page: header (logo, nav: Services · How I Work · Work · About · Blog, button **Book a consultation**), footer (logo, email, LinkedIn, **Capability statement (PDF)**, © year), closing CTA band.
+Global elements on every page: header (logo, nav: Services · How I Work · Work · About · Blog, button **Book a consultation**), footer (logo, email, LinkedIn, **Capability statement (PDF)**, **Privacy**, © year), closing CTA band.
 
 ## 4. Design system (implemented in `assets/css/styles.css`)
 
