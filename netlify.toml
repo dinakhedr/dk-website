@@ -73,48 +73,57 @@
   to = "/work/"
   status = 301
 
-# Blog articles whose address changed
+# Old blog articles whose address changed
 [[redirects]]
   from = "/blog/why-your-startup-meetings-suck-and-how-to-fix-them"
-  to = "/insights/why-startup-meetings-fail-and-how-to-fix-them/"
+  to = "/blog/why-startup-meetings-fail-and-how-to-fix-them/"
   status = 301
 
 [[redirects]]
   from = "/blog/5-must-have-marketing-videos-for-your-business-in-2025"
-  to = "/insights/5-must-have-marketing-videos-for-your-business/"
+  to = "/blog/5-must-have-marketing-videos-for-your-business/"
   status = 301
 
 [[redirects]]
   from = "/blog/positioning-vs.-promotion-why-most-startups-get-it-wrong"
-  to = "/insights/positioning-vs-promotion/"
+  to = "/blog/positioning-vs-promotion/"
   status = 301
 
-# Blog index, tag, author and paging pages
-[[redirects]]
-  from = "/blog"
-  to = "/insights/"
-  status = 301
-
+# Old blog tag, author and paging pages
 [[redirects]]
   from = "/blog/tag/*"
-  to = "/insights/"
+  to = "/blog/"
   status = 301
 
 [[redirects]]
   from = "/blog/author/*"
-  to = "/insights/"
+  to = "/blog/"
   status = 301
 
 [[redirects]]
   from = "/blog/page/*"
-  to = "/insights/"
+  to = "/blog/"
   status = 301
 
-# All other blog articles kept their slug
+# Articles moved from /insights/ to /blog/ (Nov 2026); all other old
+# blog articles kept their slug, so /blog/<slug>/ is served directly.
 [[redirects]]
-  from = "/blog/*"
-  to = "/insights/:splat/"
+  from = "/insights"
+  to = "/blog/"
   status = 301
+  force = true
+
+[[redirects]]
+  from = "/insights/"
+  to = "/blog/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/insights/*"
+  to = "/blog/:splat"
+  status = 301
+  force = true
 
 # ---------------------------------------------------------------
 # Headers
