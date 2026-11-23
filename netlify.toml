@@ -158,3 +158,9 @@
   for = "/404.html"
   [headers.values]
     X-Robots-Tag = "noindex"
+
+# Keep the CV out of search results (it stays downloadable from the site).
+[[headers]]
+  for = "/assets/docs/dina-khedr-cv.pdf"
+  [headers.values]
+    X-Robots-Tag = "noindex"
