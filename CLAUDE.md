@@ -155,7 +155,7 @@ Case study template: Header (title, partners, year, tags, image) → At a glance
   - `/blog/positioning-vs.-promotion-why-most-startups-get-it-wrong` → `/blog/positioning-vs-promotion/`
 - Booking link (every "Book a consultation" button): `https://calendar.app.google/dwxgqnSqhQKSAXD16` (open in new tab).
 - Contact email (site-wide, Dina's choice 19 Oct 2026): `info@dinakhedr.com` · LinkedIn `https://www.linkedin.com/in/dinakhedr`. (Her CV PDF still shows her Gmail — that is fine.)
-- Analytics: GA4 + Google Search Console at launch.
+- Analytics: **GA4 installed (Measurement ID `G-L4R884EP0C`, 23 Nov 2026)** — the same snippet sits just before `</head>` on every page (copy it into new pages; not in `design/`). It only sends data on `dinakhedr.com`, so local `file://` previews are not counted. Google Search Console: Dina to confirm setup and sitemap submission.
 
 ## 7. Assets
 
