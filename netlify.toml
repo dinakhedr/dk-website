@@ -73,6 +73,17 @@
   to = "/work/"
   status = 301
 
+# Old Experience page is now the About page
+[[redirects]]
+  from = "/experience"
+  to = "/about/"
+  status = 301
+
+[[redirects]]
+  from = "/experience/*"
+  to = "/about/"
+  status = 301
+
 # Old blog articles whose address changed
 [[redirects]]
   from = "/blog/why-your-startup-meetings-suck-and-how-to-fix-them"
